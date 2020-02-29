@@ -1,0 +1,15 @@
+.header {
+  padding: 0 16px;
+  width: 100%;
+  background-color: lightblue;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  &__nav {
+    display: flex;
+    &--item-one {
+      margin-right: 15px;
+    }
+  }
+}
