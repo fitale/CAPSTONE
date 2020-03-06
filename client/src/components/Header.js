@@ -6,7 +6,7 @@ export default function Header() {
       <header className="header">
         <h3 className="header__title">upNEXT</h3>
         <nav className="header__nav">
-          <h6 className="header__nav--item-one">SIGN IN</h6>
+          <h6 className="header__nav--item-one">LOG IN</h6>
           <h6 className="header__nav--item">SIGN UP</h6>
         </nav>
       </header>

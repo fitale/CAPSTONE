@@ -6,10 +6,37 @@
   justify-content: space-between;
   align-items: center;
   height: 80px;
+  &__title {
+    @include mobile-header;
+  }
   &__nav {
     display: flex;
+    @include mobile-subheader;
     &--item-one {
       margin-right: 15px;
+    }
+  }
+}
+
+@include medium {
+  .header {
+    padding: 0 24px;
+    height: 100px;
+    &__title {
+      @include desk-tablet-header;
+    }
+    &__nav {
+      @include desk-tablet-subheader;
+    }
+  }
+}
+
+@include huge {
+  .header {
+    padding: 0 180px;
+    height: 120px;
+    &__nav {
+      @include desk-tablet-header-smaller;
     }
   }
 }
