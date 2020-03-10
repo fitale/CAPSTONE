@@ -1,0 +1,311 @@
+[
+  {
+    "long": "-78.8768921",
+    "lat": "42.9324188",
+    "college_of_institution_type": "Buffalo State",
+    "campus": "STATE UNIVERSITY COLLEGE AT BUFFALO",
+    "address": "1300 ELMWOOD AVE",
+    "city": "BUFFALO",
+    "state": "NY",
+    "zip": "14222",
+    "county": "Erie",
+    "institution_level": "4-year",
+    "institution_type": "Comprehensive Colleges",
+    "enrollment_as_of": "Fall 2018",
+    "undergrad_enrollment": "8082",
+    "graduate_enrollment": "1036",
+    "program_1": "Business Administration",
+    "program_2": "Psychology",
+    "program_3": "Biology",
+    "program_4": "Criminal Justice",
+    "program_5": "Multidisciplinary Studies",
+    "campus_website": {
+      "url": "http://www.buffalostate.edu/"
+    },
+    "location": {
+      "latitude": "42.9324188",
+      "longitude": "-78.8768921"
+    }
+  },
+  {
+    "long": "-78.7888641",
+    "lat": "43.0008278",
+    "college_of_institution_type": "Buffalo University ",
+    "campus": "STATE UNIVERSITY OF NEW YORK AT BUFFALO",
+    "address": "12 CAPEN HALL",
+    "city": "BUFFALO",
+    "state": "NY",
+    "zip": "14260",
+    "county": "Erie",
+    "institution_level": "4-year",
+    "institution_type": "Doctoral Degree Granting Institutions",
+    "enrollment_as_of": "Fall 2018",
+    "undergrad_enrollment": "21612",
+    "graduate_enrollment": "9896",
+    "program_1": "Business Administration",
+    "program_2": "Psychology",
+    "program_3": "Computer Science",
+    "program_4": "Biological Sciences",
+    "program_5": "Mechanical Engineering",
+    "campus_website": {
+      "url": "http://www.buffalo.edu/"
+    },
+    "location": {
+      "latitude": "43.0008278",
+      "longitude": "-78.7888641"
+    }
+  },
+  {
+    "long": "-77.9509811",
+    "lat": "43.2119102",
+    "college_of_institution_type": "Brockport",
+    "campus": "STATE UNIVERSITY COLLEGE AT BROCKPORT",
+    "address": " 350 NEW CAMPUS DR",
+    "city": "BROCKPORT",
+    "state": "NY",
+    "zip": "14420",
+    "county": "Monroe",
+    "institution_level": "4-year",
+    "institution_type": "Comprehensive Colleges",
+    "enrollment_as_of": "Fall 2018",
+    "undergrad_enrollment": "7057",
+    "graduate_enrollment": "1230",
+    "program_1": "Nursing",
+    "program_2": "Business Administration",
+    "program_3": "Psychology",
+    "program_4": "Health Science",
+    "program_5": "Criminal Justice",
+    "campus_website": {
+      "url": "http://www.brockport.edu/"
+    },
+    "location": {
+      "latitude": "43.2119102",
+      "longitude": "-77.9509811"
+    }
+  },
+  {
+    "long": "-77.8248215",
+    "lat": "42.7967949",
+    "college_of_institution_type": "Geneseo",
+    "campus": "STATE UNIVERSITY COLLEGE AT GENESEO",
+    "address": "1 COLLEGE CIRCLE",
+    "city": "GENESEO",
+    "state": "NY",
+    "zip": "14454",
+    "county": "Livingston",
+    "institution_level": "4-year",
+    "institution_type": "Comprehensive Colleges",
+    "enrollment_as_of": "Fall 2018",
+    "undergrad_enrollment": "5494",
+    "graduate_enrollment": "94",
+    "program_1": "Biology",
+    "program_2": "Psychology",
+    "program_3": "Business Administration",
+    "program_4": "Accounting",
+    "program_5": "Communication",
+    "campus_website": {
+      "url": "http://www.geneseo.edu"
+    },
+    "location": {
+      "latitude": "42.7967949",
+      "longitude": "-77.8248215"
+    }
+  },
+  {
+    "long": "-78.1380844",
+    "lat": "43.0168915",
+    "college_of_institution_type": "Genesee",
+    "campus": "GENESEE COMMUNITY COLLEGE",
+    "address": "ONE COLLEGE RD",
+    "city": "BATAVIA",
+    "state": "NY",
+    "zip": "14020",
+    "county": "Genesee",
+    "institution_level": "2-year",
+    "institution_type": "Community Colleges",
+    "enrollment_as_of": "Fall 2018",
+    "undergrad_enrollment": "5530",
+    "graduate_enrollment": "0",
+    "program_1": "Liberal Arts & Sciences: General Studies",
+    "program_2": "Business Administration",
+    "program_3": "Nursing",
+    "program_4": "Health Studies",
+    "program_5": "Criminal Justice",
+    "campus_website": {
+      "url": "http://www.genesee.edu"
+    },
+    "location": {
+      "latitude": "43.0168915",
+      "longitude": "-78.1380844"
+    }
+  },
+  {
+    "long": "-77.6152344",
+    "lat": "43.1010475",
+    "college_of_institution_type": "Monroe",
+    "campus": "MONROE COMMUNITY COLLEGE",
+    "address": "1000 E HENRIETTA RD",
+    "city": "ROCHESTER",
+    "state": "NY",
+    "zip": "14623",
+    "county": "Monroe",
+    "institution_level": "2-year",
+    "institution_type": "Community Colleges",
+    "enrollment_as_of": "Fall 2018",
+    "undergrad_enrollment": "12273",
+    "graduate_enrollment": "0",
+    "program_1": "Liberal Arts & Sciences--General Studies",
+    "program_2": "Business: Business Administration",
+    "program_3": "Health Studies",
+    "program_4": "Human Services",
+    "program_5": "Criminal Justice",
+    "campus_website": {
+      "url": "http://www.monroecc.edu"
+    },
+    "location": {
+      "latitude": "43.1010475",
+      "longitude": "-77.6152344"
+    }
+  },
+  {
+    "long": "-79.3207245",
+    "lat": "42.4385948",
+    "college_of_institution_type": "Fredonia",
+    "campus": "STATE UNIVERSITY COLLEGE AT FREDONIA",
+    "address": "280 CENTRAL AVE",
+    "city": "FREDONIA",
+    "state": "NY",
+    "zip": "14063",
+    "county": "Chautauqua",
+    "institution_level": "4-year",
+    "institution_type": "Comprehensive Colleges",
+    "enrollment_as_of": "Fall 2018",
+    "undergrad_enrollment": "4431",
+    "graduate_enrollment": "224",
+    "program_1": "Music Education",
+    "program_2": "Psychology",
+    "program_3": "Criminal Justice",
+    "program_4": "Biology",
+    "program_5": "Business Administration",
+    "campus_website": {
+      "url": "http://www.fredonia.edu"
+    },
+    "location": {
+      "latitude": "42.4385948",
+      "longitude": "-79.3207245"
+    }
+  },
+  {
+    "long": "-77.2724304",
+    "lat": "42.8767853",
+    "college_of_institution_type": "Finger Lakes",
+    "campus": "FINGER LAKES COMMUNITY COLLEGE",
+    "address": "3325 MARVIN SANDS DR",
+    "city": "CANANDAIGUA",
+    "state": "NY",
+    "zip": "14424",
+    "county": "Ontario",
+    "institution_level": "2-year",
+    "institution_type": "Community Colleges",
+    "enrollment_as_of": "Fall 2018",
+    "undergrad_enrollment": "5944",
+    "graduate_enrollment": "0",
+    "program_1": "Liberal Arts & Sciences",
+    "program_2": "Health Care Studies",
+    "program_3": "Business: Business Administration",
+    "program_4": "Human Services",
+    "program_5": "Business-Business Administration",
+    "campus_website": {
+      "url": "http://www.flcc.edu"
+    },
+    "location": {
+      "latitude": "42.8767853",
+      "longitude": "-77.2724304"
+    }
+  },
+  {
+    "long": "-78.8828583",
+    "lat": "43.1444206",
+    "college_of_institution_type": "Niagara County",
+    "campus": "NIAGARA COUNTY COMMUNITY COLLEGE",
+    "address": "3111 SAUNDERS SETTLEMENT",
+    "city": "SANBORN",
+    "state": "NY",
+    "zip": "14132",
+    "county": "Niagara",
+    "institution_level": "2-year",
+    "institution_type": "Community Colleges",
+    "enrollment_as_of": "Fall 2018",
+    "undergrad_enrollment": "5047",
+    "graduate_enrollment": "0",
+    "program_1": "Liberal Arts & Sciences [Day Format]",
+    "program_2": "Liberal Arts & Sciences: Humanities & Social Science",
+    "program_3": "Business: Business Administration",
+    "program_4": "Nursing",
+    "program_5": "Criminal Justice",
+    "campus_website": {
+      "url": "http://www.niagaracc.suny.edu"
+    },
+    "location": {
+      "latitude": "43.1444206",
+      "longitude": "-78.8828583"
+    }
+  },
+  {
+    "long": "-75.9698486",
+    "lat": "42.0898132",
+    "college_of_institution_type": "Binghamton",
+    "campus": "STATE UNIVERSITY OF NEW YORK AT BINGHAMTON",
+    "address": "4400 VESTAL PKWY E",
+    "address_2": "P.O. Box 6000",
+    "city": "BINGHAMTON",
+    "state": "NY",
+    "zip": "13901",
+    "county": "Broome",
+    "institution_level": "4-year",
+    "institution_type": "Doctoral Degree Granting Institutions",
+    "enrollment_as_of": "Fall 2018",
+    "undergrad_enrollment": "14021",
+    "graduate_enrollment": "3747",
+    "program_1": "Business Administration",
+    "program_2": "Economics",
+    "program_3": "Computer Science",
+    "program_4": "Accounting",
+    "program_5": "Biological Sciences",
+    "campus_website": {
+      "url": "http://www.binghamton.edu"
+    },
+    "location": {
+      "latitude": "42.0898132",
+      "longitude": "-75.9698486"
+    }
+  },
+  {
+    "long": "-78.8731613",
+    "lat": "42.8819122",
+    "college_of_institution_type": "Erie",
+    "campus": "ERIE COMMUNITY COLLEGE-CITY CAMPUS",
+    "address": "121 ELLICOTT ST",
+    "city": "BUFFALO",
+    "state": "NY",
+    "zip": "14203",
+    "county": "Erie",
+    "institution_level": "2-year",
+    "institution_type": "Community Colleges",
+    "enrollment_as_of": "Fall 2018",
+    "undergrad_enrollment": "10529",
+    "graduate_enrollment": "0",
+    "program_1": "Lib Arts & Sci-General Studies",
+    "program_2": "Business: Business Administration",
+    "program_3": "Liberal Arts & Sciences - General Studies",
+    "program_4": "Criminal Justice",
+    "program_5": "Nursing",
+    "campus_website": {
+      "url": "http://www.ecc.edu"
+    },
+    "location": {
+      "latitude": "42.8819122",
+      "longitude": "-78.8731613"
+    }
+  }
+]
