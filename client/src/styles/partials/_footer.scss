@@ -1,0 +1,44 @@
+.footer {
+  padding: 0 16px;
+  height: 80px;
+  &__title {
+    @include mobile-header;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  &__nav {
+    display: flex;
+    justify-content: space-evenly;
+    &--item {
+      @include mobile-labels;
+    }
+  }
+}
+
+@include medium {
+  .footer {
+    padding: 0 24px;
+    height: 100px;
+    &__title {
+      @include desk-tablet-header;
+      margin-top: 32px;
+      margin-bottom: 20px;
+    }
+    &__nav {
+      justify-content: center;
+      &--item {
+        margin-left: 40px;
+        @include desk-tablet-labels;
+      }
+    }
+  }
+}
+
+@include huge {
+  .footer {
+    padding: 0 180px;
+    &__nav {
+      justify-content: flex-end;
+    }
+  }
+}

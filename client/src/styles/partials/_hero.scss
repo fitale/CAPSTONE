@@ -1,0 +1,38 @@
+.hero {
+  position: relative;
+  &__image {
+    height: 60vw;
+    width: 100vw;
+    filter: brightness(85%);
+  }
+  &__text {
+    @include mobile-header;
+    font-family: OpenSansCondensedBold;
+    position: absolute;
+    top: 30px;
+    left: 16px;
+    width: 60vw;
+    color: white;
+  }
+}
+
+@include medium {
+  .hero {
+    &__text {
+      @include desk-tablet-header;
+      font-family: OpenSansCondensedBold;
+      top: 64px;
+      left: 24px;
+      width: 50vw;
+    }
+  }
+}
+
+@include huge {
+  .hero {
+    &__text {
+      top: 180px;
+      left: 180px;
+    }
+  }
+}

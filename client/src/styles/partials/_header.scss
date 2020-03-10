@@ -1,19 +1,26 @@
 .header {
   padding: 0 16px;
-  width: 100%;
-  background-color: lightblue;
+  height: 80px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 80px;
+  border-bottom: 1px solid black;
   &__title {
     @include mobile-header;
   }
   &__nav {
-    display: flex;
-    @include mobile-subheader;
-    &--item-one {
-      margin-right: 15px;
+    &--tablet-desk,
+    &--tablet-desk-one {
+      display: none;
+    }
+    &--mobile {
+      .svg {
+        &:hover {
+          fill: lightblue;
+          cursor: pointer;
+          transition: fill 0.2s ease-in-out;
+        }
+      }
     }
   }
 }
@@ -26,7 +33,17 @@
       @include desk-tablet-header;
     }
     &__nav {
-      @include desk-tablet-subheader;
+      &--tablet-desk,
+      &--tablet-desk-one {
+        display: unset;
+        @include desk-tablet-subheader;
+      }
+      &--tablet-desk-one {
+        margin-right: 10px;
+      }
+      &--mobile {
+        display: none;
+      }
     }
   }
 }
@@ -34,9 +51,5 @@
 @include huge {
   .header {
     padding: 0 180px;
-    height: 120px;
-    &__nav {
-      @include desk-tablet-header-smaller;
-    }
   }
 }

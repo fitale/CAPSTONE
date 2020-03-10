@@ -18,6 +18,20 @@
   src: url("../assets/fonts/OpenSansLight.ttf");
 }
 
+@font-face {
+  font-family: "OpenSansCondensedLight";
+  src: url("../assets/fonts/OpenSansCondensedLight.ttf");
+}
+
+@font-face {
+  font-family: "OpenSansCondensedBold";
+  src: url("../assets/fonts/OpenSansCondensedBold.ttf");
+}
+@font-face {
+  font-family: "OpenSansCondensedLightItalic";
+  src: url("../assets/fonts/OpenSansCondensedLightItalic.ttf");
+}
+
 @mixin mobile-header {
   font-size: 1.5rem;
   line-height: 2rem;

@@ -4,7 +4,7 @@ export default class Footer extends Component {
   render() {
     return (
       <footer className="footer">
-        <h1 className="footer__title">upNEXT</h1>
+        <h1 className="footer__title">uChoose</h1>
         <nav className="footer__nav">
           <h3 className="footer__nav--item">About</h3>
           <h3 className="footer__nav--item">Data</h3>
