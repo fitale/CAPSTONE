@@ -7,6 +7,7 @@
   border-bottom: 1px solid black;
   &__title {
     @include mobile-header;
+    color: #808080;
   }
   &__nav {
     &--tablet-desk,
@@ -15,6 +16,7 @@
     }
     &--mobile {
       .svg {
+        fill: #808080;
         &:hover {
           fill: lightblue;
           cursor: pointer;

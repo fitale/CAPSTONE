@@ -5,12 +5,14 @@
     @include mobile-header;
     margin-top: 20px;
     margin-bottom: 10px;
+    color: #808080;
   }
   &__nav {
     display: flex;
     justify-content: space-evenly;
     &--item {
       @include mobile-labels;
+      color: #808080;
     }
   }
 }
