@@ -263,6 +263,42 @@
   overflow: hidden;
 }
 
+.search {
+  margin: 32px 16px 20px;
+}
+
+.search__title {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-family: OpenSansBold;
+  font-family: OpenSansCondensedBold;
+}
+
+.search__container--card {
+  position: relative;
+}
+
+.search__container--card:hover {
+  cursor: pointer;
+}
+
+.search__container--card .heading {
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+  font-family: OpenSansSemiBold;
+  font-family: OpenSansCondensedBold;
+  position: absolute;
+  top: 60px;
+  left: 20px;
+}
+
+.search__container--card .image {
+  width: 100%;
+  height: 70vw;
+  border: 1px solid black;
+  border-radius: 4px;
+}
+
 *,
 html,
 body {
