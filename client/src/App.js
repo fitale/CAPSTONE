@@ -3,22 +3,16 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "./styles/main.css";
 
 import Header from "./components/Header";
-import Footer from "./components/Footer";
-import Hero from "./components/Hero";
 import LandingPage from "./components/LandingPage";
-import Locations from "./components/Locations";
+import SearchNow from "./components/SearchNow.js";
 
 function App() {
   return (
     <Router className="App">
       <Header />
-      <Hero />
-      <LandingPage />
-      <Locations />
-      <Footer />
       <Switch>
-        <Route path="/" />
-        <Route path="/uChoosenow" />
+        <Route path="/" component={LandingPage} exact />
+        <Route path="/uChoosenow" component={SearchNow} exact />
       </Switch>
     </Router>
   );

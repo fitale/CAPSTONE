@@ -1,10 +1,13 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function Header() {
   return (
     <>
       <header className="header">
-        <h3 className="header__title">uChoose</h3>
+        <Link to="/">
+          <h3 className="header__title">uChoose</h3>
+        </Link>
         <nav className="header__nav">
           <h6 className="header__nav--tablet-desk-one">SIGN UP</h6>
           <h6 className="header__nav--tablet-desk">LOG IN</h6>

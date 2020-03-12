@@ -8,7 +8,7 @@ export default class Locations extends Component {
     return (
       <main className="locations">
         <h3 className="locations__title">Search by Location</h3>
-        <div id="map" className="locations__map"></div>
+        <div className="locations__map"></div>
       </main>
     );
   }
