@@ -1,6 +1,6 @@
 [
   {
-    "long": "-78.8768921",
+    "lng": "-78.8768921",
     "lat": "42.9324188",
     "college_of_institution_type": "Buffalo State",
     "campus": "STATE UNIVERSITY COLLEGE AT BUFFALO",
@@ -28,7 +28,7 @@
     }
   },
   {
-    "long": "-78.7888641",
+    "lng": "-78.7888641",
     "lat": "43.0008278",
     "college_of_institution_type": "Buffalo University ",
     "campus": "STATE UNIVERSITY OF NEW YORK AT BUFFALO",
@@ -56,7 +56,7 @@
     }
   },
   {
-    "long": "-77.9509811",
+    "lng": "-77.9509811",
     "lat": "43.2119102",
     "college_of_institution_type": "Brockport",
     "campus": "STATE UNIVERSITY COLLEGE AT BROCKPORT",
@@ -84,7 +84,7 @@
     }
   },
   {
-    "long": "-77.8248215",
+    "lng": "-77.8248215",
     "lat": "42.7967949",
     "college_of_institution_type": "Geneseo",
     "campus": "STATE UNIVERSITY COLLEGE AT GENESEO",
@@ -112,7 +112,7 @@
     }
   },
   {
-    "long": "-78.1380844",
+    "lng": "-78.1380844",
     "lat": "43.0168915",
     "college_of_institution_type": "Genesee",
     "campus": "GENESEE COMMUNITY COLLEGE",
@@ -140,12 +140,12 @@
     }
   },
   {
-    "long": "-77.6152344",
+    "lng": "-77.6152344",
     "lat": "43.1010475",
     "college_of_institution_type": "Monroe",
     "campus": "MONROE COMMUNITY COLLEGE",
     "address": "1000 E HENRIETTA RD",
-    "city": "ROCHESTER",
+    "city": "ROCHESTER HENRIETTA",
     "state": "NY",
     "zip": "14623",
     "county": "Monroe",
@@ -168,12 +168,12 @@
     }
   },
   {
-    "long": "-79.3207245",
+    "lng": "-79.3207245",
     "lat": "42.4385948",
     "college_of_institution_type": "Fredonia",
     "campus": "STATE UNIVERSITY COLLEGE AT FREDONIA",
     "address": "280 CENTRAL AVE",
-    "city": "FREDONIA",
+    "city": "FREDONIA DUNKIRK",
     "state": "NY",
     "zip": "14063",
     "county": "Chautauqua",
@@ -196,7 +196,7 @@
     }
   },
   {
-    "long": "-77.2724304",
+    "lng": "-77.2724304",
     "lat": "42.8767853",
     "college_of_institution_type": "Finger Lakes",
     "campus": "FINGER LAKES COMMUNITY COLLEGE",
@@ -224,12 +224,12 @@
     }
   },
   {
-    "long": "-78.8828583",
+    "lng": "-78.8828583",
     "lat": "43.1444206",
     "college_of_institution_type": "Niagara County",
     "campus": "NIAGARA COUNTY COMMUNITY COLLEGE",
     "address": "3111 SAUNDERS SETTLEMENT",
-    "city": "SANBORN",
+    "city": "SANBORN NIAGARA",
     "state": "NY",
     "zip": "14132",
     "county": "Niagara",
@@ -252,7 +252,7 @@
     }
   },
   {
-    "long": "-75.9698486",
+    "lng": "-75.9698486",
     "lat": "42.0898132",
     "college_of_institution_type": "Binghamton",
     "campus": "STATE UNIVERSITY OF NEW YORK AT BINGHAMTON",
@@ -281,7 +281,7 @@
     }
   },
   {
-    "long": "-78.8731613",
+    "lng": "-78.8731613",
     "lat": "42.8819122",
     "college_of_institution_type": "Erie",
     "campus": "ERIE COMMUNITY COLLEGE-CITY CAMPUS",
