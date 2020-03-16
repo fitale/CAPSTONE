@@ -5,7 +5,9 @@ export default class Tuition extends Component {
   state = {
     tuition: "select-one",
     priceMin: "select-one",
-    priceMax: "select-one"
+    priceMax: "select-one",
+    isShowing: false,
+    inRangeUni: []
   };
 
   handleChangeTuitionType = event => {
@@ -29,31 +31,32 @@ export default class Tuition extends Component {
   handleSubmit = event => {
     event.preventDefault();
     console.log(`this is the new state: ${JSON.stringify(this.state)}`);
-    axios
-      .get("http://localhost:5000/api/udata")
-      .then(res => {
-        console.log(res.data);
-        res.data.filter(uni => {
-          console.log(`this is in-state tuition: ${uni.tuition_in_state}`);
-          console.log(`this is out-of-state tuition: ${uni.tuition_out_state}`);
-          if (
-            uni.tuition_in_state >= this.state.priceMin &&
-            uni.tuition_in_state <= this.state.priceMax
-          ) {
-            console.log(`${uni.campus} in-state tuition is in range`);
-          } else {
-            console.log(`${uni.campus} in-state tuition is out of range`);
-          }
+    this.props.uData.filter(uni => {
+      if (
+        uni.tuition_in_state >= this.state.priceMin &&
+        uni.tuition_in_state <= this.state.priceMax
+      ) {
+        this.state.inRangeUni.push(uni);
+        this.setState({
+          isShowing: true
         });
-      })
-      .catch(err => {
-        console.log(err);
-      });
+      } else {
+        console.log(`${uni.campus} in-state tuition is out of range`);
+      }
+    });
   };
 
   render() {
+    const uCampus = this.state.inRangeUni.map((uni, i) => {
+      return <h3 key={i}>{uni.campus}</h3>;
+    });
+
     {
-      if (this.state.tuition === 0 || this.state.price === 0) {
+      if (
+        this.state.tuition === 0 ||
+        this.state.priceMin === 0 ||
+        this.state.priceMax === 0
+      ) {
         return <h1>LOADING</h1>;
       } else {
         return (
@@ -83,7 +86,7 @@ export default class Tuition extends Component {
               </select>
               <input type="submit" value="Submit" />
             </form>
-            <h3>Name of Univeristy</h3>
+            {this.state.isShowing && <div>{uCampus}</div>}
           </main>
         );
       }
