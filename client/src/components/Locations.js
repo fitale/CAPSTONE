@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import axios from "axios";
 import GoogleMapReact from "google-map-react";
 
-// import menuIcon from "../assets/icons/menu-icon.svg";
+import location from "../assets/icons/location.svg";
 import loadingImg from "../assets/icons/loading.svg";
 const API_KEY = "AIzaSyA_JOFNWwvsXhy3dsmSRX7nqi9KQy5Db7U";
 
@@ -17,6 +17,12 @@ export default class Locations extends Component {
     marker: [],
     zoom: 6
   };
+
+  componentDidUpdate(prevProps, prevState) {
+    console.log("reached componentDidUpdate");
+    console.log(`this is prevProps: ${JSON.stringify(prevProps)}`);
+    console.log(`this is prevState: ${JSON.stringify(prevState)}`);
+  }
 
   searchByLocation = event => {
     event.preventDefault();
@@ -37,16 +43,22 @@ export default class Locations extends Component {
           <AnyReactComponent
             lat={oneUni.lat}
             lng={oneUni.lng}
-            text="HERE I AM"
+            text="here i am"
+            className="locations__map-holder--icon"
           />
         );
       });
-      this.setState({
-        city: location,
-        center: newCenter,
-        marker: myMarker,
-        zoom: 11
-      });
+      this.setState(
+        {
+          city: location,
+          center: newCenter,
+          marker: myMarker,
+          zoom: 11
+        },
+        () => {
+          console.log(this.state);
+        }
+      );
     });
   };
 
@@ -71,7 +83,10 @@ export default class Locations extends Component {
               Find schools now
             </button>
           </form>
-          <div style={{ height: "100vh", width: "100%" }}>
+          <div
+            className="locations__map-holder"
+            style={{ height: "100vh", width: "100%" }}
+          >
             <GoogleMapReact
               bootstrapURLKeys={{ key: API_KEY }}
               defaultCenter={this.state.center}

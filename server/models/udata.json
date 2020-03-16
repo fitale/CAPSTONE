@@ -22,10 +22,26 @@
     "campus_website": {
       "url": "http://www.buffalostate.edu/"
     },
-    "location": {
-      "latitude": "42.9324188",
-      "longitude": "-78.8768921"
-    }
+    "tuition_in_state": "25846",
+    "tuition_out_state": "35626",
+    "total_enrollment": "9118",
+    "full_time_undergrad_enrollment": "7278",
+    "full_time_undergrad_male": "3069",
+    "full_time_undergrad_female": "4209",
+    "applicants_total": "15781",
+    "applicants_male": "6743",
+    "applicants_female": "9038",
+    "admission_total": "9550",
+    "admission_male": "3787",
+    "admission_female": "5763",
+    "SAT_reading_writing_25": "400",
+    "SAT_reading_writing_75": "510",
+    "SAT_math_25": "460",
+    "SAT_math_75": "530",
+    "ACT_25": "",
+    "ACT_75": "",
+    "application_fee": "50",
+    "student_to_faculty": "15"
   },
   {
     "lng": "-78.7888641",
@@ -50,10 +66,26 @@
     "campus_website": {
       "url": "http://www.buffalo.edu/"
     },
-    "location": {
-      "latitude": "43.0008278",
-      "longitude": "-78.7888641"
-    }
+    "tuition_in_state": "27758",
+    "tuition_out_state": "45428",
+    "total_enrollment": "26475",
+    "full_time_undergrad_enrollment": "19941",
+    "full_time_undergrad_male": "11407",
+    "full_time_undergrad_female": "8534",
+    "applicants_total": "31196",
+    "applicants_male": "15599",
+    "applicants_female": "15597",
+    "admission_total": "17423",
+    "admission_male": "8948",
+    "admission_female": "8475",
+    "SAT_reading_writing_25": "570",
+    "SAT_reading_writing_75": "650",
+    "SAT_math_25": "590",
+    "SAT_math_75": "680",
+    "ACT_25": "24",
+    "ACT_75": "29",
+    "application_fee": "50",
+    "student_to_faculty": "13"
   },
   {
     "lng": "-77.9509811",
@@ -78,10 +110,26 @@
     "campus_website": {
       "url": "http://www.brockport.edu/"
     },
-    "location": {
-      "latitude": "43.2119102",
-      "longitude": "-77.9509811"
-    }
+    "tuition_in_state": "24608",
+    "tuition_out_state": "34388",
+    "total_enrollment": "8287",
+    "full_time_undergrad_enrollment": "6343",
+    "full_time_undergrad_male": "2776",
+    "full_time_undergrad_female": "3567",
+    "applicants_total": "10536",
+    "applicants_male": "4391",
+    "applicants_female": "6145",
+    "admission_total": "5617",
+    "admission_male": "2220",
+    "admission_female": "3397",
+    "SAT_reading_writing_25": "510",
+    "SAT_reading_writing_75": "590",
+    "SAT_math_25": "510",
+    "SAT_math_75": "590",
+    "ACT_25": "20",
+    "ACT_75": "25",
+    "application_fee": "50",
+    "student_to_faculty": "18"
   },
   {
     "lng": "-77.8248215",
@@ -106,10 +154,26 @@
     "campus_website": {
       "url": "http://www.geneseo.edu"
     },
-    "location": {
-      "latitude": "42.7967949",
-      "longitude": "-77.8248215"
-    }
+    "tuition_in_state": "25761",
+    "tuition_out_state": "35541",
+    "total_enrollment": "5612",
+    "full_time_undergrad_enrollment": "5375",
+    "full_time_undergrad_male": "2066",
+    "full_time_undergrad_female": "3309",
+    "applicants_total": "10548",
+    "applicants_male": "3808",
+    "applicants_female": "6740",
+    "admission_total": "6836",
+    "admission_male": "2427",
+    "admission_female": "4409",
+    "SAT_reading_writing_25": "560",
+    "SAT_reading_writing_75": "650",
+    "SAT_math_25": "590",
+    "SAT_math_75": "680",
+    "ACT_25": "24",
+    "ACT_75": "28",
+    "application_fee": "50",
+    "student_to_faculty": "18"
   },
   {
     "lng": "-78.1380844",
@@ -134,10 +198,26 @@
     "campus_website": {
       "url": "http://www.genesee.edu"
     },
-    "location": {
-      "latitude": "43.0168915",
-      "longitude": "-78.1380844"
-    }
+    "tuition_in_state": "16410",
+    "tuition_out_state": "17010",
+    "total_enrollment": "5530",
+    "full_time_undergrad_enrollment": "2047",
+    "full_time_undergrad_male": "744",
+    "full_time_undergrad_female": "1303",
+    "applicants_total": "",
+    "applicants_male": "",
+    "applicants_female": "",
+    "admission_total": "",
+    "admission_male": "",
+    "admission_female": "",
+    "SAT_reading_writing_25": "",
+    "SAT_reading_writing_75": "",
+    "SAT_math_25": "",
+    "SAT_math_75": "",
+    "ACT_25": "",
+    "ACT_75": "",
+    "application_fee": "0",
+    "student_to_faculty": "15"
   },
   {
     "lng": "-77.6152344",
@@ -162,10 +242,26 @@
     "campus_website": {
       "url": "http://www.monroecc.edu"
     },
-    "location": {
-      "latitude": "43.1010475",
-      "longitude": "-77.6152344"
-    }
+    "tuition_in_state": "18016",
+    "tuition_out_state": "22396",
+    "total_enrollment": "12273",
+    "full_time_undergrad_enrollment": "7483",
+    "full_time_undergrad_male": "3523",
+    "full_time_undergrad_female": "3960",
+    "applicants_total": "",
+    "applicants_male": "",
+    "applicants_female": "",
+    "admission_total": "",
+    "admission_male": "",
+    "admission_female": "",
+    "SAT_reading_writing_25": "",
+    "SAT_reading_writing_75": "",
+    "SAT_math_25": "",
+    "SAT_math_75": "",
+    "ACT_25": "",
+    "ACT_75": "",
+    "application_fee": "0",
+    "student_to_faculty": "21"
   },
   {
     "lng": "-79.3207245",
@@ -190,10 +286,26 @@
     "campus_website": {
       "url": "http://www.fredonia.edu"
     },
-    "location": {
-      "latitude": "42.4385948",
-      "longitude": "-79.3207245"
-    }
+    "tuition_in_state": "23902",
+    "tuition_out_state": "33682",
+    "total_enrollment": "4655",
+    "full_time_undergrad_enrollment": "4314",
+    "full_time_undergrad_male": "1832",
+    "full_time_undergrad_female": "2482",
+    "applicants_total": "6183",
+    "applicants_male": "2411",
+    "applicants_female": "3772",
+    "admission_total": "4711",
+    "admission_male": "1930",
+    "admission_female": "2781",
+    "SAT_reading_writing_25": "490",
+    "SAT_reading_writing_75": "590",
+    "SAT_math_25": "480",
+    "SAT_math_75": "580",
+    "ACT_25": "21",
+    "ACT_75": "27",
+    "application_fee": "50",
+    "student_to_faculty": "14"
   },
   {
     "lng": "-77.2724304",
@@ -218,10 +330,26 @@
     "campus_website": {
       "url": "http://www.flcc.edu"
     },
-    "location": {
-      "latitude": "42.8767853",
-      "longitude": "-77.2724304"
-    }
+    "tuition_in_state": "18002",
+    "tuition_out_state": "22396",
+    "total_enrollment": "5944",
+    "full_time_undergrad_enrollment": "2377",
+    "full_time_undergrad_male": "1127",
+    "full_time_undergrad_female": "1250",
+    "applicants_total": "",
+    "applicants_male": "",
+    "applicants_female": "",
+    "admission_total": "",
+    "admission_male": "",
+    "admission_female": "",
+    "SAT_reading_writing_25": "",
+    "SAT_reading_writing_75": "",
+    "SAT_math_25": "",
+    "SAT_math_75": "",
+    "ACT_25": "",
+    "ACT_75": "",
+    "application_fee": "20",
+    "student_to_faculty": "19"
   },
   {
     "lng": "-78.8828583",
@@ -246,10 +374,26 @@
     "campus_website": {
       "url": "http://www.niagaracc.suny.edu"
     },
-    "location": {
-      "latitude": "43.1444206",
-      "longitude": "-78.8828583"
-    }
+    "tuition_in_state": "",
+    "tuition_out_state": "",
+    "total_enrollment": "5047",
+    "full_time_undergrad_enrollment": "2962",
+    "full_time_undergrad_male": "1355",
+    "full_time_undergrad_female": "1607",
+    "applicants_total": "",
+    "applicants_male": "",
+    "applicants_female": "",
+    "admission_total": "",
+    "admission_male": "",
+    "admission_female": "",
+    "SAT_reading_writing_25": "",
+    "SAT_reading_writing_75": "",
+    "SAT_math_25": "",
+    "SAT_math_75": "",
+    "ACT_25": "",
+    "ACT_75": "",
+    "application_fee": "0",
+    "student_to_faculty": "17"
   },
   {
     "lng": "-75.9698486",
@@ -275,10 +419,26 @@
     "campus_website": {
       "url": "http://www.binghamton.edu"
     },
-    "location": {
-      "latitude": "42.0898132",
-      "longitude": "-75.9698486"
-    }
+    "tuition_in_state": "26911",
+    "tuition_out_state": "43706",
+    "total_enrollment": "17768",
+    "full_time_enrollment": "13630",
+    "full_time_undergrad_male": "6829",
+    "full_time_undergrad_female": "6801",
+    "applicants_total": "38755",
+    "applicants_male": "17981",
+    "applicants_female": "20774",
+    "admission_total": "15429",
+    "admission_male": "7197",
+    "admission_female": "8232",
+    "SAT_reading_writing_25": "650",
+    "SAT_reading_writing_75": "710",
+    "SAT_math_25": "660",
+    "SAT_math_75": "730",
+    "ACT_25": "28",
+    "ACT_75": "32",
+    "application_fee": "50",
+    "student_to_faculty": "19"
   },
   {
     "lng": "-78.8731613",
@@ -303,9 +463,25 @@
     "campus_website": {
       "url": "http://www.ecc.edu"
     },
-    "location": {
-      "latitude": "42.8819122",
-      "longitude": "-78.8731613"
-    }
+    "tuition_in_state": "21186",
+    "tuition_out_state": "25752",
+    "total_enrollment": "10529",
+    "full_time_undergrad_enrollment": "6706",
+    "full_time_undergrad_male": "3449",
+    "full_time_undergrad_female": "3257",
+    "applicants_total": "",
+    "applicants_male": "",
+    "applicants_female": "",
+    "admission_total": "",
+    "admission_male": "",
+    "admission_female": "",
+    "SAT_reading_writing_25": "",
+    "SAT_reading_writing_75": "",
+    "SAT_math_25": "",
+    "SAT_math_75": "",
+    "ACT_25": "",
+    "ACT_75": "",
+    "application_fee": "25",
+    "student_to_faculty": "18"
   }
 ]

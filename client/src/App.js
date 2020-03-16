@@ -7,6 +7,7 @@ import Header from "./components/Header";
 import LandingPage from "./components/LandingPage.js";
 import SearchNow from "./components/SearchNow.js";
 import Locations from "./components/Locations.js";
+import Tuition from "./components/Tuition";
 
 export default class App extends Component {
   state = {
@@ -27,7 +28,8 @@ export default class App extends Component {
             <Route path="/" component={LandingPage} exact />
             <Route path="/uChoosenow" component={SearchNow} exact />
             <Route path="/searchbylocation" component={Locations} />
-            <Route path="/searchbytuition" />
+
+            <Route path="/searchbytuition" component={Tuition} />
             <Route path="/searchbytest-scores" />
           </Switch>
         </Router>

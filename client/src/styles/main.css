@@ -299,6 +299,12 @@
   border-radius: 4px;
 }
 
+.locations__title {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-family: OpenSansBold;
+}
+
 *,
 html,
 body {

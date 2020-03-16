@@ -1,0 +1,10 @@
+.locations {
+  &__title {
+    @include mobile-header;
+  }
+  //   &__map-holder {
+  //     &--icon {
+  //       background-image: url("../assets/icons/location.svg");
+  //     }
+  //   }
+}
