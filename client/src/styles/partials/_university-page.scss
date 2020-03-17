@@ -1,0 +1,21 @@
+.u-container {
+  &__title {
+    @include mobile-header;
+  }
+  &__button {
+    height: 100px;
+    width: 100px;
+    &--text {
+      @include mobile-labels;
+    }
+  }
+  &__subheader {
+    @include mobile-subheader;
+  }
+  &__hero-holder {
+    &--img {
+      height: 60vw;
+      width: 100%;
+    }
+  }
+}

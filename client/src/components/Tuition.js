@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 export default class Tuition extends Component {
   state = {
     tuition: "select-one",
@@ -71,7 +72,11 @@ export default class Tuition extends Component {
   render() {
     // map through Uni in price range to display in browser
     const uCampus = this.state.inRangeUni.map((uni, i) => {
-      return <h3 key={i}>{uni.campus}</h3>;
+      return (
+        <Link to="/:id">
+          <h3 key={i}>{uni.campus}</h3>
+        </Link>
+      );
     });
 
     // let user know search is out of range and suggests trying again

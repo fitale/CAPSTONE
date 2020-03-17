@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import axios from "axios";
+
 import "./styles/main.css";
 import loadingImg from "./assets/icons/loading.svg";
 
@@ -8,7 +10,7 @@ import LandingPage from "./components/LandingPage.js";
 import SearchNow from "./components/SearchNow.js";
 import Locations from "./components/Locations.js";
 import Tuition from "./components/Tuition";
-import axios from "axios";
+import UniversityPage from "./components/UniversityPage";
 
 export default class App extends Component {
   state = {
@@ -16,12 +18,17 @@ export default class App extends Component {
   };
 
   componentDidMount() {
-    axios.get("http://localhost:5000/api/udata").then(res => {
-      console.log(res.data);
-      this.setState({
-        udata: res.data
+    axios
+      .get("http://localhost:5000/api/udata")
+      .then(res => {
+        console.log(res.data);
+        this.setState({
+          udata: res.data
+        });
+      })
+      .catch(err => {
+        console.log(err);
       });
-    });
   }
 
   render() {
@@ -46,6 +53,7 @@ export default class App extends Component {
               exact
             />
             <Route path="/searchbytest-scores" />
+            <Route path="/:id" component={UniversityPage} />
           </Switch>
         </Router>
       );

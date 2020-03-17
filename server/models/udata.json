@@ -1,5 +1,6 @@
 [
   {
+    "id": "0",
     "lng": "-78.8768921",
     "lat": "42.9324188",
     "college_of_institution_type": "Buffalo State",
@@ -44,6 +45,7 @@
     "student_to_faculty": "15"
   },
   {
+    "id": "1",
     "lng": "-78.7888641",
     "lat": "43.0008278",
     "college_of_institution_type": "Buffalo University ",
@@ -88,6 +90,7 @@
     "student_to_faculty": "13"
   },
   {
+    "id": "2",
     "lng": "-77.9509811",
     "lat": "43.2119102",
     "college_of_institution_type": "Brockport",
@@ -132,6 +135,7 @@
     "student_to_faculty": "18"
   },
   {
+    "id": "3",
     "lng": "-77.8248215",
     "lat": "42.7967949",
     "college_of_institution_type": "Geneseo",
@@ -176,6 +180,7 @@
     "student_to_faculty": "18"
   },
   {
+    "id": "4",
     "lng": "-78.1380844",
     "lat": "43.0168915",
     "college_of_institution_type": "Genesee",
@@ -220,6 +225,7 @@
     "student_to_faculty": "15"
   },
   {
+    "id": "5",
     "lng": "-77.6152344",
     "lat": "43.1010475",
     "college_of_institution_type": "Monroe",
@@ -264,6 +270,7 @@
     "student_to_faculty": "21"
   },
   {
+    "id": "6",
     "lng": "-79.3207245",
     "lat": "42.4385948",
     "college_of_institution_type": "Fredonia",
@@ -308,6 +315,7 @@
     "student_to_faculty": "14"
   },
   {
+    "id": "7",
     "lng": "-77.2724304",
     "lat": "42.8767853",
     "college_of_institution_type": "Finger Lakes",
@@ -352,6 +360,7 @@
     "student_to_faculty": "19"
   },
   {
+    "id": "8",
     "lng": "-78.8828583",
     "lat": "43.1444206",
     "college_of_institution_type": "Niagara County",
@@ -396,6 +405,7 @@
     "student_to_faculty": "17"
   },
   {
+    "id": "9",
     "lng": "-75.9698486",
     "lat": "42.0898132",
     "college_of_institution_type": "Binghamton",
@@ -441,6 +451,7 @@
     "student_to_faculty": "19"
   },
   {
+    "id": "10",
     "lng": "-78.8731613",
     "lat": "42.8819122",
     "college_of_institution_type": "Erie",

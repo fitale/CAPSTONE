@@ -305,6 +305,34 @@
   font-family: OpenSansBold;
 }
 
+.u-container__title {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-family: OpenSansBold;
+}
+
+.u-container__button {
+  height: 100px;
+  width: 100px;
+}
+
+.u-container__button--text {
+  font-size: 0.75rem;
+  line-height: 1.25rem;
+  font-family: OpenSansSemiBold;
+}
+
+.u-container__subheader {
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+  font-family: OpenSansSemiBold;
+}
+
+.u-container__hero-holder--img {
+  height: 60vw;
+  width: 100%;
+}
+
 *,
 html,
 body {
