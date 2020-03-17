@@ -1,54 +1,98 @@
 import React, { Component } from "react";
-import axios from "axios";
-
 export default class Tuition extends Component {
   state = {
     tuition: "select-one",
     priceMin: "select-one",
     priceMax: "select-one",
-    isShowing: false,
-    inRangeUni: []
+    isShowingUni: false,
+    isNotShowingUni: false,
+    inRangeUni: [],
+    outRangeUni: []
   };
 
+  // sets state: tuition-in-state or tuition-out-of-state
   handleChangeTuitionType = event => {
     this.setState({
       tuition: event.target.value
     });
   };
 
+  // sets state: tuition min
   handleChangeTuitionPriceMin = event => {
     this.setState({
       priceMin: event.target.value
     });
   };
 
+  // sets state: tuition max
   handleChangeTuitionPriceMax = event => {
     this.setState({
       priceMax: event.target.value
     });
   };
 
+  // submits form to search for university based on tuition price range
   handleSubmit = event => {
     event.preventDefault();
-    console.log(`this is the new state: ${JSON.stringify(this.state)}`);
     this.props.uData.filter(uni => {
       if (
+        this.state.tuition === "tuition_in_state" &&
         uni.tuition_in_state >= this.state.priceMin &&
         uni.tuition_in_state <= this.state.priceMax
       ) {
         this.state.inRangeUni.push(uni);
         this.setState({
-          isShowing: true
+          isShowingUni: true
+        });
+      }
+      if (
+        this.state.tuition === "tuition_out_state" &&
+        uni.tuition_out_state >= this.state.priceMin &&
+        uni.tuition_out_state <= this.state.priceMax
+      ) {
+        this.state.inRangeUni.push(uni);
+        this.setState({
+          isShowingUni: true
         });
       } else {
-        console.log(`${uni.campus} in-state tuition is out of range`);
+        this.state.outRangeUni.push(uni);
+        this.setState({
+          isNotShowingUni: true
+        });
       }
     });
   };
 
+  // refresh page to begin another search
+  pageRefresh = event => {
+    window.location.reload();
+  };
+
   render() {
+    // map through Uni in price range to display in browser
     const uCampus = this.state.inRangeUni.map((uni, i) => {
       return <h3 key={i}>{uni.campus}</h3>;
+    });
+
+    // let user know search is out of range and suggests trying again
+    const noCampus = this.state.outRangeUni.map((uni, i) => {
+      if (
+        this.state.inRangeUni.length === 0 &&
+        this.state.outRangeUni.length > 0
+      ) {
+        return (
+          <div>
+            <h3>
+              Unfortunately, there are no Universities that match your preferred
+              tuition per academic year
+            </h3>
+
+            <button onClick={this.pageRefresh}>
+              <h3>Search again</h3>
+            </button>
+          </div>
+        );
+      }
     });
 
     {
@@ -86,7 +130,16 @@ export default class Tuition extends Component {
               </select>
               <input type="submit" value="Submit" />
             </form>
-            {this.state.isShowing && <div>{uCampus}</div>}
+            {this.state.isShowingUni && (
+              <div>
+                <h1>Universities that match you</h1>
+                {uCampus}
+                <button onClick={this.pageRefresh}>
+                  <h3>Search again</h3>
+                </button>
+              </div>
+            )}
+            {this.state.isNotShowingUni && <div>{noCampus}</div>}
           </main>
         );
       }
