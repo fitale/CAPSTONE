@@ -20,9 +20,7 @@
     "program_3": "Biology",
     "program_4": "Criminal Justice",
     "program_5": "Multidisciplinary Studies",
-    "campus_website": {
-      "url": "http://www.buffalostate.edu/"
-    },
+    "campus_website": "http://www.buffalostate.edu/",
     "tuition_in_state": "25846",
     "tuition_out_state": "35626",
     "total_enrollment": "9118",
@@ -65,9 +63,7 @@
     "program_3": "Computer Science",
     "program_4": "Biological Sciences",
     "program_5": "Mechanical Engineering",
-    "campus_website": {
-      "url": "http://www.buffalo.edu/"
-    },
+    "campus_website": "http://www.buffalo.edu/",
     "tuition_in_state": "27758",
     "tuition_out_state": "45428",
     "total_enrollment": "26475",
@@ -110,9 +106,7 @@
     "program_3": "Psychology",
     "program_4": "Health Science",
     "program_5": "Criminal Justice",
-    "campus_website": {
-      "url": "http://www.brockport.edu/"
-    },
+    "campus_website": "http://www.brockport.edu/",
     "tuition_in_state": "24608",
     "tuition_out_state": "34388",
     "total_enrollment": "8287",
@@ -155,9 +149,7 @@
     "program_3": "Business Administration",
     "program_4": "Accounting",
     "program_5": "Communication",
-    "campus_website": {
-      "url": "http://www.geneseo.edu"
-    },
+    "campus_website": "http://www.geneseo.edu",
     "tuition_in_state": "25761",
     "tuition_out_state": "35541",
     "total_enrollment": "5612",
@@ -200,9 +192,7 @@
     "program_3": "Nursing",
     "program_4": "Health Studies",
     "program_5": "Criminal Justice",
-    "campus_website": {
-      "url": "http://www.genesee.edu"
-    },
+    "campus_website": "http://www.genesee.edu",
     "tuition_in_state": "16410",
     "tuition_out_state": "17010",
     "total_enrollment": "5530",
@@ -245,9 +235,7 @@
     "program_3": "Health Studies",
     "program_4": "Human Services",
     "program_5": "Criminal Justice",
-    "campus_website": {
-      "url": "http://www.monroecc.edu"
-    },
+    "campus_website": "http://www.monroecc.edu",
     "tuition_in_state": "18016",
     "tuition_out_state": "22396",
     "total_enrollment": "12273",
@@ -290,9 +278,7 @@
     "program_3": "Criminal Justice",
     "program_4": "Biology",
     "program_5": "Business Administration",
-    "campus_website": {
-      "url": "http://www.fredonia.edu"
-    },
+    "campus_website": "http://www.fredonia.edu",
     "tuition_in_state": "23902",
     "tuition_out_state": "33682",
     "total_enrollment": "4655",
@@ -335,9 +321,7 @@
     "program_3": "Business: Business Administration",
     "program_4": "Human Services",
     "program_5": "Business-Business Administration",
-    "campus_website": {
-      "url": "http://www.flcc.edu"
-    },
+    "campus_website": "http://www.flcc.edu",
     "tuition_in_state": "18002",
     "tuition_out_state": "22396",
     "total_enrollment": "5944",
@@ -380,9 +364,7 @@
     "program_3": "Business: Business Administration",
     "program_4": "Nursing",
     "program_5": "Criminal Justice",
-    "campus_website": {
-      "url": "http://www.niagaracc.suny.edu"
-    },
+    "campus_website": "http://www.niagaracc.suny.edu",
     "tuition_in_state": "",
     "tuition_out_state": "",
     "total_enrollment": "5047",
@@ -426,9 +408,7 @@
     "program_3": "Computer Science",
     "program_4": "Accounting",
     "program_5": "Biological Sciences",
-    "campus_website": {
-      "url": "http://www.binghamton.edu"
-    },
+    "campus_website": "http://www.binghamton.edu",
     "tuition_in_state": "26911",
     "tuition_out_state": "43706",
     "total_enrollment": "17768",
@@ -471,9 +451,7 @@
     "program_3": "Liberal Arts & Sciences - General Studies",
     "program_4": "Criminal Justice",
     "program_5": "Nursing",
-    "campus_website": {
-      "url": "http://www.ecc.edu"
-    },
+    "campus_website": "http://www.ecc.edu",
     "tuition_in_state": "21186",
     "tuition_out_state": "25752",
     "total_enrollment": "10529",

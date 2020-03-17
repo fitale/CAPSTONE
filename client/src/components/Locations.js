@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import axios from "axios";
 import GoogleMapReact from "google-map-react";
 
-import location from "../assets/icons/location.svg";
+// import location from "../assets/icons/location.svg";
 import loadingImg from "../assets/icons/loading.svg";
 const API_KEY = "AIzaSyA_JOFNWwvsXhy3dsmSRX7nqi9KQy5Db7U";
 

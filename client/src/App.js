@@ -53,7 +53,13 @@ export default class App extends Component {
               exact
             />
             <Route path="/searchbytest-scores" />
-            <Route path="/:id" component={UniversityPage} />
+            <Route
+              path="/:id"
+              render={props => (
+                <UniversityPage {...props} uData={this.state.udata} />
+              )}
+              exact
+            />
           </Switch>
         </Router>
       );
