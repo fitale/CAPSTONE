@@ -12,42 +12,43 @@ export default class TestScores extends Component {
     oneID: ""
   };
 
-  // inheriting props from App.js
-  componentDidMount() {
-    console.log(`OG state: ${JSON.stringify(this.state)}`);
-  }
-
   // update state to be test user want to search by
   handleChange = event => {
     console.log(event.target.value);
-    this.setState(
-      {
-        testType: event.target.value
-      },
-      () => {
-        console.log(`new state: ${JSON.stringify(this.state)}`);
-      }
-    );
+    this.setState({
+      testType: event.target.value
+    });
   };
 
   // submits form to search for Uni based on test scores
   handleEvent = event => {
     event.preventDefault();
-    console.log(`input value: ${event.target.input.value}`);
+    // console.log(`input value: ${event.target.input.value}`);
     const studentScore = event.target.input.value;
     this.props.uData.filter(uni => {
       if (
         this.state.testType === "SAT" &&
         (uni.SAT_reading_writing_25 === studentScore ||
-          uni.SAT_reading_writing_75 === studentScore)
+          uni.SAT_reading_writing_75 === studentScore ||
+          uni.SAT_math_25 === studentScore ||
+          uni.SAT_math_75 === studentScore)
       ) {
-        console.log(`test scores match`);
+        // console.log(`test scores match`);
+        this.state.matchUni.push(uni);
+        this.setState({
+          isShowingUni: true
+        });
+      }
+      if (
+        this.state.testType === "ACT" &&
+        (uni.ACT_25 === studentScore || uni.ACT_75 === studentScore)
+      ) {
         this.state.matchUni.push(uni);
         this.setState({
           isShowingUni: true
         });
       } else {
-        console.log(`no test scores match`);
+        // console.log(`no test scores match`);
         this.state.noMatchUni.push(uni);
         this.setState({
           isNotShowingUni: true
@@ -75,14 +76,7 @@ export default class TestScores extends Component {
     const uCampus = this.state.matchUni.map(uni => {
       console.log(uni.id);
       return (
-        <Link
-          to={`/${uni.id}`}
-          // to={`/:id`}
-          key={uni.id}
-          onClick={this.idProps}
-          // oneUni={this.state.oneID}
-          // params={{ id: `${uni.id}` }}
-        >
+        <Link to={`/${uni.id}`} key={uni.id} onClick={this.idProps}>
           <li value={uni.id}>{uni.campus}</li>
         </Link>
       );
@@ -125,7 +119,15 @@ export default class TestScores extends Component {
           />
           <button>Find schools now</button>
         </form>
-        {this.state.isShowingUni && <div>{uCampus}</div>}
+        {this.state.isShowingUni && (
+          <div>
+            <h1>Universities that match you</h1>
+            {uCampus}
+            <button onClick={this.pageRefresh}>
+              <h3>Search again</h3>
+            </button>
+          </div>
+        )}
         {this.state.isNotShowingUni && <div>{noCampus()}</div>}
       </main>
     );
