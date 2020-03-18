@@ -72,8 +72,8 @@ export default class Tuition extends Component {
 
   // grabbing ID to link to individual university page
   idProps = event => {
-    console.log("link clicked");
-    console.log(event.target.value);
+    // console.log("link clicked");
+    // console.log(event.target.value);
     this.setState({
       oneID: event.target.value
     });
@@ -82,7 +82,7 @@ export default class Tuition extends Component {
   render() {
     // map through Uni in price range to display in browser
     const uCampus = this.state.inRangeUni.map(uni => {
-      console.log(uni.id);
+      // console.log(uni.id);
       return (
         <Link
           to={`/${uni.id}`}
@@ -117,26 +117,6 @@ export default class Tuition extends Component {
         );
       }
     };
-
-    // const noCampus = this.state.outRangeUni.map((uni, i) => {
-    //   if (
-    //     this.state.inRangeUni.length === 0 &&
-    //     this.state.outRangeUni.length > 0
-    //   ) {
-    //     return (
-    //       <div>
-    //         <h3>
-    //           Unfortunately, there are no Universities that match your preferred
-    //           tuition per academic year
-    //         </h3>
-
-    //         <button onClick={this.pageRefresh}>
-    //           <h3>Search again</h3>
-    //         </button>
-    //       </div>
-    //     );
-    //   }
-    // });
 
     {
       // if (

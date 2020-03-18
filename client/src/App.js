@@ -5,13 +5,13 @@ import axios from "axios";
 import "./styles/main.css";
 import loadingImg from "./assets/icons/loading.svg";
 
-import Header from "./components/Header";
+import Header from "./components/Header.js";
 import LandingPage from "./components/LandingPage.js";
 import SearchNow from "./components/SearchNow.js";
 import Locations from "./components/Locations.js";
-import Tuition from "./components/Tuition";
-import UniversityPage from "./components/UniversityPage";
-
+import Tuition from "./components/Tuition.js";
+import UniversityPage from "./components/UniversityPage.js";
+import TestScores from "./components/TestScores.js";
 export default class App extends Component {
   state = {
     udata: []
@@ -52,7 +52,12 @@ export default class App extends Component {
               render={props => <Tuition {...props} uData={this.state.udata} />}
               exact
             />
-            <Route path="/searchbytest-scores" />
+            <Route
+              path="/searchbytest-scores"
+              render={props => (
+                <TestScores {...props} uData={this.state.udata} />
+              )}
+            />
             <Route
               path="/:id"
               render={props => (
