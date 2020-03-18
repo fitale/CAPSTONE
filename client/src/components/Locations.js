@@ -18,16 +18,17 @@ export default class Locations extends Component {
     zoom: 6
   };
 
-  componentDidUpdate(prevProps, prevState) {
-    console.log("reached componentDidUpdate");
-    console.log(`this is prevProps: ${JSON.stringify(prevProps)}`);
-    console.log(`this is prevState: ${JSON.stringify(prevState)}`);
-  }
+  // componentDidUpdate(prevProps, prevState) {
+  //   console.log("reached componentDidUpdate");
+  //   console.log(`this is prevProps: ${JSON.stringify(prevProps)}`);
+  //   console.log(`this is prevState: ${JSON.stringify(prevState)}`);
+  // }
 
   searchByLocation = event => {
     event.preventDefault();
-    console.log(event.target.input.value);
+    // console.log(event.target.input.value);
     let location = event.target.input.value;
+    // OG way
     axios.get("http://localhost:5000/api/udata").then(res => {
       const buffUnis = res.data.filter(uni =>
         uni.city.toLowerCase().includes(location.toLowerCase())

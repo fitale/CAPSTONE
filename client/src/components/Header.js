@@ -1,9 +1,22 @@
-import React from "react";
+import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
-export default function Header() {
-  return (
-    <>
+import MenuSlider from "./MenuSlider.js";
+
+export default class Header extends Component {
+  state = {
+    isShowing: false
+  };
+
+  openMenuSlider = event => {
+    console.log("clicked!");
+    this.setState({
+      isShowing: true
+    });
+  };
+
+  render() {
+    return (
       <header className="header">
         <Link to="/">
           <h3 className="header__title">uChoose</h3>
@@ -12,16 +25,22 @@ export default function Header() {
           <h6 className="header__nav--tablet-desk-one">SIGN UP</h6>
           <h6 className="header__nav--tablet-desk">LOG IN</h6>
           <div className="header__nav--mobile">
-            <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24">
+            <svg
+              onClick={this.openMenuSlider}
+              xmlns="http://www.w3.org/2000/svg"
+              height="24"
+              width="24"
+            >
               <path d="M0 0h24v24H0z" fill="none" />
               <path
                 d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"
                 className="svg"
               />
             </svg>
+            {this.state.isShowing && <MenuSlider />}
           </div>
         </nav>
       </header>
-    </>
-  );
+    );
+  }
 }

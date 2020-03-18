@@ -17,6 +17,7 @@
     &--mobile {
       .svg {
         fill: #808080;
+        position: relative;
         &:hover {
           fill: lightblue;
           cursor: pointer;

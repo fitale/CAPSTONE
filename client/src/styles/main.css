@@ -63,6 +63,7 @@
 
 .header__nav--mobile .svg {
   fill: #808080;
+  position: relative;
 }
 
 .header__nav--mobile .svg:hover {
@@ -331,6 +332,28 @@
 .u-container__hero-holder--img {
   height: 60vw;
   width: 100%;
+}
+
+.menu-slider {
+  z-index: 999;
+  position: absolute;
+  right: 16px;
+}
+
+.menu-slider__link {
+  text-decoration: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.menu-slider__link--text {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  border: 1px solid black;
+  height: 40px;
+  width: 160px;
 }
 
 *,

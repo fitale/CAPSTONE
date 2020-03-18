@@ -1,0 +1,16 @@
+.menu-slider {
+  z-index: 999;
+  position: absolute;
+  right: 16px;
+  &__link {
+    text-decoration: none;
+    display: flex;
+
+    &--text {
+      align-self: center;
+      border: 1px solid black;
+      height: 40px;
+      width: 160px;
+    }
+  }
+}
