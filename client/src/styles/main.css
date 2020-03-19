@@ -212,14 +212,7 @@
 }
 
 .landing-page {
-  margin: 20px 16px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  margin: 1.25rem 1rem;
 }
 
 .landing-page__header {
@@ -227,41 +220,263 @@
   line-height: 1.375rem;
   font-family: OpenSansSemiBold;
   font-family: OpenSansCondensedBold;
-  color: #808080;
+  color: #0000a3;
 }
 
 .landing-page__para {
-  margin-top: 10px;
+  margin-top: 0.625rem;
   font-family: OpenSansLight;
   font-style: italic;
+  color: #808080;
 }
 
-.landing-page__button {
-  margin-top: 20px;
-  width: 160px;
-  height: 40px;
-  border: 1px solid #000000;
-  border-radius: 4px;
+.landing-page__major--flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 0;
+}
+
+.landing-page__major--flex .button {
+  text-decoration: none;
+  margin: 1.25rem 0;
+  width: 10rem;
+  height: 2.5rem;
+  border: 1px solid #663cff;
+  border-color: #663cff;
+  border-radius: 0.25rem;
   outline: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
       align-self: center;
+  background-color: #663cff;
 }
 
-.landing-page__button--text {
+.landing-page__major--flex .button:hover {
+  -webkit-transition: ease-in-out 0.5s;
+  transition: ease-in-out 0.5s;
+  background-color: #0000a3;
+  border-color: #0000a3;
+  cursor: pointer;
+}
+
+.landing-page__major--flex .button__text {
   font-size: 0.875rem;
   line-height: 1.375rem;
   font-family: OpenSansSemiBold;
+  color: #ffffff;
 }
 
-.landing-page__iframe {
-  margin-top: 20px;
+.landing-page__major--flex .smaller {
+  font-family: OpenSansSemiBold;
+  color: #0000a3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
-.landing-page__iframe--map {
+.landing-page__major--flex-vid {
+  margin: 1.25rem 0;
+}
+
+.landing-page__major--flex-vid .video {
+  outline: none;
   height: 60vw;
   width: 100%;
-  overflow: hidden;
+}
+
+.landing-page__holder--left .bold-header {
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+  font-family: OpenSansSemiBold;
+  color: #0000a3;
+}
+
+.landing-page__holder--left .para {
+  margin-top: 0.625rem;
+  font-family: OpenSansLight;
+  font-style: italic;
+  color: #808080;
+}
+
+.landing-page__holder--right .img {
+  border-radius: 0.25rem;
+  margin: 1.25rem 0;
+  height: 60vw;
+  width: 100%;
+}
+
+@media only screen and (min-width: 768px) {
+  .landing-page {
+    margin: 32px 24px 0;
+  }
+  .landing-page__header {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-family: OpenSansBold;
+    font-family: OpenSansCondensedBold;
+  }
+  .landing-page__para {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-family: OpenSansSemiBold;
+    font-family: OpenSansLight;
+    margin-top: 20px;
+  }
+  .landing-page__major--flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    height: 25vw;
+    background-color: #f5f5f5;
+    margin-top: 2rem;
+  }
+  .landing-page__major--flex .button {
+    text-decoration: none;
+    margin: 2rem 0;
+    width: 12.5rem;
+    height: 3.125rem;
+    background-color: #663cff;
+  }
+  .landing-page__major--flex .button:hover {
+    -webkit-transition: ease-in-out 0.5s;
+    transition: ease-in-out 0.5s;
+    background-color: #0000d6;
+    border-color: #0000d6;
+    cursor: pointer;
+  }
+  .landing-page__major--flex .button__text {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-family: OpenSansSemiBold;
+    color: #ffffff;
+  }
+  .landing-page__major--flex .smaller {
+    font-family: OpenSansSemiBold;
+    width: 40%;
+  }
+  .landing-page__major--flex-vid {
+    margin: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .landing-page__major--flex-vid .video {
+    height: 50vw;
+    width: 90%;
+  }
+  .landing-page__holder {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .landing-page__holder--left {
+    width: 40%;
+    margin-right: 25px;
+  }
+  .landing-page__holder--left .bold-header {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-family: OpenSansBold;
+    font-family: OpenSansCondensedBold;
+  }
+  .landing-page__holder--left .para {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    font-family: OpenSansRegular;
+    font-family: OpenSansLight;
+  }
+  .landing-page__holder--right {
+    width: 50%;
+    margin-left: 25px;
+  }
+  .landing-page__holder--right .img {
+    height: unset;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .landing-page {
+    margin: 40px 180px;
+  }
+  .landing-page__header {
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+    font-family: OpenSansBold;
+  }
+  .landing-page__para {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-family: OpenSansBold;
+    font-family: OpenSansLight;
+  }
+  .landing-page__major--flex .button {
+    width: 260px;
+    height: 65px;
+  }
+  .landing-page__major--flex .button__text {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-family: OpenSansBold;
+    font-family: OpenSansSemiBold;
+  }
+  .landing-page__major--flex .smaller {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-family: OpenSansBold;
+  }
+  .landing-page__major--flex-vid {
+    margin-bottom: 40px;
+  }
+  .landing-page__holder {
+    margin: 24px 0;
+  }
+  .landing-page__holder--left {
+    width: 50%;
+  }
+  .landing-page__holder--left .bold-header {
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+    font-family: OpenSansBold;
+    font-family: OpenSansCondensedBold;
+    margin-bottom: 24px;
+  }
+  .landing-page__holder--left .para {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-family: OpenSansBold;
+    font-family: OpenSansLight;
+  }
 }
 
 .search {

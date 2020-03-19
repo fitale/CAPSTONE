@@ -1,0 +1,211 @@
+.landing-page {
+  margin: 1.25rem 1rem;
+  &__header {
+    @include mobile-subheader;
+    font-family: OpenSansCondensedBold;
+    color: $dark-blue;
+  }
+  &__para {
+    margin-top: 0.625rem;
+    font-family: OpenSansLight;
+    font-style: italic;
+    color: $grey;
+  }
+  &__major {
+    &--flex {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-left: 0;
+      .button {
+        text-decoration: none;
+        margin: 1.25rem 0;
+        width: 10rem;
+        height: 2.5rem;
+        border: 1px solid $light-purple;
+        border-color: $light-purple;
+        border-radius: 0.25rem;
+        outline: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-self: center;
+        background-color: $light-purple;
+        &:hover {
+          transition: ease-in-out 0.5s;
+          background-color: $dark-blue;
+          border-color: $dark-blue;
+          cursor: pointer;
+        }
+        &__text {
+          @include mobile-subheader;
+          color: $white;
+        }
+      }
+      .smaller {
+        font-family: OpenSansSemiBold;
+        color: $dark-blue;
+        display: flex;
+      }
+    }
+    &--flex-vid {
+      margin: 1.25rem 0;
+      .video {
+        outline: none;
+        height: 60vw;
+        width: 100%;
+      }
+    }
+  }
+
+  &__holder {
+    &--left {
+      .bold-header {
+        @include mobile-subheader;
+        color: $dark-blue;
+      }
+      .para {
+        margin-top: 0.625rem;
+        font-family: OpenSansLight;
+        font-style: italic;
+        color: $grey;
+      }
+    }
+    &--right {
+      .img {
+        border-radius: 0.25rem;
+        margin: 1.25rem 0;
+        height: 60vw;
+        width: 100%;
+      }
+    }
+  }
+}
+
+@include medium {
+  .landing-page {
+    margin: 32px 24px 0;
+
+    &__header {
+      @include desk-tablet-header-smaller;
+      font-family: OpenSansCondensedBold;
+    }
+    &__para {
+      @include desk-tablet-subheader;
+      font-family: OpenSansLight;
+      margin-top: 20px;
+    }
+    &__major {
+      &--flex {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-around;
+        height: 25vw;
+        background-color: $light-grey;
+        margin-top: 2rem;
+        .button {
+          text-decoration: none;
+          margin: 2rem 0;
+          width: 12.5rem;
+          height: 3.125rem;
+          background-color: $light-purple;
+          &:hover {
+            transition: ease-in-out 0.5s;
+            background-color: $primary-blue;
+            border-color: $primary-blue;
+            cursor: pointer;
+          }
+          &__text {
+            @include desk-tablet-subheader;
+            color: $white;
+          }
+        }
+        .smaller {
+          font-family: OpenSansSemiBold;
+          width: 40%;
+        }
+      }
+      &--flex-vid {
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        .video {
+          height: 50vw;
+          width: 90%;
+        }
+      }
+    }
+
+    &__holder {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      &--left {
+        width: 40%;
+        margin-right: 25px;
+        .bold-header {
+          @include desk-tablet-header-smaller;
+          font-family: OpenSansCondensedBold;
+        }
+        .para {
+          @include desk-tablet-para-comment;
+          font-family: OpenSansLight;
+        }
+      }
+      &--right {
+        width: 50%;
+        margin-left: 25px;
+        .img {
+          height: unset;
+        }
+      }
+    }
+  }
+}
+
+@include huge {
+  .landing-page {
+    margin: 40px 180px;
+    &__header {
+      @include desk-tablet-header;
+    }
+    &__para {
+      @include desk-tablet-header-smaller;
+      font-family: OpenSansLight;
+    }
+    &__major {
+      &--flex {
+        .button {
+          width: 260px;
+          height: 65px;
+          &__text {
+            @include desk-tablet-header-smaller;
+            font-family: OpenSansSemiBold;
+          }
+        }
+        .smaller {
+          @include desk-tablet-header-smaller;
+          // color: $dark-blue;
+        }
+      }
+      &--flex-vid {
+        margin-bottom: 40px;
+      }
+    }
+    &__holder {
+      margin: 24px 0;
+      &--left {
+        width: 50%;
+        .bold-header {
+          @include desk-tablet-header;
+          font-family: OpenSansCondensedBold;
+          margin-bottom: 24px;
+        }
+        .para {
+          @include desk-tablet-header-smaller;
+          font-family: OpenSansLight;
+        }
+      }
+    }
+  }
+}
