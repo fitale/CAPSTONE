@@ -84,7 +84,7 @@
 
 @include medium {
   .landing-page {
-    margin: 32px 24px 0;
+    margin: 2rem 1.5rem 0;
 
     &__header {
       @include desk-tablet-header-smaller;
@@ -93,7 +93,7 @@
     &__para {
       @include desk-tablet-subheader;
       font-family: OpenSansLight;
-      margin-top: 20px;
+      margin-top: 1.25rem;
     }
     &__major {
       &--flex {
@@ -142,7 +142,7 @@
       justify-content: center;
       &--left {
         width: 40%;
-        margin-right: 25px;
+        margin-right: 1.5625rem;
         .bold-header {
           @include desk-tablet-header-smaller;
           font-family: OpenSansCondensedBold;
@@ -154,7 +154,7 @@
       }
       &--right {
         width: 50%;
-        margin-left: 25px;
+        margin-left: 1.5625rem;
         .img {
           height: unset;
         }
@@ -165,7 +165,7 @@
 
 @include huge {
   .landing-page {
-    margin: 40px 180px;
+    margin: 2.5rem 11.25rem;
     &__header {
       @include desk-tablet-header;
     }
@@ -176,8 +176,8 @@
     &__major {
       &--flex {
         .button {
-          width: 260px;
-          height: 65px;
+          width: 16.25rem;
+          height: 4.0625rem;
           &__text {
             @include desk-tablet-header-smaller;
             font-family: OpenSansSemiBold;
@@ -185,21 +185,20 @@
         }
         .smaller {
           @include desk-tablet-header-smaller;
-          // color: $dark-blue;
         }
       }
       &--flex-vid {
-        margin-bottom: 40px;
+        margin-bottom: 2.5rem;
       }
     }
     &__holder {
-      margin: 24px 0;
+      margin: 1.5rem 0;
       &--left {
         width: 50%;
         .bold-header {
           @include desk-tablet-header;
           font-family: OpenSansCondensedBold;
-          margin-bottom: 24px;
+          margin-bottom: 1.5rem;
         }
         .para {
           @include desk-tablet-header-smaller;
