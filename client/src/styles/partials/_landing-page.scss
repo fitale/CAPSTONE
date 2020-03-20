@@ -104,17 +104,15 @@
         background-color: $light-grey;
         margin-top: 2rem;
         .button {
-          text-decoration: none;
           margin: 2rem 0;
           width: 12.5rem;
           height: 3.125rem;
-          background-color: $light-purple;
-          &:hover {
-            transition: ease-in-out 0.5s;
-            background-color: $primary-blue;
-            border-color: $primary-blue;
-            cursor: pointer;
-          }
+          // &:hover {
+          //   transition: ease-in-out 0.5s;
+          //   background-color: $primary-blue;
+          //   border-color: $primary-blue;
+          //   cursor: pointer;
+          // }
           &__text {
             @include desk-tablet-subheader;
             color: $white;

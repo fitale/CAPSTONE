@@ -60,7 +60,6 @@ export default class App extends Component {
                 <Locations {...props} uData={this.state.udata} />
               )}
             />
-
             <Route
               path="/searchbytuition"
               render={props => <Tuition {...props} uData={this.state.udata} />}

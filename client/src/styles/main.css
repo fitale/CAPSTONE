@@ -353,18 +353,9 @@
     margin-top: 2rem;
   }
   .landing-page__major--flex .button {
-    text-decoration: none;
     margin: 2rem 0;
     width: 12.5rem;
     height: 3.125rem;
-    background-color: #663cff;
-  }
-  .landing-page__major--flex .button:hover {
-    -webkit-transition: ease-in-out 0.5s;
-    transition: ease-in-out 0.5s;
-    background-color: #0000d6;
-    border-color: #0000d6;
-    cursor: pointer;
   }
   .landing-page__major--flex .button__text {
     font-size: 1rem;
@@ -629,6 +620,347 @@
   border: 1px solid black;
   height: 40px;
   width: 160px;
+}
+
+.main-tuition {
+  margin: 24px 16px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main-tuition__title {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-family: OpenSansBold;
+  font-family: OpenSansCondensedBold;
+  color: #0000a3;
+  margin-bottom: 24px;
+}
+
+.main-tuition__form {
+  border: 1px solid #808080;
+  border-radius: 4px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 75vw;
+}
+
+.main-tuition__form--flex {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.main-tuition__form--flex .h5 {
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+  font-family: OpenSansSemiBold;
+  font-family: OpenSansLight;
+}
+
+.main-tuition__form--flex .select {
+  margin-top: 10px;
+  outline: none;
+}
+
+.main-tuition__form--flex .select:hover {
+  cursor: pointer;
+}
+
+.main-tuition__form--submit {
+  width: 160px;
+  height: 40px;
+  border-radius: 4px;
+  background-color: #663cff;
+  border: 1px solid #663cff;
+  outline: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.main-tuition__form--submit:hover {
+  -webkit-transition: ease-in-out 0.5s;
+  transition: ease-in-out 0.5s;
+  background-color: #0000a3;
+  border-color: #0000a3;
+  cursor: pointer;
+}
+
+.main-tuition__form--submit .inner-text {
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+  font-family: OpenSansSemiBold;
+  color: #ffffff;
+}
+
+.main-tuition__uni {
+  margin-top: 32px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main-tuition__uni--title {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-family: OpenSansBold;
+  margin-bottom: 20px;
+  color: #0000d6;
+}
+
+.main-tuition__uni .link {
+  text-decoration: none;
+}
+
+.main-tuition__uni .link:hover {
+  cursor: pointer;
+}
+
+.main-tuition__uni .link .li {
+  list-style: none;
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+  font-family: OpenSansSemiBold;
+  color: #808080;
+  margin-bottom: 5px;
+}
+
+.main-tuition__uni .button {
+  width: 160px;
+  height: 40px;
+  border-radius: 4px;
+  background-color: #663cff;
+  border: 1px solid #663cff;
+  outline: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 20px;
+}
+
+.main-tuition__uni .button:hover {
+  -webkit-transition: ease-in-out 0.5s;
+  transition: ease-in-out 0.5s;
+  background-color: #0000a3;
+  border-color: #0000a3;
+  cursor: pointer;
+}
+
+.main-tuition__uni .button__inner-text {
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+  font-family: OpenSansSemiBold;
+  color: #ffffff;
+}
+
+.main-tuition__error--div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 32px;
+}
+
+.main-tuition__error--div .h3 {
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+  font-family: OpenSansSemiBold;
+  color: #808080;
+}
+
+.main-tuition__error--div .button {
+  width: 160px;
+  height: 40px;
+  border-radius: 4px;
+  background-color: #663cff;
+  border: 1px solid #663cff;
+  outline: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 20px;
+}
+
+.main-tuition__error--div .button:hover {
+  -webkit-transition: ease-in-out 0.5s;
+  transition: ease-in-out 0.5s;
+  background-color: #0000a3;
+  border-color: #0000a3;
+  cursor: pointer;
+}
+
+.main-tuition__error--div .button__inner-text {
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+  font-family: OpenSansSemiBold;
+  color: #ffffff;
+}
+
+@media only screen and (min-width: 768px) {
+  .main-tuition {
+    margin: 32px 24px 0;
+  }
+  .main-tuition__title {
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-family: OpenSansBold;
+    font-family: OpenSansCondensedBold;
+  }
+  .main-tuition__form {
+    width: 60vw;
+  }
+  .main-tuition__form--flex .h5 {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-family: OpenSansSemiBold;
+    font-family: OpenSansLight;
+  }
+  .main-tuition__form--submit {
+    margin: 2rem 0;
+    width: 12.5rem;
+    height: 3.125rem;
+  }
+  .main-tuition__form--submit .inner-text {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-family: OpenSansSemiBold;
+  }
+  .main-tuition__uni {
+    margin-top: 40px;
+  }
+  .main-tuition__uni--title {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-family: OpenSansBold;
+    margin-bottom: 30px;
+  }
+  .main-tuition__uni--title .link .li {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-family: OpenSansSemiBold;
+    margin-bottom: 10px;
+  }
+  .main-tuition__uni .button {
+    width: 12.5rem;
+    height: 3.125rem;
+  }
+  .main-tuition__uni .button__inner-text {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-family: OpenSansSemiBold;
+  }
+  .main-tuition__error--div {
+    margin-top: 40px;
+  }
+  .main-tuition__error--div .h3 {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-family: OpenSansSemiBold;
+  }
+  .main-tuition__error--div .button {
+    width: 12.5rem;
+    height: 3.125rem;
+  }
+  .main-tuition__error--div .button__inner-text {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-family: OpenSansSemiBold;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .main-tuition {
+    margin: 40px 180px 0;
+  }
+  .main-tuition__title {
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+    font-family: OpenSansBold;
+    font-family: OpenSansCondensedBold;
+  }
+  .main-tuition__form {
+    width: 40vw;
+  }
+  .main-tuition__form--submit {
+    width: 16.25rem;
+    height: 4.0625rem;
+  }
+  .main-tuition__uni--title {
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+    font-family: OpenSansBold;
+  }
+  .main-tuition__uni .link .li {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-family: OpenSansBold;
+    font-family: OpenSansSemiBold;
+  }
+  .main-tuition__uni .button {
+    width: 16.25rem;
+    height: 4.0625rem;
+  }
+  .main-tuition__error--div .h3 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-family: OpenSansBold;
+  }
+  .main-tuition__error--div .button {
+    width: 16.25rem;
+    height: 4.0625rem;
+  }
 }
 
 *,

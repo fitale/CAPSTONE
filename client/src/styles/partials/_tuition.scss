@@ -1,0 +1,244 @@
+.main-tuition {
+  margin: 24px 16px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &__title {
+    @include mobile-header;
+    font-family: OpenSansCondensedBold;
+    color: $dark-blue;
+    margin-bottom: 24px;
+  }
+  &__form {
+    border: 1px solid $grey;
+    border-radius: 4px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 75vw;
+    &--flex {
+      margin-top: 20px;
+      margin-bottom: 20px;
+      .h5 {
+        @include mobile-subheader;
+        font-family: OpenSansLight;
+      }
+      .select {
+        margin-top: 10px;
+        outline: none;
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+    &--submit {
+      width: 160px;
+      height: 40px;
+      border-radius: 4px;
+      background-color: $light-purple;
+      border: 1px solid $light-purple;
+      outline: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      &:hover {
+        transition: ease-in-out 0.5s;
+        background-color: #0000a3;
+        border-color: #0000a3;
+        cursor: pointer;
+      }
+      .inner-text {
+        @include mobile-subheader;
+        color: $white;
+      }
+    }
+  }
+  &__uni {
+    margin-top: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &--title {
+      @include mobile-header;
+      margin-bottom: 20px;
+      color: $primary-blue;
+    }
+    .link {
+      text-decoration: none;
+      &:hover {
+        cursor: pointer;
+      }
+      .li {
+        list-style: none;
+        @include mobile-subheader;
+        color: $grey;
+        margin-bottom: 5px;
+      }
+    }
+    .button {
+      width: 160px;
+      height: 40px;
+      border-radius: 4px;
+      background-color: $light-purple;
+      border: 1px solid $light-purple;
+      outline: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 20px;
+      &:hover {
+        transition: ease-in-out 0.5s;
+        background-color: #0000a3;
+        border-color: #0000a3;
+        cursor: pointer;
+      }
+      &__inner-text {
+        @include mobile-subheader;
+        color: $white;
+      }
+    }
+  }
+  &__error {
+    &--div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 32px;
+      .h3 {
+        @include mobile-subheader;
+        color: $grey;
+      }
+      .button {
+        width: 160px;
+        height: 40px;
+        border-radius: 4px;
+        background-color: $light-purple;
+        border: 1px solid $light-purple;
+        outline: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 20px;
+        &:hover {
+          transition: ease-in-out 0.5s;
+          background-color: #0000a3;
+          border-color: #0000a3;
+          cursor: pointer;
+        }
+        &__inner-text {
+          @include mobile-subheader;
+          color: $white;
+        }
+      }
+    }
+  }
+}
+
+@include medium {
+  .main-tuition {
+    margin: 32px 24px 0;
+    &__title {
+      align-self: flex-start;
+      @include desk-tablet-header-smaller;
+      font-family: OpenSansCondensedBold;
+    }
+    &__form {
+      width: 60vw;
+      &--flex {
+        .h5 {
+          @include desk-tablet-subheader;
+          font-family: OpenSansLight;
+        }
+      }
+      &--submit {
+        margin: 2rem 0;
+        width: 12.5rem;
+        height: 3.125rem;
+        .inner-text {
+          @include desk-tablet-subheader;
+        }
+      }
+    }
+    &__uni {
+      margin-top: 40px;
+      &--title {
+        @include desk-tablet-header-smaller;
+        margin-bottom: 30px;
+        .link {
+          .li {
+            @include desk-tablet-subheader;
+            margin-bottom: 10px;
+          }
+        }
+      }
+      .button {
+        width: 12.5rem;
+        height: 3.125rem;
+        &__inner-text {
+          @include desk-tablet-subheader;
+        }
+      }
+    }
+    &__error {
+      &--div {
+        margin-top: 40px;
+        .h3 {
+          @include desk-tablet-subheader;
+        }
+        .button {
+          width: 12.5rem;
+          height: 3.125rem;
+          &__inner-text {
+            @include desk-tablet-subheader;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include huge {
+  .main-tuition {
+    margin: 40px 180px 0;
+    &__title {
+      @include desk-tablet-header;
+      font-family: OpenSansCondensedBold;
+    }
+    &__form {
+      width: 40vw;
+      &--submit {
+        width: 16.25rem;
+        height: 4.0625rem;
+      }
+    }
+    &__uni {
+      &--title {
+        @include desk-tablet-header;
+      }
+      .link {
+        .li {
+          @include desk-tablet-header-smaller;
+          font-family: OpenSansSemiBold;
+        }
+      }
+      .button {
+        width: 16.25rem;
+        height: 4.0625rem;
+      }
+    }
+    &__error {
+      &--div {
+        .h3 {
+          @include desk-tablet-header-smaller;
+        }
+        .button {
+          width: 16.25rem;
+          height: 4.0625rem;
+        }
+      }
+    }
+  }
+}

@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+
+import Footer from "./Footer.js";
 export default class Tuition extends Component {
   state = {
     tuition: "select-one",
@@ -82,17 +84,16 @@ export default class Tuition extends Component {
   render() {
     // map through Uni in price range to display in browser
     const uCampus = this.state.inRangeUni.map(uni => {
-      // console.log(uni.id);
       return (
         <Link
           to={`/${uni.id}`}
-          // to={`/:id`}
           key={uni.id}
           onClick={this.idProps}
-          // oneUni={this.state.oneID}
-          // params={{ id: `${uni.id}` }}
+          className="link"
         >
-          <li value={uni.id}>{uni.campus}</li>
+          <li value={uni.id} className="li">
+            {uni.campus}
+          </li>
         </Link>
       );
     });
@@ -104,14 +105,14 @@ export default class Tuition extends Component {
         this.state.outRangeUni.length > 0
       ) {
         return (
-          <div>
-            <h3>
+          <div className="main-tuition__error--div">
+            <h3 className="h3">
               Unfortunately, there are no Universities that match your preferred
               tuition per academic year
             </h3>
 
-            <button onClick={this.pageRefresh}>
-              <h3>Search again</h3>
+            <button onClick={this.pageRefresh} className="button">
+              <h3 className="button__inner-text">Search again</h3>
             </button>
           </div>
         );
@@ -119,51 +120,77 @@ export default class Tuition extends Component {
     };
 
     {
-      // if (
-      //   this.state.tuition === 0 ||
-      //   this.state.priceMin === 0 ||
-      //   this.state.priceMax === 0
-      // ) {
-      //   return <h1>LOADING</h1>;
-      // }
-      // else {
       return (
-        <main>
-          <h3>What is your preferred tuition per academic year?</h3>
-          <form onSubmit={this.handleSubmit}>
-            <select onChange={this.handleChangeTuitionType}>
-              <option value="select-one">--</option>
-              <option value="tuition_in_state">In state</option>
-              <option value="tuition_out_state">Out of state</option>
-            </select>
-            <select onChange={this.handleChangeTuitionPriceMin}>
-              <option value="select-one">--</option>
-              <option value="0">0</option>
-              <option value="10000">10000</option>
-              <option value="20000">20000</option>
-              <option value="30000">30000</option>
-              <option value="40000">40000</option>
-            </select>
-            <select onChange={this.handleChangeTuitionPriceMax}>
-              <option value="select-one">--</option>
-              <option value="10000">10000</option>
-              <option value="20000">20000</option>
-              <option value="30000">30000</option>
-              <option value="40000">40000</option>
-              <option value="50000">50000</option>
-            </select>
-            <input type="submit" value="Submit" />
+        <main className="main-tuition">
+          <h3 className="main-tuition__title">
+            What is your preferred tuition per academic year?
+          </h3>
+          <form onSubmit={this.handleSubmit} className="main-tuition__form">
+            <div className="main-tuition__form--flex">
+              <h5 className="h5">
+                Are you searching for universities in-state or out-of-state?
+              </h5>
+              <select
+                onChange={this.handleChangeTuitionType}
+                className="select"
+              >
+                <option value="select-one">--</option>
+                <option value="tuition_in_state">In state</option>
+                <option value="tuition_out_state">Out of state</option>
+              </select>
+            </div>
+            <div className="main-tuition__form--flex">
+              <h5 className="h5">
+                Select your minimum annual tuition payment preference
+              </h5>
+              <select
+                onChange={this.handleChangeTuitionPriceMin}
+                className="select"
+              >
+                <option value="select-one">--</option>
+                <option value="0">0</option>
+                <option value="10000">10000</option>
+                <option value="20000">20000</option>
+                <option value="30000">30000</option>
+                <option value="40000">40000</option>
+              </select>
+            </div>
+            <div className="main-tuition__form--flex">
+              <h5 className="h5">
+                Select your maximum annual tuition payment preference
+              </h5>
+              <select
+                onChange={this.handleChangeTuitionPriceMax}
+                className="select"
+              >
+                <option value="select-one">--</option>
+                <option value="10000">10000</option>
+                <option value="20000">20000</option>
+                <option value="30000">30000</option>
+                <option value="40000">40000</option>
+                <option value="50000">50000</option>
+              </select>
+            </div>
+
+            <button className="main-tuition__form--submit">
+              <h5 className="inner-text">SUBMIT</h5>
+            </button>
           </form>
           {this.state.isShowingUni && (
-            <div>
-              <h1>Universities that match you</h1>
+            <div className="main-tuition__uni">
+              <h1 className="main-tuition__uni--title">
+                Universities that match you
+              </h1>
               {uCampus}
-              <button onClick={this.pageRefresh}>
-                <h3>Search again</h3>
+              <button onClick={this.pageRefresh} className="button">
+                <h3 className="button__inner-text">SEARCH AGAIN</h3>
               </button>
             </div>
           )}
-          {this.state.isNotShowingUni && <div>{noCampus()}</div>}
+          {this.state.isNotShowingUni && (
+            <div className="main-tuition__error">{noCampus()}</div>
+          )}
+          <Footer />
         </main>
       );
     }
