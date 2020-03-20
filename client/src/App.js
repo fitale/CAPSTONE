@@ -25,7 +25,7 @@ export default class App extends Component {
     axios
       .get("http://localhost:5000/api/udata")
       .then(res => {
-        console.log(res.data);
+        // console.log(res.data);
         this.setState({
           udata: res.data
         });
@@ -72,7 +72,7 @@ export default class App extends Component {
               )}
             />
             <Route
-              path="/:id"
+              path="/:_id"
               render={props => (
                 <UniversityPage {...props} uData={this.state.udata} />
               )}

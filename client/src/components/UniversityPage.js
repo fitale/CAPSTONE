@@ -10,12 +10,14 @@ export default class UniversityPage extends Component {
   };
 
   componentDidMount() {
-    console.log(`ID passed as props: ${this.props.match.params.id}`);
+    console.log(`ID passed as props: ${this.props.match.params._id}`);
+    console.log(`this.props = ${JSON.stringify(this.props)}`);
+    console.log(`uni._id = ${this.props.match.params._id}`);
     const oneUniv = this.props.uData.map(uni => {
-      if (uni.id === this.props.match.params.id) {
+      if (uni._id === this.props.match.params._id) {
         this.setState(
           {
-            oneUniID: this.props.match.params.id,
+            oneUniID: this.props.match.params._id,
             oneUniv: uni
           },
           () => {
