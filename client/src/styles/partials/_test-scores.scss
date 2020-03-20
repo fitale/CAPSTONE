@@ -1,5 +1,5 @@
-.main-tuition {
-  margin: 24px 16px 0;
+.test-scores {
+  margin: 24px 16px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -17,24 +17,36 @@
     padding-bottom: 20px;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     width: 75vw;
-    &--flex {
-      margin-top: 20px;
-      margin-bottom: 20px;
-      .h5 {
+    &--div {
+      .prompt {
         @include mobile-subheader;
         font-family: OpenSansLight;
+        margin-top: 10px;
       }
       .select {
         margin-top: 10px;
+        margin-bottom: 10px;
         outline: none;
         &:hover {
           cursor: pointer;
         }
       }
     }
-    &--submit {
+    &--input {
+      width: 160px;
+      height: 40px;
+      margin-bottom: 20px;
+      padding-left: 10px;
+      border-radius: 4px;
+      outline: none;
+      &:placeholder-shown {
+        padding-left: 10px;
+      }
+    }
+    &--button {
       width: 160px;
       height: 40px;
       border-radius: 4px;
@@ -50,7 +62,7 @@
         border-color: #0000a3;
         cursor: pointer;
       }
-      .inner-text {
+      .submit {
         @include mobile-subheader;
         color: $white;
       }
@@ -61,16 +73,13 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    &--title {
+    &--matches {
       @include mobile-header;
-      margin-bottom: 20px;
       color: $primary-blue;
+      margin-bottom: 20px;
     }
-    .link {
+    &--link {
       text-decoration: none;
-      &:hover {
-        cursor: pointer;
-      }
       .li {
         list-style: none;
         @include mobile-subheader;
@@ -78,24 +87,24 @@
         margin-bottom: 5px;
       }
     }
-    .button {
+    &--button {
       width: 160px;
       height: 40px;
       border-radius: 4px;
+      margin-top: 20px;
       background-color: $light-purple;
       border: 1px solid $light-purple;
       outline: none;
       display: flex;
       align-items: center;
       justify-content: center;
-      margin-top: 20px;
       &:hover {
         transition: ease-in-out 0.5s;
         background-color: #0000a3;
         border-color: #0000a3;
         cursor: pointer;
       }
-      &__inner-text {
+      .text {
         @include mobile-subheader;
         color: $white;
       }
@@ -107,7 +116,7 @@
       flex-direction: column;
       align-items: center;
       margin-top: 32px;
-      .h3 {
+      .message {
         @include mobile-subheader;
         color: $grey;
       }
@@ -128,7 +137,7 @@
           border-color: #0000a3;
           cursor: pointer;
         }
-        &__inner-text {
+        .text {
           @include mobile-subheader;
           color: $white;
         }
@@ -138,7 +147,7 @@
 }
 
 @include medium {
-  .main-tuition {
+  .test-scores {
     margin: 32px 24px 0;
     &__title {
       align-self: flex-start;
@@ -146,38 +155,49 @@
       font-family: OpenSansCondensedBold;
     }
     &__form {
-      width: 60vw;
-      &--flex {
-        .h5 {
+      height: 30vw;
+      flex-direction: row;
+      justify-content: space-around;
+      &--div {
+        margin-right: 20px;
+        .prompt {
           @include desk-tablet-subheader;
           font-family: OpenSansLight;
+          margin-top: unset;
+          margin-bottom: 10px;
+        }
+        .select {
+          margin: unset;
+          height: 30px;
         }
       }
-      &--submit {
-        margin: 2rem 0;
-        width: 12.5rem;
+      &--input {
+        margin: unset;
         height: 3.125rem;
-        .inner-text {
+      }
+      &--button {
+        margin: unset;
+        height: 3.125rem;
+        .submit {
           @include desk-tablet-subheader;
         }
       }
     }
     &__uni {
       margin-top: 40px;
-      &--title {
+      &--matches {
         @include desk-tablet-header-smaller;
         margin-bottom: 30px;
-        .link {
-          .li {
-            @include desk-tablet-subheader;
-            margin-bottom: 10px;
-          }
+      }
+      &--link {
+        .li {
+          @include desk-tablet-subheader;
+          margin-bottom: 10px;
         }
       }
-      .button {
-        width: 12.5rem;
+      &--button {
         height: 3.125rem;
-        &__inner-text {
+        .text {
           @include desk-tablet-subheader;
         }
       }
@@ -185,13 +205,12 @@
     &__error {
       &--div {
         margin-top: 40px;
-        .h3 {
+        .message {
           @include desk-tablet-subheader;
         }
         .button {
-          width: 12.5rem;
           height: 3.125rem;
-          &__inner-text {
+          .text {
             @include desk-tablet-subheader;
           }
         }
@@ -201,20 +220,21 @@
 }
 
 @include huge {
-  .main-tuition {
+  .test-scores {
     margin: 40px 180px 0;
     &__title {
       @include desk-tablet-header;
       font-family: OpenSansCondensedBold;
     }
     &__form {
-      width: 40vw;
+      width: 50vw;
+      height: 20vw;
     }
     &__uni {
-      &--title {
+      &--matches {
         @include desk-tablet-header;
       }
-      .link {
+      &--link {
         .li {
           @include desk-tablet-header-smaller;
           font-family: OpenSansSemiBold;
@@ -223,7 +243,7 @@
     }
     &__error {
       &--div {
-        .h3 {
+        .message {
           @include desk-tablet-header-smaller;
         }
       }

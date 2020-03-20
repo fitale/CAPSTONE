@@ -107,8 +107,8 @@ export default class Tuition extends Component {
         return (
           <div className="main-tuition__error--div">
             <h3 className="h3">
-              Unfortunately, there are no Universities that match your preferred
-              tuition per academic year
+              No Universities that match your preferred tuition per academic
+              year
             </h3>
 
             <button onClick={this.pageRefresh} className="button">
