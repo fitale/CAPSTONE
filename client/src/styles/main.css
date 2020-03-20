@@ -572,32 +572,279 @@
   font-family: OpenSansBold;
 }
 
+.u-container {
+  margin: 24px 16px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
 .u-container__title {
   font-size: 1.5rem;
   line-height: 2rem;
   font-family: OpenSansBold;
+  font-family: OpenSansCondensedBold;
+  color: #0000d6;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  text-align: center;
+  margin-bottom: 32px;
 }
 
 .u-container__button {
-  height: 100px;
-  width: 100px;
+  height: 50px;
+  width: 160px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  border: 1px solid #663cff;
+  border-radius: 4px;
+  outline: none;
+  background-color: #663cff;
+}
+
+.u-container__button:hover {
+  cursor: pointer;
+  -webkit-animation: color-me-in 5s;
+          animation: color-me-in 5s;
+}
+
+@-webkit-keyframes color-me-in {
+  0% {
+    background-color: #663cff;
+  }
+  50% {
+    background-color: #d6d600;
+  }
+  100% {
+    background-color: #0000a3;
+  }
+}
+
+@keyframes color-me-in {
+  0% {
+    background-color: #663cff;
+  }
+  50% {
+    background-color: #d6d600;
+  }
+  100% {
+    background-color: #0000a3;
+  }
 }
 
 .u-container__button--text {
-  font-size: 0.75rem;
-  line-height: 1.25rem;
+  font-size: 0.875rem;
+  line-height: 1.375rem;
   font-family: OpenSansSemiBold;
+  color: #f5f5f5;
 }
 
 .u-container__subheader {
   font-size: 0.875rem;
   line-height: 1.375rem;
   font-family: OpenSansSemiBold;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.u-container__hero-holder {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .u-container__hero-holder--img {
-  height: 60vw;
-  width: 100%;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  height: 50vw;
+  width: 90%;
+}
+
+.u-container__holder {
+  margin-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.u-container__holder--left .sub {
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+  font-family: OpenSansSemiBold;
+}
+
+.u-container__holder--left .label {
+  font-size: 0.75rem;
+  line-height: 1.25rem;
+  font-family: OpenSansSemiBold;
+  font-family: OpenSansLight;
+  width: 35vw;
+}
+
+.u-container__holder--right .sub {
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+  font-family: OpenSansSemiBold;
+}
+
+.u-container__holder--right .label {
+  font-size: 0.75rem;
+  line-height: 1.25rem;
+  font-family: OpenSansSemiBold;
+  font-family: OpenSansLight;
+}
+
+.u-container__holder2 {
+  margin-top: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.u-container__holder2--sub, .u-container__holder4--div .sub {
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+  font-family: OpenSansSemiBold;
+}
+
+.u-container__holder2--sub-light {
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+  font-family: OpenSansSemiBold;
+  font-family: OpenSansLight;
+}
+
+.u-container__holder3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-top: 5px;
+}
+
+.u-container__holder3--div .sub {
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+  font-family: OpenSansSemiBold;
+}
+
+.u-container__holder3--div .label {
+  font-size: 0.75rem;
+  line-height: 1.25rem;
+  font-family: OpenSansSemiBold;
+  font-family: OpenSansLight;
+}
+
+.u-container__holder4 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-top: 5px;
+}
+
+.u-container__holder4--div .label {
+  font-size: 0.75rem;
+  line-height: 1.25rem;
+  font-family: OpenSansSemiBold;
+  font-family: OpenSansLight;
+  width: 40vw;
+}
+
+.u-container__holder5 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-top: 5px;
+}
+
+.u-container__holder5--flex {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.u-container__holder5--flex .sub {
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+  font-family: OpenSansSemiBold;
+}
+
+.u-container__holder5--flex .label {
+  font-size: 0.75rem;
+  line-height: 1.25rem;
+  font-family: OpenSansSemiBold;
+  font-family: OpenSansLight;
+}
+
+.u-container__section--h5 {
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+  font-family: OpenSansSemiBold;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.u-container__section--flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 10px;
+}
+
+.u-container__section--flex .sub {
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+  font-family: OpenSansSemiBold;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.u-container__section--flex .flex2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 80vw;
+}
+
+.u-container__section--flex .flex2__div--sub {
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+  font-family: OpenSansSemiBold;
+}
+
+.u-container__section--flex .flex2__div--label {
+  font-size: 0.75rem;
+  line-height: 1.25rem;
+  font-family: OpenSansSemiBold;
+  font-family: OpenSansLight;
 }
 
 .menu-slider {
@@ -867,9 +1114,12 @@
     font-family: OpenSansSemiBold;
     font-family: OpenSansLight;
   }
+  .main-tuition__form--flex .select {
+    height: 30px;
+    width: 100px;
+  }
   .main-tuition__form--submit {
     margin: 2rem 0;
-    width: 12.5rem;
     height: 3.125rem;
   }
   .main-tuition__form--submit .inner-text {
@@ -893,7 +1143,6 @@
     margin-bottom: 10px;
   }
   .main-tuition__uni .button {
-    width: 12.5rem;
     height: 3.125rem;
   }
   .main-tuition__uni .button__inner-text {
@@ -910,7 +1159,6 @@
     font-family: OpenSansSemiBold;
   }
   .main-tuition__error--div .button {
-    width: 12.5rem;
     height: 3.125rem;
   }
   .main-tuition__error--div .button__inner-text {
