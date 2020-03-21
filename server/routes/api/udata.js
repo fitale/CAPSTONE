@@ -1,7 +1,9 @@
+// initialize express and define router
 const express = require("express");
 const router = express.Router();
 const uDataSchema = require("../../models/uDataSchema.js");
 
+// get university data (all)
 router.get("/", async (req, res) => {
   try {
     const university = await uDataSchema.find();
@@ -13,6 +15,7 @@ router.get("/", async (req, res) => {
   }
 });
 
+// create new univeristy
 router.post("/", async (req, res) => {
   const university = new uDataSchema({
     id: req.body.id,
@@ -65,22 +68,12 @@ router.post("/", async (req, res) => {
   }
 });
 
-// router.get("/:id", (req, res) => {
-//   const found = university.some(uni => uni.id === req.params.id);
-//   if (found) {
-//     res.json(university.filter(uni => uni.id === req.params.id));
-//     console.log(`university with id: ${req.params.id} found`);
-//   } else {
-//     res.status(404).json({
-//       errorMessage: `The University you are searching for is not found`
-//     });
-//   }
-// });
-
+// get one university by /:id
 router.get("/_id", getUni, (req, res) => {
   res.json(res.university);
 });
 
+// helper function to get one university by /:id
 async function getUni(req, res, next) {
   try {
     university = await uDataSchema.findById(req.params.id);
@@ -94,7 +87,5 @@ async function getUni(req, res, next) {
   next();
 }
 
+// export
 module.exports = router;
-
-// const uDataFile = __dirname + "/../../models/udata.json";
-// const university = require(uDataFile);

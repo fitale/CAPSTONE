@@ -8,8 +8,8 @@ export default class Header extends Component {
     isShowing: false
   };
 
+  // displays menu dropdown
   openMenuSlider = event => {
-    console.log("clicked!");
     this.setState({
       isShowing: true
     });
@@ -37,6 +37,7 @@ export default class Header extends Component {
                 className="svg"
               />
             </svg>
+            {/* renders if event handler is clicked and state changes to true */}
             {this.state.isShowing && <MenuSlider />}
           </div>
         </nav>

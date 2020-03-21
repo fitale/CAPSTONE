@@ -1,5 +1,7 @@
+// initialize database
 const mongoose = require("mongoose");
 
+// define schema (key: datatype)
 const uDataSchema = new mongoose.Schema({
   id: Number,
   lng: Number,
@@ -44,4 +46,5 @@ const uDataSchema = new mongoose.Schema({
   student_to_faculty: Number
 });
 
+// export schema ('uData' is the name of database collection, 'uDataSchema' is the model above)
 module.exports = mongoose.model("uData", uDataSchema);
