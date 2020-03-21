@@ -5,7 +5,7 @@ import Footer from "./Footer.js";
 export default class TestScores extends Component {
   state = {
     testType: "select-one",
-    testScore: "",
+    testScore: 0,
     isShowingUni: false,
     isNotShowingUni: false,
     matchUni: [],
@@ -13,21 +13,8 @@ export default class TestScores extends Component {
     oneID: ""
   };
 
-  // componentDidMount() {
-  //   console.log(`componenDidMount`);
-  //   console.log(`this.state: ${JSON.stringify(this.state)}`);
-  // }
-
-  // componentDidUpdate(prevProps, prevState) {
-  //   console.log(`componentDidUpdate`);
-  //   console.log(
-  //     `prevProps vs this.state: ${prevProps} vs ${JSON.stringify(this.state)}`
-  //   );
-  // }
-
   // update state to be test user want to search by
   handleChange = event => {
-    // console.log(event.target.value);
     this.setState({
       testType: event.target.value
     });
@@ -36,52 +23,55 @@ export default class TestScores extends Component {
   // submits form to search for Uni based on test scores
   handleEvent = event => {
     event.preventDefault();
-    const studentScore = event.target.input.value;
-    this.setState({
-      testScore: studentScore
-    });
-    // console.log(`this.props.uData ${JSON.stringify(this.props.uData)}`);
+    const studentScore = Number(event.target.input.value);
+    // begin filtering through all university data
     this.props.uData.filter(uni => {
-      if (
-        this.state.testType === "SAT" &&
-        (uni.SAT_reading_writing_25 === this.state.testScore ||
-          uni.SAT_reading_writing_75 === this.state.testScore ||
-          uni.SAT_math_25 === this.state.testScore ||
-          uni.SAT_math_75 === this.state.testScore)
-      ) {
-        this.state.matchUni.push(uni);
-        return this.setState({
-          isShowingUni: true
-        });
-      }
-      if (
-        this.state.testType === "ACT" &&
-        (uni.ACT_25 === this.state.testScore ||
-          uni.ACT_75 === this.state.testScore)
-      ) {
-        this.state.matchUni.push(uni);
-        return this.setState(
-          {
+      // checking state to search by SAT
+      if (this.state.testType === "SAT") {
+        // checking for null values
+        if (
+          !uni.SAT_reading_writing_25 ||
+          !uni.SAT_reading_writing_75 ||
+          !uni.SAT_math_25 ||
+          !uni.SAT_math_75
+        ) {
+          this.state.noMatchUni.push(uni);
+          return this.setState({
+            isNotShowingUni: true
+          });
+        }
+        // comparing true values
+        else if (
+          uni.SAT_reading_writing_25 === studentScore ||
+          uni.SAT_reading_writing_75 === studentScore ||
+          uni.SAT_math_25 === studentScore ||
+          uni.SAT_math_75 === studentScore
+        ) {
+          this.state.matchUni.push(uni);
+          return this.setState({
             isShowingUni: true
-          },
-          () => {
-            console.log(`this.state.matches: ${this.state.matchUni}`);
-          }
-        );
+          });
+        }
       }
-      if (
-        (uni.ACT_25 ||
-          uni.ACT_75 ||
-          uni.SAT_reading_writing_25 ||
-          uni.SAT_reading_writing_75 ||
-          uni.SAT_math_25 ||
-          uni.SAT_math_75) === null
-      ) {
-        this.state.noMatchUni.push(uni);
-        return this.setState({
-          isNotShowingUni: true
-        });
-      } else {
+      // checking state to search by ACT
+      else if (this.state.testType === "ACT") {
+        // checking for null values
+        if (!uni.ACT_25 || !uni.ACT_75) {
+          this.state.noMatchUni.push(uni);
+          return this.setState({
+            isNotShowingUni: true
+          });
+        }
+        // comparing true values
+        else if (uni.ACT_25 === studentScore || uni.ACT_75 === studentScore) {
+          this.state.matchUni.push(uni);
+          return this.setState({
+            isShowingUni: true
+          });
+        }
+      }
+      // true values with no matches
+      else {
         this.state.noMatchUni.push(uni);
         return this.setState({
           isNotShowingUni: true
@@ -103,9 +93,8 @@ export default class TestScores extends Component {
   };
 
   render() {
-    // renders uni matches
+    // renders uni matches as links to university profile
     const uCampus = this.state.matchUni.map(uni => {
-      console.log(`uCampus map this.state.matchUni: ${this.state.matchUni}`);
       return (
         <Link
           to={`/${uni._id}`}
@@ -128,10 +117,7 @@ export default class TestScores extends Component {
       ) {
         return (
           <div className="test-scores__error--div">
-            <h3 className="message">
-              No Universities that match your preferred tuition per academic
-              year
-            </h3>
+            <h3 className="message">No Universities match your test scores</h3>
 
             <button onClick={this.pageRefresh} className="button">
               <h3 className="text">Search again</h3>
@@ -166,6 +152,7 @@ export default class TestScores extends Component {
             <h5 className="submit">SUBMIT</h5>
           </button>
         </form>
+        {/* renders if there are universities that match search parameters */}
         {this.state.isShowingUni && (
           <div className="test-scores__uni">
             <h1 className="test-scores__uni--matches">
@@ -180,6 +167,7 @@ export default class TestScores extends Component {
             </button>
           </div>
         )}
+        {/* renders if no universities were found to match search parameters */}
         {this.state.isNotShowingUni && (
           <div className="test-scores__error">{noCampus()}</div>
         )}

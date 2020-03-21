@@ -14,21 +14,21 @@ export default class Tuition extends Component {
     oneID: ""
   };
 
-  // sets state: tuition-in-state or tuition-out-of-state
+  // setState: tuition-in-state or tuition-out-of-state
   handleChangeTuitionType = event => {
     this.setState({
       tuition: event.target.value
     });
   };
 
-  // sets state: tuition min
+  // setState: tuition min
   handleChangeTuitionPriceMin = event => {
     this.setState({
       priceMin: event.target.value
     });
   };
 
-  // sets state: tuition max
+  // setState: tuition max
   handleChangeTuitionPriceMax = event => {
     this.setState({
       priceMax: event.target.value
@@ -38,8 +38,17 @@ export default class Tuition extends Component {
   // submits form to search for university based on tuition price range
   handleSubmit = event => {
     event.preventDefault();
+    // begin filtering through university data
     this.props.uData.filter(uni => {
-      if (
+      // checks for null values
+      if (!uni.tuition_out_state || !uni.tuition_in_state) {
+        this.state.outRangeUni.push(uni);
+        return this.setState({
+          isNotShowingUni: true
+        });
+      }
+      // if not null and in range for in-state tuition
+      else if (
         this.state.tuition === "tuition_in_state" &&
         uni.tuition_in_state >= this.state.priceMin &&
         uni.tuition_in_state <= this.state.priceMax
@@ -49,7 +58,8 @@ export default class Tuition extends Component {
           isShowingUni: true
         });
       }
-      if (
+      // if not null and in range for out-of-state tuition
+      else if (
         this.state.tuition === "tuition_out_state" &&
         uni.tuition_out_state >= this.state.priceMin &&
         uni.tuition_out_state <= this.state.priceMax
@@ -59,12 +69,8 @@ export default class Tuition extends Component {
           isShowingUni: true
         });
       }
-      if (uni.tuition_out_state === null || uni.tuition_in_state === null) {
-        this.state.outRangeUni.push(uni);
-        return this.setState({
-          isNotShowingUni: true
-        });
-      } else {
+      // if not null and no matches appear
+      else {
         this.state.outRangeUni.push(uni);
         return this.setState({
           isNotShowingUni: true
@@ -80,15 +86,13 @@ export default class Tuition extends Component {
 
   // grabbing ID to link to individual university page
   idProps = event => {
-    // console.log("link clicked");
-    // console.log(event.target.value);
     this.setState({
       oneID: event.target.value
     });
   };
 
   render() {
-    // map through Uni in price range to display in browser
+    // map through uniData in price range to display in browser
     const uCampus = this.state.inRangeUni.map(uni => {
       return (
         <Link
@@ -104,7 +108,7 @@ export default class Tuition extends Component {
       );
     });
 
-    // let user know search is out of range and suggests trying again
+    // lets user know search is out of range and instructs them to try again
     const noCampus = () => {
       if (
         this.state.inRangeUni.length === 0 &&
@@ -113,8 +117,7 @@ export default class Tuition extends Component {
         return (
           <div className="main-tuition__error--div">
             <h3 className="h3">
-              No Universities that match your preferred tuition per academic
-              year
+              No Universities match your preferred tuition per academic year
             </h3>
 
             <button onClick={this.pageRefresh} className="button">
@@ -178,6 +181,7 @@ export default class Tuition extends Component {
             <h5 className="inner-text">SUBMIT</h5>
           </button>
         </form>
+        {/* renders if there are universities that match search parameters */}
         {this.state.isShowingUni && (
           <div className="main-tuition__uni">
             <h1 className="main-tuition__uni--title">
@@ -189,6 +193,7 @@ export default class Tuition extends Component {
             </button>
           </div>
         )}
+        {/* renders if there are NO universities that match search parameters */}
         {this.state.isNotShowingUni && (
           <div className="main-tuition__error">{noCampus()}</div>
         )}
