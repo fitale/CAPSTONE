@@ -47,30 +47,41 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #808080;
+  background-color: #f5f5f5;
 }
 
-.header__title {
+.header__link {
+  text-decoration: none;
+}
+
+.header__link--title {
   font-size: 1.5rem;
   line-height: 2rem;
   font-family: OpenSansBold;
   color: #808080;
 }
 
-.header__nav--tablet-desk, .header__nav--tablet-desk-one {
+.header__link--title:hover {
+  color: #0000d6;
+  -webkit-transition: color 0.5s ease-in-out;
+  transition: color 0.5s ease-in-out;
+}
+
+.header__nav--desk {
   display: none;
 }
 
-.header__nav--mobile .svg {
+.header__nav--mobile-tablet .svg {
   fill: #808080;
   position: relative;
 }
 
-.header__nav--mobile .svg:hover {
-  fill: lightblue;
+.header__nav--mobile-tablet .svg:hover {
+  fill: #0000d6;
   cursor: pointer;
-  -webkit-transition: fill 0.2s ease-in-out;
-  transition: fill 0.2s ease-in-out;
+  -webkit-transition: fill 0.5s ease-in-out;
+  transition: fill 0.5s ease-in-out;
 }
 
 @media only screen and (min-width: 768px) {
@@ -83,23 +94,38 @@
     line-height: 2.75rem;
     font-family: OpenSansBold;
   }
-  .header__nav--tablet-desk, .header__nav--tablet-desk-one {
-    display: unset;
+  .header__nav--mobile-tablet {
     font-size: 1rem;
     line-height: 1.5rem;
     font-family: OpenSansSemiBold;
-  }
-  .header__nav--tablet-desk-one {
-    margin-right: 10px;
-  }
-  .header__nav--mobile {
-    display: none;
   }
 }
 
 @media only screen and (min-width: 1440px) {
   .header {
     padding: 0 180px;
+  }
+  .header__nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .header__nav--desk {
+    display: unset;
+    margin-right: 10px;
+    text-decoration: none;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-family: OpenSansSemiBold;
+    color: #808080;
+  }
+  .header__nav--desk:hover {
+    color: #0000d6;
+    -webkit-transition: fill 0.5s ease-in-out;
+    transition: fill 0.5s ease-in-out;
+  }
+  .header__nav--mobile-tablet {
+    display: none;
   }
 }
 
@@ -108,16 +134,26 @@
   height: 80px;
 }
 
-.footer__title {
+.footer__link {
+  text-decoration: none;
+}
+
+.footer__link--title {
   font-size: 1.5rem;
   line-height: 2rem;
   font-family: OpenSansBold;
-  margin-top: 20px;
-  margin-bottom: 10px;
   color: #808080;
 }
 
+.footer__link--title:hover {
+  color: #0000d6;
+  -webkit-transition: color 0.5s ease-in-out;
+  transition: color 0.5s ease-in-out;
+}
+
 .footer__nav {
+  margin-top: 20px;
+  margin-bottom: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -126,11 +162,18 @@
           justify-content: space-evenly;
 }
 
-.footer__nav--item {
+.footer__nav--link {
+  text-decoration: none;
   font-size: 0.75rem;
   line-height: 1.25rem;
   font-family: OpenSansSemiBold;
   color: #808080;
+}
+
+.footer__nav--link:hover {
+  color: #0000d6;
+  -webkit-transition: color 0.5s ease-in-out;
+  transition: color 0.5s ease-in-out;
 }
 
 @media only screen and (min-width: 768px) {
@@ -138,7 +181,7 @@
     padding: 0 24px;
     height: 100px;
   }
-  .footer__title {
+  .footer__link--title {
     font-size: 2.25rem;
     line-height: 2.75rem;
     font-family: OpenSansBold;
@@ -146,11 +189,11 @@
     margin-bottom: 20px;
   }
   .footer__nav {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
   }
-  .footer__nav--item {
+  .footer__nav--link {
     margin-left: 40px;
     font-size: 0.75rem;
     line-height: 1.25rem;
@@ -160,12 +203,8 @@
 
 @media only screen and (min-width: 1440px) {
   .footer {
-    padding: 0 180px;
-  }
-  .footer__nav {
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
+    margin: unset;
+    padding: unset;
   }
 }
 
@@ -175,7 +214,7 @@
 
 .hero__image {
   height: 60vw;
-  width: 100vw;
+  width: 100%;
   -webkit-filter: brightness(85%);
           filter: brightness(85%);
 }
@@ -189,7 +228,7 @@
   top: 30px;
   left: 16px;
   width: 60vw;
-  color: white;
+  color: #ffffff;
 }
 
 @media only screen and (min-width: 768px) {
@@ -573,7 +612,7 @@
 }
 
 .u-container {
-  margin: 24px 16px 0;
+  margin: 24px 16px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -617,24 +656,30 @@
 @-webkit-keyframes color-me-in {
   0% {
     background-color: #663cff;
+    border-color: #663cff;
   }
   50% {
     background-color: #d6d600;
+    border-color: #d6d600;
   }
   100% {
     background-color: #0000a3;
+    border-color: #0000a3;
   }
 }
 
 @keyframes color-me-in {
   0% {
     background-color: #663cff;
+    border-color: #663cff;
   }
   50% {
     background-color: #d6d600;
+    border-color: #d6d600;
   }
   100% {
     background-color: #0000a3;
+    border-color: #0000a3;
   }
 }
 
@@ -672,43 +717,33 @@
 }
 
 .u-container__holder {
-  margin-top: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #808080;
+  padding: 10px;
 }
 
-.u-container__holder--left .sub {
+.u-container__holder--flex .sub {
   font-size: 0.875rem;
   line-height: 1.375rem;
   font-family: OpenSansSemiBold;
 }
 
-.u-container__holder--left .label {
+.u-container__holder--flex .label {
   font-size: 0.75rem;
   line-height: 1.25rem;
   font-family: OpenSansSemiBold;
   font-family: OpenSansLight;
-  width: 35vw;
-}
-
-.u-container__holder--right .sub {
-  font-size: 0.875rem;
-  line-height: 1.375rem;
-  font-family: OpenSansSemiBold;
-}
-
-.u-container__holder--right .label {
-  font-size: 0.75rem;
-  line-height: 1.25rem;
-  font-family: OpenSansSemiBold;
-  font-family: OpenSansLight;
+  width: 50%;
 }
 
 .u-container__holder2 {
-  margin-top: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -721,7 +756,7 @@
           align-items: center;
 }
 
-.u-container__holder2--sub, .u-container__holder4--div .sub {
+.u-container__holder2--sub {
   font-size: 0.875rem;
   line-height: 1.375rem;
   font-family: OpenSansSemiBold;
@@ -738,18 +773,25 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  margin-top: 5px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #808080;
+  padding: 10px;
 }
 
-.u-container__holder3--div .sub {
+.u-container__holder3--flex {
+  margin-right: 10px;
+}
+
+.u-container__holder3--flex .sub {
   font-size: 0.875rem;
   line-height: 1.375rem;
   font-family: OpenSansSemiBold;
 }
 
-.u-container__holder3--div .label {
+.u-container__holder3--flex .label {
   font-size: 0.75rem;
   line-height: 1.25rem;
   font-family: OpenSansSemiBold;
@@ -760,32 +802,47 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  margin-top: 5px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-.u-container__holder4--div .label {
+.u-container__holder4--flex {
+  margin-right: 10px;
+}
+
+.u-container__holder4--flex .sub {
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+  font-family: OpenSansSemiBold;
+}
+
+.u-container__holder4--flex .label {
   font-size: 0.75rem;
   line-height: 1.25rem;
   font-family: OpenSansSemiBold;
   font-family: OpenSansLight;
-  width: 40vw;
+}
+
+.u-container__iframe {
+  height: 50vw;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .u-container__holder5 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  margin-top: 5px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-bottom: 1px solid #808080;
+  padding: 10px;
 }
 
 .u-container__holder5--flex {
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+  margin-right: 10px;
 }
 
 .u-container__holder5--flex .sub {
@@ -801,49 +858,225 @@
   font-family: OpenSansLight;
 }
 
+.u-container__section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
 .u-container__section--h5 {
   font-size: 0.875rem;
   line-height: 1.375rem;
   font-family: OpenSansSemiBold;
-  margin-top: 20px;
-  margin-bottom: 10px;
 }
 
 .u-container__section--flex {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-top: 10px;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  border-bottom: 1px solid #808080;
+  padding: 10px;
 }
 
-.u-container__section--flex .sub {
-  font-size: 0.875rem;
-  line-height: 1.375rem;
+.u-container__section--flex .label {
+  font-size: 0.75rem;
+  line-height: 1.25rem;
   font-family: OpenSansSemiBold;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
 }
 
 .u-container__section--flex .flex2 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  width: 80vw;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 
-.u-container__section--flex .flex2__div--sub {
-  font-size: 0.875rem;
-  line-height: 1.375rem;
-  font-family: OpenSansSemiBold;
+.u-container__section--flex .flex2__div {
+  margin-right: 10px;
 }
 
 .u-container__section--flex .flex2__div--label {
   font-size: 0.75rem;
   line-height: 1.25rem;
   font-family: OpenSansSemiBold;
+}
+
+.u-container__section--flex .flex2__div--para {
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+  font-family: OpenSansRegular;
+  font-family: OpenSansLight;
+}
+
+.u-container__section--scores {
+  border-bottom: 1px solid #808080;
+  padding: 10px;
+}
+
+.u-container__section--scores .label {
+  font-size: 0.75rem;
+  line-height: 1.25rem;
+  font-family: OpenSansSemiBold;
+}
+
+.u-container__section--scores .div__label {
+  font-size: 0.75rem;
+  line-height: 1.25rem;
+  font-family: OpenSansSemiBold;
+}
+
+.u-container__section--scores .div__para {
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+  font-family: OpenSansRegular;
+  font-family: OpenSansLight;
+}
+
+.u-container__section--label {
+  font-size: 0.75rem;
+  line-height: 1.25rem;
+  font-family: OpenSansSemiBold;
+}
+
+.u-container__section--para {
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+  font-family: OpenSansRegular;
+  font-family: OpenSansLight;
+  border-bottom: 1px solid #808080;
+  padding: 10px;
+}
+
+.u-container__section--div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  border-bottom: 1px solid #808080;
+  padding: 10px;
+}
+
+.u-container__section--div .label {
+  font-size: 0.75rem;
+  line-height: 1.25rem;
+  font-family: OpenSansSemiBold;
+}
+
+.u-container__section--div .para {
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+  font-family: OpenSansRegular;
+  font-family: OpenSansLight;
+}
+
+.u-container__section--column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: 1px solid #808080;
+  padding: 10px;
+}
+
+.u-container__section--column .label {
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+  font-family: OpenSansSemiBold;
+}
+
+.u-container__section--column .inner-div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.u-container__section--column .inner-div__flex {
+  margin-right: 10px;
+}
+
+.u-container__section--column .inner-div__flex--h6 {
+  font-size: 0.75rem;
+  line-height: 1.25rem;
+  font-family: OpenSansSemiBold;
+}
+
+.u-container__section--column .inner-div__flex--para {
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+  font-family: OpenSansRegular;
+  font-family: OpenSansLight;
+}
+
+.u-container__section--tuition {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  border-bottom: 1px solid #808080;
+  padding: 10px;
+}
+
+.u-container__section--tuition .label {
+  font-size: 0.75rem;
+  line-height: 1.25rem;
+  font-family: OpenSansSemiBold;
+}
+
+.u-container__section--tuition .div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.u-container__section--tuition .div__inner-div {
+  margin-right: 10px;
+}
+
+.u-container__section--tuition .div__inner-div--label {
+  font-size: 0.75rem;
+  line-height: 1.25rem;
+  font-family: OpenSansSemiBold;
+}
+
+.u-container__section--tuition .div__inner-div--para {
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+  font-family: OpenSansRegular;
+  font-family: OpenSansLight;
+}
+
+.u-container__culture--h5 {
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+  font-family: OpenSansSemiBold;
+}
+
+.u-container__culture--para {
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+  font-family: OpenSansRegular;
   font-family: OpenSansLight;
 }
 

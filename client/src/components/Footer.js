@@ -4,20 +4,20 @@ export default class Footer extends Component {
   render() {
     return (
       <footer className="footer">
-        <Link to="/">
-          <h1 className="footer__title">uChoose</h1>
+        <Link to="/" className="footer__link">
+          <h1 className="footer__link--title">uChoose</h1>
         </Link>
         <nav className="footer__nav">
-          <Link to="/about">
+          <Link to="/about" className="footer__nav--link">
             <h3 className="footer__nav--item">About</h3>
           </Link>
-          <Link to="/data">
+          <Link to="/data" className="footer__nav--link">
             <h3 className="footer__nav--item">Data</h3>
           </Link>
-          <Link to="/news">
+          <Link to="/news" className="footer__nav--link">
             <h3 className="footer__nav--item">News</h3>
           </Link>
-          <Link to="/contact">
+          <Link to="/contact" className="footer__nav--link">
             <h3 className="footer__nav--item">Contact Us</h3>
           </Link>
         </nav>

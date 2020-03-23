@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
-import Footer from "./Footer.js";
 export default class Tuition extends Component {
   state = {
     tuition: "select-one",
@@ -197,7 +196,6 @@ export default class Tuition extends Component {
         {this.state.isNotShowingUni && (
           <div className="main-tuition__error">{noCampus()}</div>
         )}
-        <Footer />
       </main>
     );
   }

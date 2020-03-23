@@ -2,7 +2,7 @@
   position: relative;
   &__image {
     height: 60vw;
-    width: 100vw;
+    width: 100%;
     filter: brightness(85%);
   }
   &__text {
@@ -12,7 +12,7 @@
     top: 30px;
     left: 16px;
     width: 60vw;
-    color: white;
+    color: $white;
   }
 }
 

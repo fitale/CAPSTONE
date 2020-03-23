@@ -18,13 +18,26 @@ export default class Header extends Component {
   render() {
     return (
       <header className="header">
-        <Link to="/">
-          <h3 className="header__title">uChoose</h3>
+        <Link to="/" className="header__link">
+          <h3 className="header__link--title">uChoose</h3>
         </Link>
         <nav className="header__nav">
-          <h6 className="header__nav--tablet-desk-one">SIGN UP</h6>
-          <h6 className="header__nav--tablet-desk">LOG IN</h6>
-          <div className="header__nav--mobile">
+          <Link to="/uChoosenow" className="header__nav--desk">
+            <h5 className="inner-text">Search Now</h5>
+          </Link>
+          <Link to="/about" className="header__nav--desk">
+            <h5 className="inner-text">About</h5>
+          </Link>
+          <Link to="/data" className="header__nav--desk">
+            <h5 className="inner-text">Data</h5>
+          </Link>
+          <Link to="/news" className="header__nav--desk">
+            <h5 className="inner-text">News</h5>
+          </Link>
+          <Link to="/contact" className="header__nav--desk">
+            <h5 className="inner-text">Contact</h5>
+          </Link>
+          <div className="header__nav--mobile-tablet">
             <svg
               onClick={this.openMenuSlider}
               xmlns="http://www.w3.org/2000/svg"

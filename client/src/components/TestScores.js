@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
-import Footer from "./Footer.js";
 export default class TestScores extends Component {
   state = {
     testType: "select-one",
@@ -171,7 +170,6 @@ export default class TestScores extends Component {
         {this.state.isNotShowingUni && (
           <div className="test-scores__error">{noCampus()}</div>
         )}
-        <Footer />
       </main>
     );
   }

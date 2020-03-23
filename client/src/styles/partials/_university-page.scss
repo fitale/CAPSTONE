@@ -1,5 +1,5 @@
 .u-container {
-  margin: 24px 16px 0;
+  margin: 24px 16px;
   display: flex;
   flex-direction: column;
   &__title {
@@ -24,12 +24,15 @@
       @keyframes color-me-in {
         0% {
           background-color: $light-purple;
+          border-color: $light-purple;
         }
         50% {
           background-color: $comp-yellow;
+          border-color: $comp-yellow;
         }
         100% {
           background-color: $dark-blue;
+          border-color: $dark-blue;
         }
       }
     }
@@ -53,34 +56,29 @@
     }
   }
   &__holder {
-    margin-top: 20px;
     display: flex;
-    justify-content: space-around;
-    &--left {
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid $grey;
+    padding: 10px;
+    &--flex {
+      // margin-right: 10px;
       .sub {
         @include mobile-subheader;
       }
       .label {
         @include mobile-labels;
         font-family: OpenSansLight;
-        width: 35vw;
-      }
-    }
-    &--right {
-      .sub {
-        @include mobile-subheader;
-      }
-      .label {
-        @include mobile-labels;
-        font-family: OpenSansLight;
+        width: 50%;
       }
     }
   }
   &__holder2 {
-    margin-top: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
+
     &--sub {
       @include mobile-subheader;
     }
@@ -91,9 +89,12 @@
   }
   &__holder3 {
     display: flex;
-    justify-content: space-around;
-    margin-top: 5px;
-    &--div {
+    justify-content: center;
+    margin-bottom: 10px;
+    border-bottom: 1px solid $grey;
+    padding: 10px;
+    &--flex {
+      margin-right: 10px;
       .sub {
         @include mobile-subheader;
       }
@@ -105,25 +106,30 @@
   }
   &__holder4 {
     display: flex;
-    justify-content: space-around;
-    margin-top: 5px;
-    &--div {
+    justify-content: center;
+    &--flex {
+      margin-right: 10px;
       .sub {
-        @extend .u-container__holder2--sub;
+        @include mobile-subheader;
       }
       .label {
         @include mobile-labels;
         font-family: OpenSansLight;
-        width: 40vw;
       }
     }
   }
+  &__iframe {
+    height: 50vw;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
   &__holder5 {
     display: flex;
-    justify-content: space-around;
-    margin-top: 5px;
+    justify-content: center;
+    border-bottom: 1px solid $grey;
+    padding: 10px;
     &--flex {
-      align-self: center;
+      margin-right: 10px;
       .sub {
         @include mobile-subheader;
       }
@@ -134,32 +140,128 @@
     }
   }
   &__section {
+    display: flex;
+    flex-direction: column;
     &--h5 {
       @include mobile-subheader;
-      margin-top: 20px;
-      margin-bottom: 10px;
     }
     &--flex {
       display: flex;
-      margin-top: 10px;
-      .sub {
-        @include mobile-subheader;
-        align-self: center;
+      justify-content: space-evenly;
+      border-bottom: 1px solid $grey;
+      padding: 10px;
+      .label {
+        @include mobile-labels;
       }
       .flex2 {
         display: flex;
-        justify-content: space-around;
-        width: 80vw;
+        justify-content: space-evenly;
         &__div {
-          &--sub {
-            @include mobile-subheader;
-          }
+          margin-right: 10px;
           &--label {
             @include mobile-labels;
+          }
+          &--para {
+            @include mobile-paragraph;
             font-family: OpenSansLight;
           }
         }
       }
+    }
+    &--scores {
+      border-bottom: 1px solid $grey;
+      padding: 10px;
+      .label {
+        @include mobile-labels;
+      }
+      .div {
+        &__label {
+          @include mobile-labels;
+        }
+        &__para {
+          @include mobile-paragraph;
+          font-family: OpenSansLight;
+        }
+      }
+    }
+    &--label {
+      @include mobile-labels;
+    }
+    &--para {
+      @include mobile-paragraph;
+      font-family: OpenSansLight;
+      border-bottom: 1px solid $grey;
+      padding: 10px;
+    }
+    &--div {
+      display: flex;
+      justify-content: space-evenly;
+      border-bottom: 1px solid $grey;
+      padding: 10px;
+      .label {
+        @include mobile-labels;
+      }
+      .para {
+        @include mobile-paragraph;
+        font-family: OpenSansLight;
+      }
+    }
+    &--column {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border-bottom: 1px solid $grey;
+      padding: 10px;
+      .label {
+        @include mobile-subheader;
+      }
+      .inner-div {
+        display: flex;
+        justify-content: space-evenly;
+        &__flex {
+          margin-right: 10px;
+          &--h6 {
+            @include mobile-labels;
+          }
+          &--para {
+            @include mobile-paragraph;
+            font-family: OpenSansLight;
+          }
+        }
+      }
+    }
+    &--tuition {
+      display: flex;
+      // flex-direction: column;
+      // align-items: center;
+      justify-content: space-evenly;
+      border-bottom: 1px solid $grey;
+      padding: 10px;
+      .label {
+        @include mobile-labels;
+      }
+      .div {
+        display: flex;
+        &__inner-div {
+          margin-right: 10px;
+          &--label {
+            @include mobile-labels;
+          }
+          &--para {
+            @include mobile-paragraph;
+            font-family: OpenSansLight;
+          }
+        }
+      }
+    }
+  }
+  &__culture {
+    &--h5 {
+      @include mobile-subheader;
+    }
+    &--para {
+      @include mobile-paragraph;
+      font-family: OpenSansLight;
     }
   }
 }

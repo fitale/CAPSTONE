@@ -1,18 +1,30 @@
 .footer {
   padding: 0 16px;
   height: 80px;
-  &__title {
-    @include mobile-header;
-    margin-top: 20px;
-    margin-bottom: 10px;
-    color: #808080;
+  &__link {
+    text-decoration: none;
+    &--title {
+      @include mobile-header;
+      color: $grey;
+      &:hover {
+        color: $primary-blue;
+        transition: color 0.5s ease-in-out;
+      }
+    }
   }
   &__nav {
+    margin-top: 20px;
+    margin-bottom: 10px;
     display: flex;
     justify-content: space-evenly;
-    &--item {
+    &--link {
+      text-decoration: none;
       @include mobile-labels;
-      color: #808080;
+      color: $grey;
+      &:hover {
+        color: $primary-blue;
+        transition: color 0.5s ease-in-out;
+      }
     }
   }
 }
@@ -21,14 +33,16 @@
   .footer {
     padding: 0 24px;
     height: 100px;
-    &__title {
-      @include desk-tablet-header;
-      margin-top: 32px;
-      margin-bottom: 20px;
+    &__link {
+      &--title {
+        @include desk-tablet-header;
+        margin-top: 32px;
+        margin-bottom: 20px;
+      }
     }
     &__nav {
-      justify-content: center;
-      &--item {
+      justify-content: flex-end;
+      &--link {
         margin-left: 40px;
         @include desk-tablet-labels;
       }
@@ -38,9 +52,7 @@
 
 @include huge {
   .footer {
-    padding: 0 180px;
-    &__nav {
-      justify-content: flex-end;
-    }
+    margin: unset;
+    padding: unset;
   }
 }
