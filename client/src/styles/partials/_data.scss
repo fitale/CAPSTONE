@@ -31,3 +31,42 @@
     }
   }
 }
+
+@include medium {
+  .main-data {
+    margin: 32px 24px;
+    &__h1 {
+      @include desk-tablet-header;
+    }
+    &__div {
+      &--flex {
+        .h3 {
+          @include desk-tablet-labels;
+        }
+      }
+    }
+  }
+}
+
+@include huge {
+  .main-data {
+    margin: 40px 180px;
+    &__div {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      &--flex {
+        border-bottom: none;
+        width: 30%;
+        margin: 100px 10px;
+        padding-right: 10px;
+        padding-left: 10px;
+        .a {
+          .img {
+            height: 12vw;
+          }
+        }
+      }
+    }
+  }
+}

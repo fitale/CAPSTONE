@@ -9,20 +9,7 @@ export default class Data extends Component {
       <main className="main-data">
         <h1 className="main-data__h1">DATA</h1>
         <div className="main-data__div">
-          <div className="main-data__div--flex">
-            <a
-              className="a"
-              href="https://nces.ed.gov/ipeds/datacenter/InstitutionByName.aspx"
-            >
-              <img className="img" src={IPEDS} alt="site-screenshot" />
-            </a>
-            <h3 className="h3">
-              IPEDS is the Institute of Education Sciences (IES), the US’s
-              leading source for rigorous, independent education research,
-              evaluation and statistics.
-            </h3>
-          </div>
-          <div className="main-data__div--flex">
+          <div className="main-data__div--flex ">
             <a
               className="a"
               href="https://data.ny.gov/api/views/3cij-nwhw/rows.json?accessType=DOWNLOAD&sorting=true"
@@ -36,6 +23,20 @@ export default class Data extends Component {
               University of New York (SUNY) System.
             </h3>
           </div>
+          <div className="main-data__div--flex">
+            <a
+              className="a"
+              href="https://nces.ed.gov/ipeds/datacenter/InstitutionByName.aspx"
+            >
+              <img className="img" src={IPEDS} alt="site-screenshot" />
+            </a>
+            <h3 className="h3">
+              Researched universities using IPEDS - the Institute of Education
+              Sciences (IES) - the US’s leading source for rigorous, independent
+              education research, evaluation and statistics.
+            </h3>
+          </div>
+
           <div className="main-data__div--flex">
             <a className="a" href="http://localhost:5000/api/udata">
               <img className="img" src={myAPI} alt="site-screenshot" />

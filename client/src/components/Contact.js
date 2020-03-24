@@ -2,6 +2,6 @@ import React, { Component } from "react";
 
 export default class Contact extends Component {
   render() {
-    return <div>fitale wari</div>;
+    return <main>fitale wari</main>;
   }
 }
