@@ -1787,6 +1787,246 @@
   }
 }
 
+.main {
+  margin: 24px 16px;
+  text-align: center;
+  overflow: hidden;
+}
+
+@-webkit-keyframes welcome {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0;
+    letter-spacing: 10px;
+    margin-bottom: -40px;
+  }
+  50% {
+    opacity: 0.5;
+    letter-spacing: 15px;
+    margin-bottom: -30px;
+  }
+  75% {
+    opacity: 0.75;
+    letter-spacing: 10px;
+    margin-bottom: -20px;
+  }
+  100% {
+    opacity: 1;
+    margin-bottom: 10px;
+  }
+}
+
+@keyframes welcome {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0;
+    letter-spacing: 10px;
+    margin-bottom: -40px;
+  }
+  50% {
+    opacity: 0.5;
+    letter-spacing: 15px;
+    margin-bottom: -30px;
+  }
+  75% {
+    opacity: 0.75;
+    letter-spacing: 10px;
+    margin-bottom: -20px;
+  }
+  100% {
+    opacity: 1;
+    margin-bottom: 10px;
+  }
+}
+
+.main__welcome {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-family: OpenSansBold;
+  -webkit-animation: welcome 1s;
+          animation: welcome 1s;
+  z-index: 2;
+  letter-spacing: 5px;
+  margin-bottom: 10px;
+}
+
+.main__name {
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+  font-family: OpenSansSemiBold;
+  color: #0000d6;
+  -webkit-animation: display 1.2s;
+          animation: display 1.2s;
+  opacity: 1;
+}
+
+@-webkit-keyframes display {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes display {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.main__section {
+  margin: 20px 0;
+}
+
+.main__section--headshot {
+  height: 70vw;
+  margin-top: 10px;
+}
+
+.main__section--div {
+  margin-top: 20px;
+}
+
+.main__section--div .label {
+  font-size: 0.75rem;
+  line-height: 1.25rem;
+  font-family: OpenSansSemiBold;
+  margin-bottom: 10px;
+  text-align: justify;
+}
+
+.main__section--div .para {
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+  font-family: OpenSansRegular;
+  font-family: OpenSansLight;
+  text-align: justify;
+}
+
+@media only screen and (min-width: 768px) {
+  .main {
+    margin: 32px 24px;
+  }
+  .main__welcome {
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+    font-family: OpenSansBold;
+  }
+  .main__name {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-family: OpenSansSemiBold;
+  }
+  .main__section--headshot {
+    height: 40vw;
+  }
+  .main__section--div .label {
+    font-size: 0.75rem;
+    line-height: 1.25rem;
+    font-family: OpenSansSemiBold;
+  }
+  .main__section--div .para {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    font-family: OpenSansRegular;
+    font-family: OpenSansLight;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .main {
+    margin: 40px 180px;
+  }
+  .main__section {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    margin-top: 100px;
+  }
+  .main__section--div {
+    width: 50%;
+  }
+}
+
+.main-data {
+  margin: 24px 16px;
+}
+
+.main-data__h1 {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-family: OpenSansBold;
+  color: #0000a3;
+}
+
+.main-data__div--flex {
+  border-bottom: 1px solid #808080;
+  padding-bottom: 10px;
+  margin: 20px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main-data__div--flex .a {
+  text-decoration: none;
+}
+
+.main-data__div--flex .a:hover {
+  text-decoration: underline;
+  color: #0000d6;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.main-data__div--flex .a .img {
+  height: 40vw;
+}
+
+.main-data__div--flex .h3 {
+  font-size: 0.75rem;
+  line-height: 1.25rem;
+  font-family: OpenSansSemiBold;
+  color: #808080;
+  text-align: justify;
+}
+
 *,
 html,
 body {

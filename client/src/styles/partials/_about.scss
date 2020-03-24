@@ -1,0 +1,119 @@
+.main {
+  margin: 24px 16px;
+  text-align: center;
+  overflow: hidden;
+  @keyframes welcome {
+    0% {
+      opacity: 0;
+    }
+    25% {
+      opacity: 0;
+      letter-spacing: 10px;
+      margin-bottom: -40px;
+    }
+    50% {
+      opacity: 0.5;
+      letter-spacing: 15px;
+      margin-bottom: -30px;
+    }
+    75% {
+      opacity: 0.75;
+      letter-spacing: 10px;
+      margin-bottom: -20px;
+    }
+    100% {
+      opacity: 1;
+      margin-bottom: 10px;
+    }
+  }
+  &__welcome {
+    @include mobile-header;
+    animation: welcome 1s;
+    z-index: 2;
+    letter-spacing: 5px;
+    margin-bottom: 10px;
+  }
+  &__name {
+    @include mobile-subheader;
+    color: $primary-blue;
+    animation: display 1.2s;
+    opacity: 1;
+  }
+  @keyframes display {
+    0% {
+      opacity: 0;
+    }
+    25% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 0;
+    }
+    75% {
+      opacity: 0.5;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  &__section {
+    margin: 20px 0;
+    &--headshot {
+      height: 70vw;
+      margin-top: 10px;
+    }
+    &--div {
+      margin-top: 20px;
+      .label {
+        @include mobile-labels;
+        margin-bottom: 10px;
+        text-align: justify;
+      }
+      .para {
+        @include mobile-paragraph;
+        font-family: OpenSansLight;
+        text-align: justify;
+      }
+    }
+  }
+}
+
+@include medium {
+  .main {
+    margin: 32px 24px;
+    &__welcome {
+      @include desk-tablet-header;
+    }
+    &__name {
+      @include desk-tablet-subheader;
+    }
+    &__section {
+      &--headshot {
+        height: 40vw;
+      }
+      &--div {
+        .label {
+          @include desk-tablet-labels;
+        }
+        .para {
+          @include desk-tablet-para-comment;
+          font-family: OpenSansLight;
+        }
+      }
+    }
+  }
+}
+
+@include huge {
+  .main {
+    margin: 40px 180px;
+    &__section {
+      display: flex;
+      justify-content: space-evenly;
+      margin-top: 100px;
+      &--div {
+        width: 50%;
+      }
+    }
+  }
+}
