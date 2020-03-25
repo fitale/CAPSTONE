@@ -48,14 +48,16 @@ function Map() {
           onCloseClick={() => {
             setSelectedUni(null);
           }}
+          style={{ cursor: `pointer` }}
         >
           <div>
-            <h3>{selectedUni.campus}</h3>
+            <h3 style={{ margin: `0 0 5px` }}>{selectedUni.campus}</h3>
             <h6>{selectedUni.address}</h6>
-            <h6>
+            <h6 style={{ margin: `0 0 5px` }}>
               {selectedUni.city}, {selectedUni.state} {selectedUni.zip}
             </h6>
-            <Link to={`${selectedUni._id}`}>
+            <p style={{ margin: `0 0 5px` }}>{selectedUni.mission}</p>
+            <Link to={`${selectedUni._id}`} style={{ color: `#0000d6` }}>
               <h5>Learn more</h5>
             </Link>
           </div>
@@ -92,23 +94,24 @@ export default class Locations2 extends Component {
         return <p key={uni._id}>{uni.campus}</p>;
       });
     } else {
-      myHtml = <p>Loading...</p>;
+      myHtml = <p className="p">Loading...</p>;
     }
 
     return (
-      <main>
+      <main className="locations">
         <h3 className="locations__title">Search by Location</h3>
-        <form onSubmit={this.searchByLocation} className="locations__holder">
+        <form onSubmit={this.searchByLocation} className="locations__form">
           <input
             name="input"
-            className="locations__holder--input"
+            className="locations__form--input"
             type="text"
+            placeholder="Search city"
           />
-          <button className="locations__holder--button">
-            Find schools now
+          <button className="locations__form--button">
+            <h5 className="submit"> SUBMIT</h5>
           </button>
         </form>
-        {/* container for GoogleMaps */}
+        {/* container for GoogleMaps and key */}
         <div
           className="locations__map-holder"
           style={{ height: "50vh", width: "100vw" }}
@@ -118,22 +121,25 @@ export default class Locations2 extends Component {
             loadingElement={<div style={{ height: `100%` }} />}
             containerElement={<div style={{ height: `100%` }} />}
             mapElement={<div style={{ height: `100%` }} />}
+            className="locations__map-holder--flex"
           />
+          <div className="locations__map-holder--flex-cities">
+            <h3 className="h3">Cities to search by:</h3>
+            <p className="p">Amherst</p>
+            <p className="p">Batavia</p>
+            <p className="p">Binghamton</p>
+            <p className="p">Brockport</p>
+            <p className="p">Buffalo</p>
+            <p className="p">Canandaigua</p>
+            <p className="p">Dunkirk</p>
+            <p className="p">Fredonia</p>
+            <p className="p">Geneseo</p>
+            <p className="p">Henrietta</p>
+            <p className="p">Niagara</p>
+            <p className="p">Rochester</p>
+            <p className="p">Sanborn</p>
+          </div>
         </div>
-        <h3>Cities to search by:</h3>
-        <p>Buffalo</p>
-        <p>Amherst</p>
-        <p>Binghamton</p>
-        <p>Batavia</p>
-        <p>Geneseo</p>
-        <p>Rochester</p>
-        <p>Henrietta</p>
-        <p>Brockport</p>
-        <p>Fredonia</p>
-        <p>Dunkirk</p>
-        <p>Canandaigua</p>
-        <p>Niagara</p>
-        <p>Sanborn</p>
       </main>
     );
   }

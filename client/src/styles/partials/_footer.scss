@@ -1,6 +1,7 @@
 .footer {
-  padding: 0 16px;
-  height: 80px;
+  padding: 1rem 1rem;
+  border-top: 0.0625rem solid $grey;
+  background-color: $light-grey;
   &__link {
     text-decoration: none;
     &--title {
@@ -13,8 +14,6 @@
     }
   }
   &__nav {
-    margin-top: 20px;
-    margin-bottom: 10px;
     display: flex;
     justify-content: space-evenly;
     &--link {
@@ -31,19 +30,18 @@
 
 @include medium {
   .footer {
-    padding: 0 24px;
-    height: 100px;
+    padding: 0 1.5rem 1.5rem;
+    height: 7.5rem;
     &__link {
       &--title {
         @include desk-tablet-header;
-        margin-top: 32px;
-        margin-bottom: 20px;
+        margin-top: 2rem;
       }
     }
     &__nav {
       justify-content: flex-end;
       &--link {
-        margin-left: 40px;
+        margin-left: 2.5rem;
         @include desk-tablet-labels;
       }
     }
@@ -53,6 +51,6 @@
 @include huge {
   .footer {
     margin: unset;
-    padding: unset;
+    padding: 0 11.25rem 1.5rem;
   }
 }

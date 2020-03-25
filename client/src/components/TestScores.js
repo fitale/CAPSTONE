@@ -23,6 +23,7 @@ export default class TestScores extends Component {
   handleEvent = event => {
     event.preventDefault();
     const studentScore = Number(event.target.input.value);
+    console.log(this.props.uData);
     // begin filtering through all university data
     this.props.uData.filter(uni => {
       // checking state to search by SAT
@@ -41,10 +42,10 @@ export default class TestScores extends Component {
         }
         // comparing true values
         else if (
-          uni.SAT_reading_writing_25 === studentScore ||
-          uni.SAT_reading_writing_75 === studentScore ||
-          uni.SAT_math_25 === studentScore ||
-          uni.SAT_math_75 === studentScore
+          uni.SAT_reading_writing_25 <= studentScore ||
+          uni.SAT_reading_writing_75 <= studentScore ||
+          uni.SAT_math_25 <= studentScore ||
+          uni.SAT_math_75 <= studentScore
         ) {
           this.state.matchUni.push(uni);
           return this.setState({
@@ -62,7 +63,7 @@ export default class TestScores extends Component {
           });
         }
         // comparing true values
-        else if (uni.ACT_25 === studentScore || uni.ACT_75 === studentScore) {
+        else if (uni.ACT_25 <= studentScore || uni.ACT_75 <= studentScore) {
           this.state.matchUni.push(uni);
           return this.setState({
             isShowingUni: true

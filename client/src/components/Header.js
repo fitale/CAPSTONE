@@ -25,6 +25,7 @@ export default class Header extends Component {
           <Link to="/uChoosenow" className="header__nav--desk">
             <h5 className="inner-text">Search Now</h5>
           </Link>
+
           <Link to="/about" className="header__nav--desk">
             <h5 className="inner-text">About</h5>
           </Link>
@@ -33,9 +34,6 @@ export default class Header extends Component {
           </Link>
           <Link to="/news" className="header__nav--desk">
             <h5 className="inner-text">News</h5>
-          </Link>
-          <Link to="/contact" className="header__nav--desk">
-            <h5 className="inner-text">Contact</h5>
           </Link>
           <div className="header__nav--mobile-tablet">
             <svg

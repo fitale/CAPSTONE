@@ -1,5 +1,5 @@
 .main-tuition {
-  margin: 24px 16px 0;
+  margin: 1.5rem 1rem 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -7,39 +7,44 @@
     @include mobile-header;
     font-family: OpenSansCondensedBold;
     color: $dark-blue;
-    margin-bottom: 24px;
+    margin-bottom: 1.5rem;
   }
   &__form {
-    border: 1px solid $grey;
-    border-radius: 4px;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-bottom: 20px;
+    border: 0.0625rem solid $grey;
+    border-radius: 0.25rem;
+    padding-left: 0.625rem;
+    padding-right: 0.625rem;
+    padding-bottom: 1.25rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 75vw;
     &--flex {
-      margin-top: 20px;
-      margin-bottom: 20px;
+      margin-top: 1.25rem;
+      margin-bottom: 1.25rem;
       .h5 {
         @include mobile-subheader;
         font-family: OpenSansLight;
       }
       .select {
-        margin-top: 10px;
+        margin-top: 0.625rem;
         outline: none;
-        &:hover {
+        border: 0.0625rem solid $grey;
+        height: 1.875rem;
+        width: 6.25rem;
+        &:hover,
+        &:focus {
+          border: 0.0625rem solid $primary-blue;
           cursor: pointer;
         }
       }
     }
     &--submit {
-      width: 160px;
-      height: 40px;
-      border-radius: 4px;
+      width: 10rem;
+      height: 2.5rem;
+      border-radius: 0.25rem;
       background-color: $light-purple;
-      border: 1px solid $light-purple;
+      border: 0.0625rem solid $light-purple;
       outline: none;
       display: flex;
       align-items: center;
@@ -57,13 +62,13 @@
     }
   }
   &__uni {
-    margin-top: 32px;
+    margin-top: 2rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     &--title {
       @include mobile-header;
-      margin-bottom: 20px;
+      margin-bottom: 1.25rem;
       color: $primary-blue;
     }
     .link {
@@ -75,20 +80,20 @@
         list-style: none;
         @include mobile-subheader;
         color: $grey;
-        margin-bottom: 5px;
+        margin-bottom: 0.3125rem;
       }
     }
     .button {
-      width: 160px;
-      height: 40px;
-      border-radius: 4px;
+      width: 10rem;
+      height: 2.5rem;
+      border-radius: 0.25rem;
       background-color: $light-purple;
-      border: 1px solid $light-purple;
+      border: 0.0625rem solid $light-purple;
       outline: none;
       display: flex;
       align-items: center;
       justify-content: center;
-      margin-top: 20px;
+      margin-top: 1.25rem;
       &:hover {
         transition: ease-in-out 0.5s;
         background-color: #0000a3;
@@ -106,22 +111,22 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      margin-top: 32px;
+      margin-top: 2rem;
       .h3 {
         @include mobile-subheader;
         color: $grey;
       }
       .button {
-        width: 160px;
-        height: 40px;
-        border-radius: 4px;
+        width: 10rem;
+        height: 2.5rem;
+        border-radius: 0.25rem;
         background-color: $light-purple;
-        border: 1px solid $light-purple;
+        border: 0.0625rem solid $light-purple;
         outline: none;
         display: flex;
         align-items: center;
         justify-content: center;
-        margin-top: 20px;
+        margin-top: 1.25rem;
         &:hover {
           transition: ease-in-out 0.5s;
           background-color: #0000a3;
@@ -139,7 +144,7 @@
 
 @include medium {
   .main-tuition {
-    margin: 32px 24px 0;
+    margin: 2rem 1.5rem 0;
     &__title {
       align-self: flex-start;
       @include desk-tablet-header-smaller;
@@ -153,34 +158,30 @@
           font-family: OpenSansLight;
         }
         .select {
-          height: 30px;
-          width: 100px;
+          height: 1.875rem;
+          width: 6.25rem;
         }
       }
       &--submit {
         margin: 2rem 0;
-        // width: 12.5rem;
-        height: 3.125rem;
         .inner-text {
           @include desk-tablet-subheader;
         }
       }
     }
     &__uni {
-      margin-top: 40px;
+      margin-top: 2.5rem;
       &--title {
         @include desk-tablet-header-smaller;
-        margin-bottom: 30px;
+        margin-bottom: 1.875rem;
         .link {
           .li {
             @include desk-tablet-subheader;
-            margin-bottom: 10px;
+            margin-bottom: 0.625rem;
           }
         }
       }
       .button {
-        // width: 12.5rem;
-        height: 3.125rem;
         &__inner-text {
           @include desk-tablet-subheader;
         }
@@ -188,13 +189,11 @@
     }
     &__error {
       &--div {
-        margin-top: 40px;
+        margin-top: 2.5rem;
         .h3 {
           @include desk-tablet-subheader;
         }
         .button {
-          // width: 12.5rem;
-          height: 3.125rem;
           &__inner-text {
             @include desk-tablet-subheader;
           }
@@ -206,13 +205,16 @@
 
 @include huge {
   .main-tuition {
-    margin: 40px 180px 0;
+    margin: 2.5rem 11.25rem 0;
     &__title {
       @include desk-tablet-header;
       font-family: OpenSansCondensedBold;
     }
     &__form {
       width: 40vw;
+      &--submit {
+        height: 3.125rem;
+      }
     }
     &__uni {
       &--title {
@@ -224,11 +226,18 @@
           font-family: OpenSansSemiBold;
         }
       }
+      .button {
+        height: 3.125rem;
+      }
     }
     &__error {
+      margin: 0.3125rem 0 6.25rem;
       &--div {
         .h3 {
           @include desk-tablet-header-smaller;
+        }
+        .button {
+          height: 3.125rem;
         }
       }
     }

@@ -1,10 +1,113 @@
 .locations {
   &__title {
+    margin: 1.5rem 1rem;
     @include mobile-header;
+    font-family: OpenSansCondensedBold;
+    color: $dark-blue;
+    margin-bottom: 1.25rem;
   }
-  //   &__map-holder {
-  //     &--icon {
-  //       background-image: url("../assets/icons/location.svg");
-  //     }
-  //   }
+  &__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &--input {
+      height: 1.875rem;
+      width: 50vw;
+      background-image: url("../assets/icons/search.svg");
+      // z-index: 9;
+      background-repeat: no-repeat;
+      background-position: center left;
+      background-position-x: 0.625rem;
+      padding-left: 2.1875rem;
+      outline: none;
+      border-radius: 0.25rem;
+      border: 0.0625rem solid $grey;
+      &:focus,
+      &:hover {
+        border: 0.0625rem solid $primary-blue;
+        cursor: pointer;
+      }
+    }
+    &--button {
+      margin: 0.625rem 0 1.875rem;
+      width: 10rem;
+      height: 2.5rem;
+      border-radius: 0.25rem;
+      background-color: $light-purple;
+      border: 0.0625rem solid $light-purple;
+      outline: none;
+      &:hover {
+        transition: ease-in-out 0.5s;
+        background-color: $dark-blue;
+        border-color: $dark-blue;
+        cursor: pointer;
+      }
+      .submit {
+        @include mobile-subheader;
+        color: $white;
+      }
+    }
+  }
+  &__map-holder {
+    &--flex-cities {
+      margin: 1.5rem 1rem;
+      .h3 {
+        @include mobile-subheader;
+        margin-bottom: 0.625rem;
+      }
+      .p {
+        @include mobile-paragraph;
+        margin-bottom: 0.3125rem;
+      }
+    }
+  }
+}
+
+@include medium {
+  .locations {
+    &__title {
+      @include desk-tablet-header-smaller;
+      font-family: OpenSansCondensedBold;
+      margin: 2rem 1.5rem;
+    }
+    &__form {
+      &--input {
+        height: 2.5rem;
+      }
+      &--button {
+        .submit {
+          @include desk-tablet-subheader;
+        }
+      }
+    }
+    &__map-holder {
+      &--flex-cities {
+        margin: 2rem 1.5rem;
+        .h3 {
+          @include desk-tablet-subheader;
+        }
+        .p {
+          @include desk-tablet-para-comment;
+        }
+      }
+    }
+  }
+}
+
+@include huge {
+  .locations {
+    &__title {
+      @include desk-tablet-header;
+      font-family: OpenSansCondensedBold;
+      margin: 2.5rem 11.25rem;
+    }
+    &__form {
+      &--input {
+        width: 30vw;
+      }
+      &--button {
+        height: 3.125rem;
+      }
+    }
+  }
 }

@@ -9,8 +9,8 @@
     @include mobile-header;
     font-family: OpenSansCondensedBold;
     position: absolute;
-    top: 30px;
-    left: 16px;
+    top: 1.875rem;
+    left: 1rem;
     width: 60vw;
     color: $white;
   }
@@ -21,8 +21,8 @@
     &__text {
       @include desk-tablet-header;
       font-family: OpenSansCondensedBold;
-      top: 64px;
-      left: 24px;
+      top: 4rem;
+      left: 1.5rem;
       width: 50vw;
     }
   }
@@ -31,8 +31,8 @@
 @include huge {
   .hero {
     &__text {
-      top: 180px;
-      left: 180px;
+      top: 11.25rem;
+      left: 11.25rem;
     }
   }
 }

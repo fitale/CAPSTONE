@@ -14,7 +14,6 @@ import UniversityPage from "./components/UniversityPage.js";
 import TestScores from "./components/TestScores.js";
 import About from "./components/About.js";
 import Data from "./components/Data.js";
-import Contact from "./components/Contact.js";
 import News from "./components/News.js";
 export default class App extends Component {
   state = {
@@ -52,7 +51,6 @@ export default class App extends Component {
             <Route path="/about" component={About} exact />
             <Route path="/data" component={Data} exact />
             <Route path="/news" component={News} exact />
-            <Route path="/contact" component={Contact} exact />
 
             <Route
               path="/searchbylocation"

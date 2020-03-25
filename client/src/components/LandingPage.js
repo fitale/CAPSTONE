@@ -62,8 +62,8 @@ export default class LandingPage extends Component {
               <img src={study} alt="planning" className="img" />
             </div>
           </div>
-          <Footer />
         </main>
+        <Footer />
       </>
     );
   }

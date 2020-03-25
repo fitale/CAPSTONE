@@ -1,5 +1,5 @@
 .u-container {
-  margin: 24px 16px;
+  margin: 1.5rem 1rem;
   display: flex;
   flex-direction: column;
   &__title {
@@ -8,14 +8,14 @@
     color: $primary-blue;
     align-self: center;
     text-align: center;
-    margin-bottom: 32px;
+    margin-bottom: 2rem;
   }
   &__button {
-    height: 50px;
-    width: 160px;
+    height: 3.125rem;
+    width: 10rem;
     align-self: center;
-    border: 1px solid $light-purple;
-    border-radius: 4px;
+    border: 0.0625rem solid $light-purple;
+    border-radius: 0.25rem;
     outline: none;
     background-color: $light-purple;
     &:hover {
@@ -43,8 +43,8 @@
   }
   &__subheader {
     @include mobile-subheader;
-    margin-top: 20px;
-    margin-bottom: 10px;
+    margin-top: 1.25rem;
+    margin-bottom: 0.625rem;
   }
   &__hero-holder {
     display: flex;
@@ -58,19 +58,18 @@
   &__holder {
     display: flex;
     justify-content: center;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    border-bottom: 1px solid $grey;
-    padding: 10px;
+    margin-top: 0.625rem;
+    margin-bottom: 0.625rem;
+    border-bottom: 0.0625rem solid $grey;
+    padding: 0.625rem;
     &--flex {
-      // margin-right: 10px;
       .sub {
         @include mobile-subheader;
       }
       .label {
         @include mobile-labels;
         font-family: OpenSansLight;
-        width: 50%;
+        width: 80%;
       }
     }
   }
@@ -90,13 +89,14 @@
   &__holder3 {
     display: flex;
     justify-content: center;
-    margin-bottom: 10px;
-    border-bottom: 1px solid $grey;
-    padding: 10px;
+    margin-bottom: 0.625rem;
+    border-bottom: 0.0625rem solid $grey;
+    padding: 0.625rem;
     &--flex {
-      margin-right: 10px;
+      margin-right: 0.625rem;
       .sub {
         @include mobile-subheader;
+        // margin-right: 60px;
       }
       .label {
         @include mobile-labels;
@@ -108,7 +108,10 @@
     display: flex;
     justify-content: center;
     &--flex {
-      margin-right: 10px;
+      margin-right: 0.625rem;
+      .a {
+        color: $primary-blue;
+      }
       .sub {
         @include mobile-subheader;
       }
@@ -120,16 +123,16 @@
   }
   &__iframe {
     height: 50vw;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 0.625rem;
+    margin-bottom: 0.625rem;
   }
   &__holder5 {
     display: flex;
     justify-content: center;
-    border-bottom: 1px solid $grey;
-    padding: 10px;
+    border-bottom: 0.0625rem solid $grey;
+    padding: 0.625rem;
     &--flex {
-      margin-right: 10px;
+      margin-right: 0.625rem;
       .sub {
         @include mobile-subheader;
       }
@@ -148,8 +151,8 @@
     &--flex {
       display: flex;
       justify-content: space-evenly;
-      border-bottom: 1px solid $grey;
-      padding: 10px;
+      border-bottom: 0.0625rem solid $grey;
+      padding: 0.625rem;
       .label {
         @include mobile-labels;
       }
@@ -157,7 +160,7 @@
         display: flex;
         justify-content: space-evenly;
         &__div {
-          margin-right: 10px;
+          margin-right: 0.625rem;
           &--label {
             @include mobile-labels;
           }
@@ -169,8 +172,8 @@
       }
     }
     &--scores {
-      border-bottom: 1px solid $grey;
-      padding: 10px;
+      border-bottom: 0.0625rem solid $grey;
+      padding: 0.625rem;
       .label {
         @include mobile-labels;
       }
@@ -186,18 +189,19 @@
     }
     &--label {
       @include mobile-labels;
+      margin-top: 0.625rem;
     }
     &--para {
       @include mobile-paragraph;
       font-family: OpenSansLight;
-      padding: 10px;
+      padding: 0.625rem;
     }
     &--div {
       display: flex;
       justify-content: space-evenly;
-      border-top: 1px solid $grey;
-      border-bottom: 1px solid $grey;
-      padding: 10px;
+      border-top: 0.0625rem solid $grey;
+      border-bottom: 0.0625rem solid $grey;
+      padding: 0.625rem;
       .label {
         @include mobile-labels;
       }
@@ -210,8 +214,8 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      border-bottom: 1px solid $grey;
-      padding: 10px;
+      border-bottom: 0.0625rem solid $grey;
+      padding: 0.625rem;
       .label {
         @include mobile-subheader;
       }
@@ -219,7 +223,7 @@
         display: flex;
         justify-content: space-evenly;
         &__flex {
-          margin-right: 10px;
+          margin-right: 0.625rem;
           &--h6 {
             @include mobile-labels;
           }
@@ -232,18 +236,16 @@
     }
     &--tuition {
       display: flex;
-      // flex-direction: column;
-      // align-items: center;
       justify-content: space-evenly;
-      border-bottom: 1px solid $grey;
-      padding: 10px;
+      border-bottom: 0.0625rem solid $grey;
+      padding: 0.625rem;
       .label {
         @include mobile-labels;
       }
       .div {
         display: flex;
         &__inner-div {
-          margin-right: 10px;
+          margin-right: 0.625rem;
           &--label {
             @include mobile-labels;
           }
@@ -256,8 +258,10 @@
     }
   }
   &__culture {
+    margin-top: 0.625rem;
     &--h5 {
       @include mobile-subheader;
+      margin-bottom: 0.3125rem;
     }
     &--para {
       @include mobile-paragraph;
@@ -269,7 +273,7 @@
 
 @include medium {
   .u-container {
-    margin: 32px 24px;
+    margin: 2rem 1.5rem;
     align-items: center;
     &__title {
       @include desk-tablet-header-smaller;
@@ -282,7 +286,7 @@
     &__holder {
       width: 50vw;
       &--flex {
-        margin: 5px 100px;
+        margin: 0.3125rem 6.25rem;
         width: 50%;
         .sub {
           @include desk-tablet-subheader;
@@ -306,7 +310,7 @@
     &__holder3 {
       width: 50vw;
       &--flex {
-        margin: 5px 100px;
+        margin: 0.3125rem 6.25rem;
         width: 50%;
         .sub {
           @include desk-tablet-subheader;
@@ -321,7 +325,7 @@
       width: 50vw;
       &--flex {
         width: 50%;
-        margin: 5px 100px;
+        margin: 0.3125rem 6.25rem;
         .sub {
           @include desk-tablet-subheader;
         }
@@ -337,11 +341,11 @@
       height: 30vw;
     }
     &__holder5 {
-      width: 50vw;
       justify-content: center;
+      width: 50vw;
       &--flex {
         width: 50%;
-        margin: 5px 100px;
+        margin: 0.3125rem 3.125rem;
         .sub {
           @include desk-tablet-subheader;
         }
@@ -355,17 +359,18 @@
       width: 50vw;
       &--h5 {
         @include desk-tablet-subheader;
+        margin-top: 0.625rem;
       }
       &--flex {
         justify-content: center;
         .label {
           @include desk-tablet-labels;
           width: 20%;
-          margin: 5px 100px;
+          margin: 0.3125rem 2.5rem;
         }
         .flex2 {
           width: 20%;
-          margin: 5px 100px;
+          margin: 0.3125rem 6.25rem;
           flex-direction: column;
           &__div {
             &--label {
@@ -382,13 +387,13 @@
         display: flex;
         justify-content: center;
         .label {
-          margin: 5px 100px;
-          width: 20%;
+          margin: 0.3125rem 2.5rem;
+          width: 50%;
           @include desk-tablet-labels;
         }
         .div {
-          margin: 5px 100px;
-          width: 20%;
+          margin: 0.3125rem 1.25rem;
+          width: 50%;
           &__label {
             @include desk-tablet-labels;
           }

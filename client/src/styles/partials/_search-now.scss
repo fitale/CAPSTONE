@@ -25,6 +25,10 @@
         height: 70vw;
         border: 0.0625rem solid black;
         border-radius: 0.25rem;
+        &:focus,
+        &:hover {
+          border: 0.125rem solid $primary-blue;
+        }
       }
     }
   }

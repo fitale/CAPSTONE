@@ -1,10 +1,10 @@
 .header {
-  padding: 0 16px;
-  height: 80px;
+  padding: 0 1rem;
+  height: 5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid $grey;
+  border-bottom: 0.0625rem solid $grey;
   background-color: $light-grey;
   &__link {
     text-decoration: none;
@@ -37,10 +37,12 @@
 
 @include medium {
   .header {
-    padding: 0 24px;
-    height: 100px;
-    &__title {
-      @include desk-tablet-header;
+    padding: 0 1.5rem;
+    height: 6.25rem;
+    &__link {
+      &--title {
+        @include desk-tablet-header;
+      }
     }
     &__nav {
       &--mobile-tablet {
@@ -52,12 +54,12 @@
 
 @include huge {
   .header {
-    padding: 0 180px;
+    padding: 0 11.25rem;
     &__nav {
       display: flex;
       &--desk {
         display: unset;
-        margin-right: 10px;
+        margin-left: 2.5rem;
         text-decoration: none;
         @include desk-tablet-subheader;
         color: $grey;

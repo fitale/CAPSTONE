@@ -42,7 +42,8 @@ const uDataSchema = new mongoose.Schema({
   ACT_25: Number,
   ACT_75: Number,
   application_fee: Number,
-  student_to_faculty: Number
+  student_to_faculty: Number,
+  mission: String
 });
 
 // export schema ('uData' is the name of database collection, 'uDataSchema' is the model above)

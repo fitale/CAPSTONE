@@ -67,7 +67,9 @@ export default class UniversityPage extends Component {
         <div className="u-container__holder4">
           <div className="u-container__holder4--flex">
             <h5 className="sub">Website</h5>
-            <p className="label">{this.state.oneUniv.campus_website}</p>
+            <a href={`${this.state.oneUniv.campus_website}`} className="a">
+              <p className="label">{this.state.oneUniv.campus_website}</p>
+            </a>
           </div>
           <div className="u-container__holder4--flex">
             <h5 className="sub">Address</h5>
@@ -161,7 +163,7 @@ export default class UniversityPage extends Component {
         </section>
         <section className="u-container__section">
           <div className="u-container__section--div">
-            <h6 className="label">Total: </h6>
+            <h6 className="label">Admission Total: </h6>
             <p className="para">{this.state.oneUniv.admission_total}</p>
             <h6 className="label">Male:</h6>
             <p className="para">{this.state.oneUniv.admission_male}</p>
@@ -216,17 +218,9 @@ export default class UniversityPage extends Component {
           </div>
         </section>
         <div className="u-container__culture">
-          <h5 className="u-container__culture--h5">Campus Culture</h5>
+          <h5 className="u-container__culture--h5">Mission Statement</h5>
           <p className="u-container__culture--para">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book. It has survived not
-            only five centuries, but also the leap into electronic typesetting,
-            remaining essentially unchanged. It was popularised in the 1960s
-            with the release of Letraset sheets containing Lorem Ipsum passages,
-            and more recently with desktop publishing software like Aldus
-            PageMaker including versions of Lorem Ipsum.
+            {this.state.oneUniv.mission}
           </p>
         </div>
       </main>

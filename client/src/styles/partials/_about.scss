@@ -1,5 +1,5 @@
 .main {
-  margin: 24px 16px;
+  margin: 1.5rem 1rem;
   text-align: center;
   overflow: hidden;
   @keyframes welcome {
@@ -8,30 +8,30 @@
     }
     25% {
       opacity: 0;
-      letter-spacing: 10px;
-      margin-bottom: -40px;
+      letter-spacing: 0.625rem;
+      margin-bottom: -2.5rem;
     }
     50% {
       opacity: 0.5;
-      letter-spacing: 15px;
-      margin-bottom: -30px;
+      letter-spacing: 0.9375rem;
+      margin-bottom: -1.875rem;
     }
     75% {
       opacity: 0.75;
-      letter-spacing: 10px;
-      margin-bottom: -20px;
+      letter-spacing: 0.625rem;
+      margin-bottom: -1.25rem;
     }
     100% {
       opacity: 1;
-      margin-bottom: 10px;
+      margin-bottom: 0.625rem;
     }
   }
   &__welcome {
     @include mobile-header;
     animation: welcome 1s;
     z-index: 2;
-    letter-spacing: 5px;
-    margin-bottom: 10px;
+    letter-spacing: 0.3125rem;
+    margin-bottom: 0.625rem;
   }
   &__name {
     @include mobile-subheader;
@@ -57,16 +57,16 @@
     }
   }
   &__section {
-    margin: 20px 0;
+    margin: 1.25rem 0;
     &--headshot {
       height: 70vw;
-      margin-top: 10px;
+      margin-top: 0.625rem;
     }
     &--div {
-      margin-top: 20px;
+      margin-top: 1.25rem;
       .label {
         @include mobile-labels;
-        margin-bottom: 10px;
+        margin-bottom: 0.625rem;
         text-align: justify;
       }
       .para {
@@ -74,13 +74,30 @@
         font-family: OpenSansLight;
         text-align: justify;
       }
+      .title {
+        @include mobile-header;
+        color: $dark-blue;
+        margin: 1.25rem 0;
+      }
+      .section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 1.25rem;
+        &__a {
+          margin: 1.25rem 0;
+          &--img {
+            height: 10vw;
+          }
+        }
+      }
     }
   }
 }
 
 @include medium {
   .main {
-    margin: 32px 24px;
+    margin: 2rem 1.5rem;
     &__welcome {
       @include desk-tablet-header;
     }
@@ -99,6 +116,19 @@
           @include desk-tablet-para-comment;
           font-family: OpenSansLight;
         }
+        .title {
+          @include desk-tablet-header;
+        }
+        .section {
+          flex-direction: row;
+          justify-content: center;
+          &__a {
+            margin: 0 1.25rem;
+            &--img {
+              height: 5vw;
+            }
+          }
+        }
       }
     }
   }
@@ -106,13 +136,16 @@
 
 @include huge {
   .main {
-    margin: 40px 180px;
+    margin: 2.5rem 11.25rem;
     &__section {
       display: flex;
       justify-content: space-evenly;
-      margin-top: 100px;
+      margin-top: 6.25rem;
       &--div {
         width: 50%;
+        .title {
+          margin-top: 6.25rem;
+        }
       }
     }
   }
