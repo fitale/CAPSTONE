@@ -190,12 +190,12 @@
     &--para {
       @include mobile-paragraph;
       font-family: OpenSansLight;
-      border-bottom: 1px solid $grey;
       padding: 10px;
     }
     &--div {
       display: flex;
       justify-content: space-evenly;
+      border-top: 1px solid $grey;
       border-bottom: 1px solid $grey;
       padding: 10px;
       .label {
@@ -262,6 +262,234 @@
     &--para {
       @include mobile-paragraph;
       font-family: OpenSansLight;
+      text-align: justify;
+    }
+  }
+}
+
+@include medium {
+  .u-container {
+    margin: 32px 24px;
+    align-items: center;
+    &__title {
+      @include desk-tablet-header-smaller;
+      font-family: OpenSansCondensedBold;
+    }
+    &__subheader {
+      @include desk-tablet-subheader;
+      align-self: flex-start;
+    }
+    &__holder {
+      width: 50vw;
+      &--flex {
+        margin: 5px 100px;
+        width: 50%;
+        .sub {
+          @include desk-tablet-subheader;
+        }
+        .label {
+          @include desk-tablet-labels;
+          font-family: OpenSansLight;
+        }
+      }
+    }
+    &__holder2 {
+      // width: 50vw;
+      &--sub {
+        @include desk-tablet-subheader;
+      }
+      &--sub-light {
+        @include desk-tablet-subheader;
+        font-family: OpenSansLight;
+      }
+    }
+    &__holder3 {
+      width: 50vw;
+      &--flex {
+        margin: 5px 100px;
+        width: 50%;
+        .sub {
+          @include desk-tablet-subheader;
+        }
+        .label {
+          @include desk-tablet-labels;
+          font-family: OpenSansLight;
+        }
+      }
+    }
+    &__holder4 {
+      width: 50vw;
+      &--flex {
+        width: 50%;
+        margin: 5px 100px;
+        .sub {
+          @include desk-tablet-subheader;
+        }
+        .label {
+          @include desk-tablet-labels;
+          font-family: OpenSansLight;
+        }
+      }
+    }
+    &__iframe {
+      margin: auto;
+      width: 55vw;
+      height: 30vw;
+    }
+    &__holder5 {
+      width: 50vw;
+      justify-content: center;
+      &--flex {
+        width: 50%;
+        margin: 5px 100px;
+        .sub {
+          @include desk-tablet-subheader;
+        }
+        .label {
+          @include desk-tablet-labels;
+          font-family: OpenSansLight;
+        }
+      }
+    }
+    &__section {
+      width: 50vw;
+      &--h5 {
+        @include desk-tablet-subheader;
+      }
+      &--flex {
+        justify-content: center;
+        .label {
+          @include desk-tablet-labels;
+          width: 20%;
+          margin: 5px 100px;
+        }
+        .flex2 {
+          width: 20%;
+          margin: 5px 100px;
+          flex-direction: column;
+          &__div {
+            &--label {
+              @include desk-tablet-labels;
+            }
+            &--para {
+              @include desk-tablet-para-comment;
+              font-family: OpenSansLight;
+            }
+          }
+        }
+      }
+      &--scores {
+        display: flex;
+        justify-content: center;
+        .label {
+          margin: 5px 100px;
+          width: 20%;
+          @include desk-tablet-labels;
+        }
+        .div {
+          margin: 5px 100px;
+          width: 20%;
+          &__label {
+            @include desk-tablet-labels;
+          }
+          &__para {
+            @include desk-tablet-para-comment;
+            font-family: OpenSansLight;
+          }
+        }
+      }
+      &--label {
+        @include desk-tablet-labels;
+        margin: auto;
+        margin-top: 10px;
+      }
+      &--para {
+        @include desk-tablet-para-comment;
+        font-family: OpenSansLight;
+        margin: auto;
+      }
+      &--div {
+        // justify-content: center;
+        // margin: 10px 0;
+        .label {
+          @include desk-tablet-labels;
+        }
+        .para {
+          @include desk-tablet-para-comment;
+          font-family: OpenSansLight;
+        }
+      }
+      &--column {
+        .label {
+          @include desk-tablet-labels;
+          margin-bottom: 10px;
+        }
+        .inner-div {
+          // justify-content: center;
+          &__flex {
+            margin: 5px 50px;
+
+            &--h6 {
+              @include desk-tablet-labels;
+            }
+            &--para {
+              @include desk-tablet-para-comment;
+              font-family: OpenSansLight;
+            }
+          }
+        }
+      }
+      &--tuition {
+        justify-content: center;
+        .label {
+          width: 20%;
+          margin: 5px 100px;
+          @include desk-tablet-labels;
+        }
+        .div {
+          width: 20%;
+          margin: 5px 100px;
+          flex-direction: column;
+          &__inner-div {
+            &--label {
+              @include desk-tablet-labels;
+            }
+            &--para {
+              @include desk-tablet-para-comment;
+              font-family: OpenSansLight;
+            }
+          }
+        }
+      }
+    }
+    &__culture {
+      width: 75vw;
+      margin-top: 20px;
+      &--h5 {
+        @include desk-tablet-subheader;
+      }
+      &--para {
+        @include desk-tablet-para-comment;
+        font-family: OpenSansLight;
+      }
+    }
+  }
+}
+
+@include huge {
+  .u-container {
+    margin: 40px 180px;
+    &__title {
+      @include desk-tablet-header;
+      font-family: OpenSansCondensedBold;
+    }
+    &__hero-holder {
+      &--img {
+        height: 40vw;
+      }
+    }
+    &__culture {
+      width: 45vw;
     }
   }
 }

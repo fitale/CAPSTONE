@@ -160,7 +160,6 @@ export default class UniversityPage extends Component {
           </p>
         </section>
         <section className="u-container__section">
-          <h5 className="u-container__section--h5">Admission</h5>
           <div className="u-container__section--div">
             <h6 className="label">Total: </h6>
             <p className="para">{this.state.oneUniv.admission_total}</p>
@@ -204,13 +203,13 @@ export default class UniversityPage extends Component {
               <div className="div__inner-div">
                 <h6 className="div__inner-div--label">In-state</h6>
                 <p className="div__inner-div--para">
-                  {this.state.oneUniv.tuition_in_state}
+                  ${this.state.oneUniv.tuition_in_state}
                 </p>
               </div>
               <div className="div__inner-div">
                 <h6 className="div__inner-div--label">Out-of-state</h6>
                 <p className="div__inner-div--para">
-                  {this.state.oneUniv.tuition_out_state}
+                  ${this.state.oneUniv.tuition_out_state}
                 </p>
               </div>
             </div>
