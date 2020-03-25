@@ -3,7 +3,6 @@ const mongoose = require("mongoose");
 
 // define schema (key: datatype)
 const uDataSchema = new mongoose.Schema({
-  id: Number,
   lng: Number,
   lat: Number,
   college_of_institution_type: String,

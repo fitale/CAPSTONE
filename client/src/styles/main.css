@@ -1489,6 +1489,9 @@
   margin-top: 10px;
   margin-bottom: 10px;
   outline: none;
+  height: 30px;
+  width: 100%;
+  border: 1px solid #808080;
 }
 
 .test-scores__form--div .select:hover {

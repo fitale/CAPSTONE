@@ -8,7 +8,7 @@ import loadingImg from "./assets/icons/loading.svg";
 import Header from "./components/Header.js";
 import LandingPage from "./components/LandingPage.js";
 import SearchNow from "./components/SearchNow.js";
-import Locations from "./components/Locations.js";
+import Locations2 from "./components/Locations2.js";
 import Tuition from "./components/Tuition.js";
 import UniversityPage from "./components/UniversityPage.js";
 import TestScores from "./components/TestScores.js";
@@ -56,8 +56,8 @@ export default class App extends Component {
 
             <Route
               path="/searchbylocation"
-              render={props => (
-                <Locations {...props} uData={this.state.udata} />
+              render={routerProps => (
+                <Locations2 {...routerProps} uData={this.state.udata} />
               )}
             />
             <Route
