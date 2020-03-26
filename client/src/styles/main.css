@@ -740,6 +740,108 @@
   }
 }
 
+.news {
+  margin: 24px 16px;
+}
+
+.news__title {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-family: OpenSansBold;
+  color: #0000a3;
+}
+
+.news__section--div {
+  margin: 20px 0;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+  padding: 10px;
+}
+
+.news__section--div .url {
+  text-decoration: none;
+}
+
+.news__section--div .url__h5 {
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+  font-family: OpenSansSemiBold;
+  color: #0000d6;
+  font-family: OpenSansCondensedBold;
+}
+
+.news__section--div .url__img {
+  width: 100%;
+  margin: 10px 0;
+}
+
+.news__section--div .url__description {
+  font-size: 0.75rem;
+  line-height: 1.25rem;
+  font-family: OpenSansSemiBold;
+  font-family: OpenSansLight;
+  color: #808080;
+}
+
+@media only screen and (min-width: 768px) {
+  .news {
+    margin: 32px 24px;
+  }
+  .news__title {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-family: OpenSansBold;
+  }
+  .news__section {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: 30px 0;
+  }
+  .news__section--div {
+    height: 50vw;
+    overflow-y: scroll;
+    margin: 10px 10px;
+    padding: 20px;
+    width: 40vw;
+  }
+  .news__section--div .url__h5 {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-family: OpenSansSemiBold;
+    font-family: OpenSansCondensedBold;
+  }
+  .news__section--div .url__img {
+    margin: 20px 0;
+  }
+  .news__section--div .url__description {
+    font-size: 0.75rem;
+    line-height: 1.25rem;
+    font-family: OpenSansSemiBold;
+    font-family: OpenSansLight;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .news {
+    margin: 40px 180px;
+  }
+  .news__title {
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+    font-family: OpenSansBold;
+  }
+  .news__section--div {
+    width: 20vw;
+    height: 30vw;
+  }
+}
+
 .menu-slider {
   z-index: 999;
   position: absolute;

@@ -1,0 +1,82 @@
+.news {
+  margin: 24px 16px;
+  &__title {
+    @include mobile-header;
+    color: $dark-blue;
+  }
+  &__section {
+    &--div {
+      margin: 20px 0;
+      background-color: $light-grey;
+      border-radius: 4px;
+      padding: 10px;
+      .url {
+        text-decoration: none;
+        &__h5 {
+          @include mobile-subheader;
+          color: $primary-blue;
+          font-family: OpenSansCondensedBold;
+        }
+        &__img {
+          width: 100%;
+          margin: 10px 0;
+        }
+        &__description {
+          @include mobile-labels;
+          font-family: OpenSansLight;
+          color: $grey;
+        }
+      }
+    }
+  }
+}
+
+@include medium {
+  .news {
+    margin: 32px 24px;
+    &__title {
+      @include desk-tablet-header-smaller;
+    }
+    &__section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 30px 0;
+      &--div {
+        height: 50vw;
+        overflow-y: scroll;
+        margin: 10px 10px;
+        padding: 20px;
+        width: 40vw;
+        .url {
+          &__h5 {
+            @include desk-tablet-subheader;
+            font-family: OpenSansCondensedBold;
+          }
+          &__img {
+            margin: 20px 0;
+          }
+          &__description {
+            @include desk-tablet-labels;
+            font-family: OpenSansLight;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include huge {
+  .news {
+    margin: 40px 180px;
+    &__title {
+      @include desk-tablet-header;
+    }
+    &__section {
+      &--div {
+        width: 20vw;
+        height: 30vw;
+      }
+    }
+  }
+}
