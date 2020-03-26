@@ -26,7 +26,7 @@ export default class About extends Component {
               uChoose suggests universities students ought to consider based on
               simplified campus match scores, tuition costs, and location
               matches. Not only can they find the schools that best fit their
-              academic goals, but they can find institutions that are most
+              academic standing, but they can find institutions that are most
               affordable and begin planning to apply. With uChoose, students and
               families have the power to begin their univeristy search process
               and make the best decisions.

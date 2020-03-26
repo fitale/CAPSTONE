@@ -9,20 +9,25 @@ export default class Header extends Component {
   };
 
   // displays menu dropdown
-  openMenuSlider = event => {
-    this.setState({
-      isShowing: true
-    });
-  };
+openMenuSlider = event => {
+  console.log('clicked from openMenuSlider')
+  this.setState({
+    isShowing: true
+  })
+}
+
+// closeMenu = event => {
+//   console.log('clicked from closeMenu')
+// }
 
   render() {
     return (
       <header className="header">
-        <Link to="/" className="header__link">
+        <Link to="/" className="header__link" >
           <h3 className="header__link--title">uChoose</h3>
         </Link>
         <nav className="header__nav">
-          <Link to="/uChoosenow" className="header__nav--desk">
+          <Link to="/uChoosenow" className="header__nav--desk" >
             <h5 className="inner-text">Search Now</h5>
           </Link>
 
