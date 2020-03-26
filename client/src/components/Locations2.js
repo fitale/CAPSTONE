@@ -14,15 +14,18 @@ const API_KEY = "AIzaSyA_JOFNWwvsXhy3dsmSRX7nqi9KQy5Db7U";
 
 let testData = [];
 let filteredUni = [];
+let noMatches = [];
 
-// renders GoogleMap in browser
+// function that creates Google map in component
 function Map() {
   const [selectedUni, setSelectedUni] = useState(null);
   const myMarker = filteredUni.map(school => {
     return (
+      // renders marker after user searches city
       <Marker
         key={school._id}
         position={{ lat: school.lat, lng: school.lng }}
+        // opens marker to see its content
         onClick={() => {
           setSelectedUni(school);
         }}
@@ -43,6 +46,7 @@ function Map() {
     >
       {myMarker}
       {selectedUni && (
+        // marker content
         <InfoWindow
           position={{ lat: selectedUni.lat, lng: selectedUni.lng }}
           onCloseClick={() => {
@@ -67,6 +71,7 @@ function Map() {
   );
 }
 
+// wrap Map() in helpers to load Google libraries
 const WrappedMap = withScriptjs(withGoogleMap(Map));
 
 export default class Locations2 extends Component {
@@ -79,9 +84,19 @@ export default class Locations2 extends Component {
   searchByLocation = event => {
     event.preventDefault();
     let location = event.target.input.value.toLowerCase();
+    // reset form
+    event.target.reset();
     filteredUni = testData.filter(uni => {
-      return uni.city.toLowerCase().includes(location);
+      if (uni.city.toLowerCase().includes(location)) {
+        return uni.city.toLowerCase().includes(location);
+      } else {
+        noMatches.push(uni);
+      }
     });
+    // alert if there are no university matches
+    if (filteredUni.length === 0) {
+      return alert("No university matches. Please search again.");
+    }
     this.setState({
       test: "testing"
     });
@@ -106,16 +121,18 @@ export default class Locations2 extends Component {
             className="locations__form--input"
             type="text"
             placeholder="Search city"
+            required
           />
           <button className="locations__form--button">
-            <h5 className="submit"> SUBMIT</h5>
+            <h5 className="submit"> SEARCH</h5>
           </button>
         </form>
-        {/* container for GoogleMaps and key */}
+        {/* container for Google maps to render in browser and key */}
         <div
           className="locations__map-holder"
           style={{ height: "50vh", width: "100vw" }}
         >
+          {/* Map() is rendered here */}
           <WrappedMap
             googleMapURL={`https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=${API_KEY}`}
             loadingElement={<div style={{ height: `100%` }} />}
@@ -123,6 +140,7 @@ export default class Locations2 extends Component {
             mapElement={<div style={{ height: `100%` }} />}
             className="locations__map-holder--flex"
           />
+          {/* cities I accounted for in my data set - limited since I built my API */}
           <div className="locations__map-holder--flex-cities">
             <h3 className="h3">Cities to search by:</h3>
             <p className="p">Amherst</p>

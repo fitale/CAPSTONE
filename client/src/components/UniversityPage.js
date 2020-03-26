@@ -2,6 +2,7 @@ import React, { Component } from "react";
 
 import uImage from "../assets/images/uni.jpg";
 
+// Google maps API_KEY for iframe
 const API_KEY = "AIzaSyA_JOFNWwvsXhy3dsmSRX7nqi9KQy5Db7U";
 export default class UniversityPage extends Component {
   state = {
@@ -24,8 +25,10 @@ export default class UniversityPage extends Component {
 
   render() {
     return (
+      // if fields are blank in browser, that is because there are null values in API (not all schools report their info to IPEDS)
       <main className="u-container">
         <h3 className="u-container__title">{this.state.oneUniv.campus}</h3>
+        {/* would have liked to implement user login, so they can save schools they are interested in */}
         <button className="u-container__button">
           <h5 className="u-container__button--text">ADD TO WATCH LIST</h5>
         </button>

@@ -171,8 +171,6 @@
 
 .footer__nav--link:hover {
   color: #0000d6;
-  -webkit-transition: color 0.5s ease-in-out;
-  transition: color 0.5s ease-in-out;
 }
 
 @media only screen and (min-width: 768px) {
@@ -211,7 +209,7 @@
 }
 
 .hero__image {
-  height: 60vw;
+  height: 55vw;
   width: 100%;
   -webkit-filter: brightness(85%);
           filter: brightness(85%);
@@ -286,7 +284,7 @@
   margin: 1.25rem 0;
   width: 10rem;
   height: 2.5rem;
-  border: 1px solid #663cff;
+  border: 0.0625rem solid #663cff;
   border-color: #663cff;
   border-radius: 0.25rem;
   outline: none;
@@ -451,6 +449,24 @@
   }
   .landing-page__holder--right .img {
     height: unset;
+    width: 44vw;
+  }
+  .landing-page__holder-reverse {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+  }
+  .landing-page__holder-reverse--left {
+    margin-right: unset;
+    margin-left: 1.5625rem;
+  }
+  .landing-page__holder-reverse--right {
+    margin-left: unset;
+    margin-right: 1.5625rem;
+  }
+  .landing-page__holder-reverse--right .img {
+    width: 44vw;
   }
 }
 
@@ -491,6 +507,9 @@
   .landing-page__holder {
     margin: 1.5rem 0;
   }
+  .landing-page__holder--right .img {
+    width: 36vw;
+  }
   .landing-page__holder--left {
     width: 50%;
   }
@@ -506,6 +525,9 @@
     line-height: 1.5rem;
     font-family: OpenSansSemiBold;
     font-family: OpenSansLight;
+  }
+  .landing-page__holder-reverse--right .img {
+    width: 36vw;
   }
 }
 
@@ -741,21 +763,22 @@
 }
 
 .news {
-  margin: 24px 16px;
+  margin: 1.5rem 1rem;
 }
 
 .news__title {
   font-size: 1.5rem;
   line-height: 2rem;
   font-family: OpenSansBold;
+  font-family: OpenSansCondensedBold;
   color: #0000a3;
 }
 
 .news__section--div {
-  margin: 20px 0;
+  margin: 1.25rem 0;
   background-color: #f5f5f5;
-  border-radius: 4px;
-  padding: 10px;
+  border-radius: 0.25rem;
+  padding: 0.625rem;
 }
 
 .news__section--div .url {
@@ -767,12 +790,11 @@
   line-height: 1.375rem;
   font-family: OpenSansSemiBold;
   color: #0000d6;
-  font-family: OpenSansCondensedBold;
 }
 
 .news__section--div .url__img {
   width: 100%;
-  margin: 10px 0;
+  margin: 0.625rem 0;
 }
 
 .news__section--div .url__description {
@@ -785,12 +807,13 @@
 
 @media only screen and (min-width: 768px) {
   .news {
-    margin: 32px 24px;
+    margin: 2rem 1.5rem;
   }
   .news__title {
     font-size: 1.5rem;
     line-height: 2rem;
     font-family: OpenSansBold;
+    font-family: OpenSansCondensedBold;
   }
   .news__section {
     display: -webkit-box;
@@ -801,23 +824,22 @@
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    margin: 30px 0;
+    margin: 1.875rem 0;
   }
   .news__section--div {
     height: 50vw;
     overflow-y: scroll;
-    margin: 10px 10px;
-    padding: 20px;
+    margin: 0.625rem 0.625rem;
+    padding: 1.25rem;
     width: 40vw;
   }
   .news__section--div .url__h5 {
     font-size: 1rem;
     line-height: 1.5rem;
     font-family: OpenSansSemiBold;
-    font-family: OpenSansCondensedBold;
   }
   .news__section--div .url__img {
-    margin: 20px 0;
+    margin: 1.25rem 0;
   }
   .news__section--div .url__description {
     font-size: 0.75rem;
@@ -829,12 +851,13 @@
 
 @media only screen and (min-width: 1440px) {
   .news {
-    margin: 40px 180px;
+    margin: 2.5rem 11.25rem;
   }
   .news__title {
     font-size: 2.25rem;
     line-height: 2.75rem;
     font-family: OpenSansBold;
+    font-family: OpenSansCondensedBold;
   }
   .news__section--div {
     width: 20vw;
@@ -845,7 +868,7 @@
 .menu-slider {
   z-index: 999;
   position: absolute;
-  right: 1rem;
+  right: 1.2rem;
 }
 
 .menu-slider__link {
@@ -888,7 +911,7 @@
 }
 
 .main-tuition {
-  margin: 1.5rem 1rem 0;
+  margin: 1.5rem 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1007,10 +1030,12 @@
   font-family: OpenSansBold;
   margin-bottom: 1.25rem;
   color: #0000d6;
+  text-align: center;
 }
 
 .main-tuition__uni .link {
   text-decoration: none;
+  text-align: center;
 }
 
 .main-tuition__uni .link:hover {
@@ -1079,6 +1104,7 @@
   line-height: 1.375rem;
   font-family: OpenSansSemiBold;
   color: #808080;
+  text-align: center;
 }
 
 .main-tuition__error--div .button {
@@ -1117,7 +1143,7 @@
 
 @media only screen and (min-width: 768px) {
   .main-tuition {
-    margin: 2rem 1.5rem 0;
+    margin: 2rem 1.5rem;
   }
   .main-tuition__title {
     -ms-flex-item-align: start;
@@ -1185,7 +1211,7 @@
 
 @media only screen and (min-width: 1440px) {
   .main-tuition {
-    margin: 2.5rem 11.25rem 0;
+    margin: 2.5rem 11.25rem;
   }
   .main-tuition__title {
     font-size: 2.25rem;
@@ -1363,11 +1389,13 @@
   line-height: 2rem;
   font-family: OpenSansBold;
   color: #0000d6;
+  text-align: center;
   margin-bottom: 1.25rem;
 }
 
 .test-scores__uni--link {
   text-decoration: none;
+  text-align: center;
 }
 
 .test-scores__uni--link .li {
@@ -1470,7 +1498,7 @@
 
 @media only screen and (min-width: 768px) {
   .test-scores {
-    margin: 2rem 1.5rem 0;
+    margin: 2rem 1.5rem;
   }
   .test-scores__title {
     -ms-flex-item-align: start;
@@ -1552,7 +1580,7 @@
 
 @media only screen and (min-width: 1440px) {
   .test-scores {
-    margin: 2.5rem 11.25rem 0;
+    margin: 2.5rem 11.25rem;
   }
   .test-scores__title {
     font-size: 2.25rem;
@@ -1931,7 +1959,7 @@
 }
 
 .u-container {
-  padding: 24px 16px;
+  padding: 1.5rem 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1947,18 +1975,18 @@
   font-family: OpenSansBold;
   color: #0000d6;
   text-align: center;
-  margin-bottom: 24px;
+  margin-bottom: 1.5rem;
 }
 
 .u-container__button {
   -ms-flex-item-align: center;
       align-self: center;
-  height: 30px;
-  border-radius: 4px;
+  height: 1.875rem;
+  border-radius: 0.25rem;
   background-color: #663cff;
-  width: 160px;
+  width: 10rem;
   outline: none;
-  border: 1px solid #663cff;
+  border: 0.0625rem solid #663cff;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1984,7 +2012,7 @@
 }
 
 .u-container__subheader {
-  margin: 24px 0 10px;
+  margin: 1.5rem 0 0.625rem;
   font-size: 0.875rem;
   line-height: 1.375rem;
   font-family: OpenSansSemiBold;
@@ -2009,19 +2037,19 @@
 
 .u-container__hero--img .img {
   width: 100%;
-  border-radius: 4px;
+  border-radius: 0.25rem;
 }
 
 .u-container__hero--div {
-  margin-top: 10px;
-  margin-bottom: 10px;
-  border-radius: 4px;
+  margin-top: 0.625rem;
+  margin-bottom: 0.625rem;
+  border-radius: 0.25rem;
   background-color: #f5f5f5;
-  padding: 20px;
+  padding: 1.25rem;
 }
 
 .u-container__hero--div .sub {
-  margin-top: 5px;
+  margin-top: 0.3125rem;
   font-size: 0.875rem;
   line-height: 1.375rem;
   font-family: OpenSansSemiBold;
@@ -2050,26 +2078,26 @@
 }
 
 .u-container__div {
-  margin: 10px 0;
+  margin: 0.625rem 0;
 }
 
 .u-container__div--iframe {
   width: 100%;
   height: 40vw;
-  border: 1px solid #0000a3;
-  border-radius: 4px;
+  border: 0.0625rem solid #0000a3;
+  border-radius: 0.25rem;
 }
 
 .u-container__section--holder {
-  margin-top: 10px;
-  margin-bottom: 10px;
-  border-radius: 4px;
+  margin-top: 0.625rem;
+  margin-bottom: 0.625rem;
+  border-radius: 0.25rem;
   background-color: #f5f5f5;
-  padding: 20px;
+  padding: 1.25rem;
 }
 
 .u-container__section--holder .sub {
-  margin-top: 5px;
+  margin-top: 0.3125rem;
   font-size: 0.875rem;
   line-height: 1.375rem;
   font-family: OpenSansSemiBold;
@@ -2092,7 +2120,7 @@
 
 @media only screen and (min-width: 768px) {
   .u-container {
-    padding: 32px 24px;
+    padding: 2rem 1.5rem;
   }
   .u-container__title {
     font-size: 2.25rem;
@@ -2164,11 +2192,11 @@
     width: 75vw;
   }
   .u-container__section--holder {
-    margin-top: 20px;
-    padding: 30px;
+    margin-top: 1.25rem;
+    padding: 1.875rem;
   }
   .u-container__section--holder .sub {
-    margin-top: 5px;
+    margin-top: 0.3125rem;
     font-size: 1rem;
     line-height: 1.5rem;
     font-family: OpenSansSemiBold;
@@ -2183,10 +2211,10 @@
 
 @media only screen and (min-width: 1440px) {
   .u-container {
-    padding: 40px 180px;
+    padding: 2.5rem 11.25rem;
   }
   .u-container__button {
-    height: 50px;
+    height: 3.125rem;
   }
   .u-container__hero {
     -webkit-box-pack: center;
@@ -2195,12 +2223,12 @@
   }
   .u-container__hero--img {
     width: 30vw;
-    margin-left: 20px;
+    margin-left: 1.25rem;
   }
   .u-container__hero--div {
     height: 20vw;
     width: 30vw;
-    margin-right: 20px;
+    margin-right: 1.25rem;
   }
   .u-container__div--iframe {
     width: 63vw;

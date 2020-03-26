@@ -23,7 +23,8 @@ export default class TestScores extends Component {
   handleEvent = event => {
     event.preventDefault();
     const studentScore = Number(event.target.input.value);
-    console.log(this.props.uData);
+    // reset form
+    event.target.reset();
     // begin filtering through all university data
     this.props.uData.filter(uni => {
       // checking state to search by SAT
@@ -149,7 +150,7 @@ export default class TestScores extends Component {
             required
           />
           <button className="test-scores__form--button">
-            <h5 className="submit">SUBMIT</h5>
+            <h5 className="submit">SEARCH</h5>
           </button>
         </form>
         {/* renders if there are universities that match search parameters */}

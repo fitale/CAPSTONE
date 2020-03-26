@@ -37,6 +37,8 @@ export default class Tuition extends Component {
   // submits form to search for university based on tuition price range
   handleSubmit = event => {
     event.preventDefault();
+    // reset form
+    event.target.reset();
     // begin filtering through university data
     this.props.uData.filter(uni => {
       // checks for null values
@@ -152,11 +154,11 @@ export default class Tuition extends Component {
               className="select"
             >
               <option value="select-one">--</option>
-              <option value="0">0</option>
-              <option value="10000">10000</option>
-              <option value="20000">20000</option>
-              <option value="30000">30000</option>
-              <option value="40000">40000</option>
+              <option value="0">$0</option>
+              <option value="10000">$10000</option>
+              <option value="20000">$20000</option>
+              <option value="30000">$30000</option>
+              <option value="40000">$40000</option>
             </select>
           </div>
           <div className="main-tuition__form--flex">
@@ -168,16 +170,16 @@ export default class Tuition extends Component {
               className="select"
             >
               <option value="select-one">--</option>
-              <option value="10000">10000</option>
-              <option value="20000">20000</option>
-              <option value="30000">30000</option>
-              <option value="40000">40000</option>
-              <option value="50000">50000</option>
+              <option value="10000">$10000</option>
+              <option value="20000">$20000</option>
+              <option value="30000">$30000</option>
+              <option value="40000">$40000</option>
+              <option value="50000">$50000</option>
             </select>
           </div>
 
           <button className="main-tuition__form--submit">
-            <h5 className="inner-text">SUBMIT</h5>
+            <h5 className="inner-text">SEARCH</h5>
           </button>
         </form>
         {/* renders if there are universities that match search parameters */}
@@ -188,7 +190,7 @@ export default class Tuition extends Component {
             </h1>
             {uCampus}
             <button onClick={this.pageRefresh} className="button">
-              <h3 className="button__inner-text">SEARCH AGAIN</h3>
+              <h3 className="button__inner-text">Search again</h3>
             </button>
           </div>
         )}

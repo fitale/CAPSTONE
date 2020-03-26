@@ -22,7 +22,7 @@
         margin: 1.25rem 0;
         width: 10rem;
         height: 2.5rem;
-        border: 1px solid $light-purple;
+        border: 0.0625rem solid $light-purple;
         border-color: $light-purple;
         border-radius: 0.25rem;
         outline: none;
@@ -150,6 +150,21 @@
         margin-left: 1.5625rem;
         .img {
           height: unset;
+          width: 44vw;
+        }
+      }
+      &-reverse {
+        flex-direction: row-reverse;
+        &--left {
+          margin-right: unset;
+          margin-left: 1.5625rem;
+        }
+        &--right {
+          margin-left: unset;
+          margin-right: 1.5625rem;
+          .img {
+            width: 44vw;
+          }
         }
       }
     }
@@ -187,6 +202,11 @@
     }
     &__holder {
       margin: 1.5rem 0;
+      &--right {
+        .img {
+          width: 36vw;
+        }
+      }
       &--left {
         width: 50%;
         .bold-header {
@@ -197,6 +217,13 @@
         .para {
           @include desk-tablet-subheader;
           font-family: OpenSansLight;
+        }
+      }
+      &-reverse {
+        &--right {
+          .img {
+            width: 36vw;
+          }
         }
       }
     }

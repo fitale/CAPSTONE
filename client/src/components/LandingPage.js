@@ -48,8 +48,8 @@ export default class LandingPage extends Component {
               <img src={saveMoney} alt="save-money" className="img" />
             </div>
           </div>
-          <div className="landing-page__holder">
-            <div className="landing-page__holder--left">
+          <div className="landing-page__holder landing-page__holder-reverse">
+            <div className="landing-page__holder--left landing-page__holder-reverse--left ">
               <h3 className="bold-header">
                 Learn more about the admission process
               </h3>
@@ -58,7 +58,7 @@ export default class LandingPage extends Component {
                 accepted students and help you achieve your goals.
               </h5>
             </div>
-            <div className="landing-page__holder--right">
+            <div className="landing-page__holder--right landing-page__holder-reverse--right">
               <img src={study} alt="planning" className="img" />
             </div>
           </div>

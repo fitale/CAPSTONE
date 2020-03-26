@@ -16,9 +16,13 @@ openMenuSlider = event => {
   })
 }
 
-// closeMenu = event => {
-//   console.log('clicked from closeMenu')
-// }
+// closes menu dropdown after page has been selected
+closeMenu = event => {
+  console.log('clicked from closeMenu')
+  this.setState({
+    isShowing: !true
+  })
+}
 
   render() {
     return (
@@ -54,7 +58,7 @@ openMenuSlider = event => {
               />
             </svg>
             {/* renders if event handler is clicked and state changes to true */}
-            {this.state.isShowing && <MenuSlider />}
+            {this.state.isShowing && <MenuSlider triggerCloseHeaderMenu={this.closeMenu}/>}
           </div>
         </nav>
       </header>

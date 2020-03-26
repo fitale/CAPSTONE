@@ -9,6 +9,8 @@ export default class News extends Component {
     gNews: [],
     newsAPI: []
   };
+
+  // calling two APIs to retrieve news articles related to higher education
   componentDidMount() {
     axios
       .get(
@@ -20,18 +22,12 @@ export default class News extends Component {
             `http://newsapi.org/v2/everything?q=education&from=2020-03-01&sortBy=popularity&apiKey=${newsAPI_KEY}`
           )
           .then(res2 => {
-            console.log(
-              "res:",
-              res.data.response.results,
-              "res2: ",
-              res2.data.articles
-            );
             this.setState({
               gNews: res.data.response.results,
               newsAPI: res2.data.articles
             });
           });
-      }, console.log(this.state))
+      })
       .catch(err => {
         console.log(err);
       });
@@ -40,8 +36,10 @@ export default class News extends Component {
     if (this.state.gNews === 0 || this.state.newsAPI === 0) {
       return <h5>loading...</h5>;
     } else {
+      // map through Guardian API to render articles on page
       const guardianStories = this.state.gNews.map(story => {
         return (
+          // Guardian API doesn't contain images for stories
           <div className="news__section--div" key={story.id}>
             <a className="url" href={`${story.webUrl}`}>
               <h5 className="url__h5">{story.webTitle}</h5>
@@ -50,9 +48,11 @@ export default class News extends Component {
           </div>
         );
       });
-      const newsAPIStories = this.state.newsAPI.map(article => {
+      // map through newsAPI to render articles on page
+      const newsAPIStories = this.state.newsAPI.map((article, i) => {
         return (
-          <div className="news__section--div" key={article.source.id}>
+          // some IDs in dataset are null and throw a lot of errors, so used this method instead
+          <div className="news__section--div" key={i}>
             <a href={`${article.url}`} className="url">
               <h5 className="url__h5">{article.title}</h5>
               <img

@@ -20,11 +20,11 @@ export default class App extends Component {
     udata: []
   };
 
+  // retrieve data and set state - data is then passed down to child components that use it
   componentDidMount() {
     axios
       .get("http://localhost:5000/api/udata")
       .then(res => {
-        // console.log(res.data);
         this.setState({
           udata: res.data
         });
