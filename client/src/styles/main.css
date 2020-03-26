@@ -827,8 +827,6 @@
     margin: 1.875rem 0;
   }
   .news__section--div {
-    height: 50vw;
-    overflow-y: scroll;
     margin: 0.625rem 0.625rem;
     padding: 1.25rem;
     width: 40vw;
@@ -861,7 +859,7 @@
   }
   .news__section--div {
     width: 20vw;
-    height: 30vw;
+    height: 20vw;
   }
 }
 

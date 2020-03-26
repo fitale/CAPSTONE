@@ -19,7 +19,7 @@ export default class News extends Component {
       .then(res => {
         axios
           .get(
-            `http://newsapi.org/v2/everything?q=education&from=2020-03-01&sortBy=popularity&apiKey=${newsAPI_KEY}`
+            `http://newsapi.org/v2/everything?q=university&apiKey=${newsAPI_KEY}`
           )
           .then(res2 => {
             this.setState({

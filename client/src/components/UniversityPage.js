@@ -1,9 +1,6 @@
 import React, { Component } from "react";
 
 import uImage from "../assets/images/uni.jpg";
-
-// Google maps API_KEY for iframe
-const API_KEY = "AIzaSyA_JOFNWwvsXhy3dsmSRX7nqi9KQy5Db7U";
 export default class UniversityPage extends Component {
   state = {
     oneUniID: "",
@@ -66,7 +63,7 @@ export default class UniversityPage extends Component {
           <iframe
             title="iframe"
             className="u-container__div--iframe"
-            src={`https://www.google.com/maps/embed/v1/place?key=${API_KEY}&q=${this.state.oneUniv.campus}`}
+            src={`https://www.google.com/maps/embed/v1/place?key=${process.env.REACT_APP_GOOGLE_KEY}&q=${this.state.oneUniv.campus}`}
           ></iframe>
         </div>
         <section className="u-container__section">

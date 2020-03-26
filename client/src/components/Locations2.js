@@ -10,8 +10,6 @@ import {
 
 import gradCap from "../assets/icons/grad-cap.svg";
 
-const API_KEY = "AIzaSyA_JOFNWwvsXhy3dsmSRX7nqi9KQy5Db7U";
-
 let testData = [];
 let filteredUni = [];
 let noMatches = [];
@@ -134,7 +132,7 @@ export default class Locations2 extends Component {
         >
           {/* Map() is rendered here */}
           <WrappedMap
-            googleMapURL={`https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=${API_KEY}`}
+            googleMapURL={`https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=${process.env.REACT_APP_GOOGLE_KEY}`}
             loadingElement={<div style={{ height: `100%` }} />}
             containerElement={<div style={{ height: `100%` }} />}
             mapElement={<div style={{ height: `100%` }} />}
