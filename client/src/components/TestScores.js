@@ -27,27 +27,34 @@ export default class TestScores extends Component {
     event.target.reset();
     // begin filtering through all university data
     this.props.uData.filter(uni => {
-      // checking state to search by SAT
-      if (this.state.testType === "SAT") {
+      // checking state to search by SAT reading and writing
+      if (this.state.testType === "SAT-rw") {
         // checking for null values
-        if (
-          !uni.SAT_reading_writing_25 ||
-          !uni.SAT_reading_writing_75 ||
-          !uni.SAT_math_25 ||
-          !uni.SAT_math_75
-        ) {
+        if (!uni.SAT_reading_writing_25 || !uni.SAT_reading_writing_75) {
           this.state.noMatchUni.push(uni);
           return this.setState({
             isNotShowingUni: true
           });
         }
-        // comparing true values
-        else if (
-          uni.SAT_reading_writing_25 <= studentScore ||
-          uni.SAT_reading_writing_75 <= studentScore ||
-          uni.SAT_math_25 <= studentScore ||
-          uni.SAT_math_75 <= studentScore
-        ) {
+        // comparing student score to 25th percentile
+        else if (uni.SAT_reading_writing_25 <= studentScore) {
+          this.state.matchUni.push(uni);
+          return this.setState({
+            isShowingUni: true
+          });
+        }
+      }
+      // checking state to search by SAT math
+      else if (this.state.testType === "SAT-math") {
+        // checking for null values
+        if (!uni.SAT_math_25 || !uni.SAT_math_75) {
+          this.state.noMatchUni.push(uni);
+          return this.setState({
+            isNotShowingUni: true
+          });
+        }
+        // comparing student score to 25th percentile
+        else if (uni.SAT_math_25 <= studentScore) {
           this.state.matchUni.push(uni);
           return this.setState({
             isShowingUni: true
@@ -63,8 +70,8 @@ export default class TestScores extends Component {
             isNotShowingUni: true
           });
         }
-        // comparing true values
-        else if (uni.ACT_25 <= studentScore || uni.ACT_75 <= studentScore) {
+        // comparing student score to 25th percentile
+        else if (uni.ACT_25 <= studentScore) {
           this.state.matchUni.push(uni);
           return this.setState({
             isShowingUni: true
@@ -137,8 +144,8 @@ export default class TestScores extends Component {
             <h5 className="prompt">Search by SAT or ACT</h5>
             <select onChange={this.handleChange} className="select">
               <option value="select-one">--</option>
-              <option value="SAT">SAT math</option>
-              <option value="SAT">SAT reading and writing</option>
+              <option value="SAT-math">SAT math</option>
+              <option value="SAT-rw">SAT reading and writing</option>
               <option value="ACT">ACT</option>
             </select>
           </div>

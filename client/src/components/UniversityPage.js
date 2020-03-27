@@ -22,7 +22,7 @@ export default class UniversityPage extends Component {
 
   render() {
     return (
-      // if fields are blank in browser, that is because there are null values in API (not all schools report their info to IPEDS)
+      // if fields are blank in browser, that is because there are null values in API (community colleges don't require these)
       <main className="u-container">
         <h3 className="u-container__title">{this.state.oneUniv.campus}</h3>
         {/* would have liked to implement user login, so they can save schools they are interested in */}
