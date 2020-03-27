@@ -23,7 +23,7 @@ export default class App extends Component {
   // retrieve data and set state - data is then passed down to child components that use it
   componentDidMount() {
     axios
-      .get("/api/udata")
+      .get("http://localhost:5000/api/udata")
       .then(res => {
         this.setState({
           udata: res.data
