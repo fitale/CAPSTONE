@@ -19,11 +19,6 @@
 }
 
 @font-face {
-  font-family: "OpenSansCondensedLight";
-  src: url("../assets/fonts/OpenSansCondensedLight.ttf");
-}
-
-@font-face {
   font-family: "OpenSansCondensedBold";
   src: url("../assets/fonts/OpenSansCondensedBold.ttf");
 }
@@ -83,12 +78,6 @@
 @mixin desk-tablet-para-comment {
   font-size: 0.875rem;
   line-height: 1.375rem;
-  font-family: OpenSansRegular;
-}
-
-@mixin desk-tablet-lists-contact {
-  font-size: 0.875rem;
-  line-height: 1.25rem;
   font-family: OpenSansRegular;
 }
 

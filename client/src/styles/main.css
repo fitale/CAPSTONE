@@ -21,11 +21,6 @@
 }
 
 @font-face {
-  font-family: "OpenSansCondensedLight";
-  src: url("../assets/fonts/OpenSansCondensedLight.ttf");
-}
-
-@font-face {
   font-family: "OpenSansCondensedBold";
   src: url("../assets/fonts/OpenSansCondensedBold.ttf");
 }
